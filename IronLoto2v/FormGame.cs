@@ -28,7 +28,6 @@ namespace IronLoto2v
             {
                 columns[i] = new DataGridViewTextBoxColumn();
                 columns[i].Width = 558 / b;
-                
             }
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
@@ -42,10 +41,5 @@ namespace IronLoto2v
             drawData(dataGridViewGamer2, y, x);
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            FormIntroduction form=new FormIntroduction();
-            form.Show();
-        }
     }
 }
