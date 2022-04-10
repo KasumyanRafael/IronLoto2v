@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace IronLoto2v
 {
@@ -39,6 +40,8 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, y, x);
             drawData(dataGridViewGamer2, y, x);
+            StreamReader file = new StreamReader(Properties.Resources._5678);
+            MessageBox.Show(file.ReadLine());
         }
 
     }

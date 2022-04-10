@@ -64,7 +64,7 @@
             this.Controls.Add(this.dataGridViewGamer2);
             this.Controls.Add(this.dataGridViewGamer1);
             this.Name = "FormGame";
-            this.Text = "Осетинское лото";
+            this.Text = "Раунд 1. Угадывание слов по картинке, запоминание переводов";
             this.Load += new System.EventHandler(this.FormGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).EndInit();
