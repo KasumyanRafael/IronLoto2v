@@ -32,6 +32,7 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,11 +70,23 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.Location = new System.Drawing.Point(616, 584);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(137, 70);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1445, 654);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.dataGridViewGamer2);
             this.Controls.Add(this.dataGridViewGamer1);
             this.Controls.Add(this.pictureBox1);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.DataGridView dataGridViewGamer1;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

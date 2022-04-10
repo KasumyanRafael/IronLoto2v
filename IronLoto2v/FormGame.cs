@@ -41,5 +41,11 @@ namespace IronLoto2v
             drawData(dataGridViewGamer1, y, x);
             drawData(dataGridViewGamer2, y, x);
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            FormIntroduction form=new FormIntroduction();
+            form.Show();
+        }
     }
 }
