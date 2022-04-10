@@ -102,7 +102,7 @@
     <Folder Include="OurImages\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\5678.txt" />
+    <None Include="Resources\dictionary.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

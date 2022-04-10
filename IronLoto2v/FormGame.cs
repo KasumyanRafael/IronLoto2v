@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace IronLoto2v
 {
     public partial class FormGame : Form
     {
-        public string gamer1=String.Empty;
-        public string gamer2=String.Empty;
+        public string gamer1 = String.Empty;
+        public string gamer2 = String.Empty;
         int x = 4;
         int y = 16;
         int t = 5000;
@@ -33,16 +34,28 @@ namespace IronLoto2v
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
             data.RowTemplate.Height = 510 / a;
-            
-            
+
+
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
             drawData(dataGridViewGamer1, y, x);
             drawData(dataGridViewGamer2, y, x);
-            StreamReader file = new StreamReader(Properties.Resources._5678);
-            MessageBox.Show(file.ReadLine());
+            
         }
 
+        private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
+        }
+
+        private void dataGridViewGamer2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
+        }
     }
 }
+
+   
+
+  

@@ -59,14 +59,5 @@ namespace IronLoto2v.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на 5678.
-        /// </summary>
-        internal static string _5678 {
-            get {
-                return ResourceManager.GetString("_5678", resourceCulture);
-            }
-        }
     }
 }
