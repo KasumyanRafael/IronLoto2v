@@ -19,11 +19,6 @@ namespace IronLoto2v
             InitializeComponent();
         }
 
-        private void FormIntroduction_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             gamer1=textBoxGamer1.Text;

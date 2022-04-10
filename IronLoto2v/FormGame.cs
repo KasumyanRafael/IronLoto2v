@@ -23,10 +23,10 @@ namespace IronLoto2v
         }
         void drawData(DataGridView data, int a, int b)
         {
-            DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[b];
+            DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
             for (int i = 0; i < b; i++)
             {
-                columns[i] = new DataGridViewTextBoxColumn();
+                columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 558 / b;
             }
             data.Columns.AddRange(columns);

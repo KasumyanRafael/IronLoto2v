@@ -82,7 +82,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormIntroduction";
             this.Text = "Авторизация игроков";
-            this.Load += new System.EventHandler(this.FormIntroduction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
