@@ -25,6 +25,7 @@ namespace IronLoto2v
         }
         void drawData(DataGridView data, int a, int b)
         {
+            int cnt = 0;
             DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
             for (int i = 0; i < b; i++)
             {
