@@ -43,7 +43,7 @@ namespace IronLoto2v
             drawData(dataGridViewGamer1, y, x);
             drawData(dataGridViewGamer2, y, x);
             string[] s = Properties.Resources.dictionary.Split('\n');
-            //MessageBox.Show(s[66]);  
+            //MessageBox.Show(s[6]);  
         }
 
         private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)

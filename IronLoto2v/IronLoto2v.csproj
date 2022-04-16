@@ -99,7 +99,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ImagesWithRusMeaning\" />
+    <Folder Include="ImagesWithIronMeaning\" />
     <Folder Include="OurImages\" />
   </ItemGroup>
   <ItemGroup>
