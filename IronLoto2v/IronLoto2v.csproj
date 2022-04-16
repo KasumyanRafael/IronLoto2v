@@ -99,8 +99,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ImagesWithRusMeaning\" />
     <Folder Include="OurImages\" />
-    <Folder Include="WordImages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dictionary.txt" />
