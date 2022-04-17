@@ -16,8 +16,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        int x = 4;
-        int y = 16;
+        int x = 3;
+        int y = 4;
         int t = 5000;
         public FormGame()
         {
@@ -29,18 +29,16 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 558 / b;
-                //columns[i].Image = Properties.Resources.p1;
+                columns[i].Width = 200;
             }
+            data.RowTemplate.Height = 200;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
-            data.RowTemplate.Height = 510 / a;
-
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
-            drawData(dataGridViewGamer1, y, x);
-            drawData(dataGridViewGamer2, y, x);
+            drawData(dataGridViewGamer1, x, y);
+            drawData(dataGridViewGamer2, x, y);
             string[] s = Properties.Resources.dictionary.Split('\n');
             //MessageBox.Show(s[6]);
         }
