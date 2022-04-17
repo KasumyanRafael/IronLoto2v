@@ -30,7 +30,7 @@ namespace IronLoto2v
             {
                 columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 558 / b;
-                columns[i].Image = Image.FromFile(Directory.GetCurrentDirectory() + "/ImagesWithIronMeaning/8.png");
+                //columns[i].Image = Properties.Resources.p1;
             }
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
