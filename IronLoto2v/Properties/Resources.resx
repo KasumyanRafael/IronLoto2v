@@ -119,6 +119,834 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dictionary.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+    <value>..\Resources\dictionary.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="p1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p10ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p10ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p10ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p10ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p11ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p11ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p11ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p11ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p12ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p12ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p12ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p12ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p13ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p13ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p13ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p13ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p14ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p14ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p14ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p14ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p15ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p15ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p15ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p15ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p16ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p16ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p16ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p16ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p17ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p17ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p17ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p17ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p18ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p18ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p18ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p18ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p19ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p19ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p19ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p19ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p1ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p1ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p20ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p20ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p20ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p20ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p21ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p21ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p21ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p21ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p22ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p22ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p22ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p22ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p23ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p23ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p23ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p23ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p24ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p24ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p24ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p24ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p25ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p25ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p25ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p25ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p26ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p26ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p26ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p26ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p27ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p27ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p27ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p27ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p28ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p28ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p28ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p28ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p29.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p29ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p29ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p29ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p29ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p2ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p2ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p2ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p2ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p30ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p30ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p30ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p30ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p31ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p31ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p31ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p31ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p32ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p32ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p32ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p32ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p33ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p33ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p33ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p33ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p34ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p34ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p34ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p34ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p35ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p35ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p35ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p35ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p36ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p36ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p36ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p36ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p37.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p37ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p37ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p37ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p37ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p38ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p38ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p38ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p38ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p39ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p39ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p39ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p39ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p3ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p3ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p3ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p3ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p40ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p40ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p40ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p40ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p41ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p41ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p41ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p41ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p42ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p42ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p42ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p42ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p43ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p43ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p43ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p43ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p44ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p44ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p44ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p44ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p45ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p45ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p45ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p45ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p46.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p46ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p46ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p46ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p46ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p47.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p47ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p47ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p47ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p47ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p48ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p48ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p48ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p48ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p49ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p49ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p49ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p49ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p4ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p4ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p4ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p4ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p50ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p50ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p50ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p50ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p51ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p51ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p51ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p51ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p52.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p52ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p52ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p52ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p52ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p53" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p53.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p53ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p53ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p53ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p53ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p54.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p54ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p54ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p54ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p54ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p55.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p55ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p55ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p55ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p55ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p56.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p56ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p56ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p56ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p56ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p57ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p57ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p57ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p57ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p58ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p58ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p58ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p58ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p59ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p59ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p59ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p59ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p5ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p5ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p5ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p5ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p60ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p60ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p60ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p60ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p61ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p61ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p61ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p61ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p62ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p62ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p62ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p62ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p63.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p63ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p63ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p63ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p63ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p64ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p64ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p64ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p64ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p65.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p65ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p65ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p65ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p65ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p66.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p66ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p66ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p66ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p66ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p67ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p67ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p67ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p67ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p68ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p68ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p68ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p68ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p69" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p69.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p69ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p69ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p69ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p69ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p6ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p6ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p6ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p6ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p70ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p70ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p70ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p70ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p71.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p71ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p71ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p71ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p71ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p72ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p72ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p72ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p72ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p73" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p73.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p73ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p73ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p73ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p73ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p74.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p74ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p74ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p74ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p74ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p75.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p75ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p75ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p75ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p75ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p76" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p76.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p76ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p76ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p76ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p76ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p77.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p77ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p77ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p77ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p77ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p78" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p78.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p78ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p78ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p78ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p78ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p79" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p79.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p79ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p79ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p79ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p79ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p7ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p7ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p7ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p7ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p80ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p80ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p80ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p80ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p81" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p81.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p81ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p81ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p81ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p81ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p82" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p82.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p82ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p82ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p82ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p82ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p83" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p83.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p83ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p83ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p83ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p83ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p84" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p84.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p84ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p84ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p84ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p84ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p85" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p85.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p85ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p85ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p85ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p85ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p86" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p86.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p86ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p86ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p86ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p86ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p87" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p87.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p87ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p87ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p87ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p87ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p88" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p88.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p88ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p88ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p88ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p88ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p89" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p89.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p89ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p89ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p89ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p89ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p8ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p8ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p8ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p8ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p90" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p90ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p90ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p90ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p90ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p91ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p91ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p91ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p91ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p92" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p92.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p92ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p92ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p92ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p92ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p9ir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p9ir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p9ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p9ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

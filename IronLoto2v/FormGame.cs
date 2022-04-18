@@ -30,7 +30,9 @@ namespace IronLoto2v
             {
                 columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 216;
+                columns[i].Image=Properties.Resources.p2ir as Bitmap;
             }
+
             data.RowTemplate.Height = 216;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
