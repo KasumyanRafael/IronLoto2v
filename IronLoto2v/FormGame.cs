@@ -16,6 +16,7 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
+        string[] numbers = new string[92];
         int x = 3;
         int y = 4;
         int t = 5000;
@@ -30,7 +31,6 @@ namespace IronLoto2v
             {
                 columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 216;
-                columns[i].Image=Properties.Resources.p2ir as Bitmap;
             }
 
             data.RowTemplate.Height = 216;
@@ -41,8 +41,6 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
-            string[] s = Properties.Resources.dictionary.Split('\n');
-            //MessageBox.Show(s[6]);
         }
 
         private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
