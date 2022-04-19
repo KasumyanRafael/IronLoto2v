@@ -41,6 +41,7 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
+            antirepeat(numbers);
         }
 
         private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,7 +53,19 @@ namespace IronLoto2v
         {
             MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
         }
-
+        void antirepeat(string[] array)
+        {
+            Random random = new Random();
+            for (int i = array.Length - 1; i >= 1; i--)
+            {
+                int j = random.Next(i + 1);
+                // обменять значения data[j] и data[i]
+                var temp = array[j];
+                array[j] = array[i];
+                array[i] = temp;
+            }
+        }
+        
     }
 }
 
