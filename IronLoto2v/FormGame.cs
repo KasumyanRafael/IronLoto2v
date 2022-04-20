@@ -16,10 +16,9 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        string[] numbers = new string[92];
         int x = 3;
         int y = 4;
-        int t = 5000;
+        int t = 5;
         public FormGame()
         {
             InitializeComponent();
@@ -41,7 +40,11 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
-            antirepeat(numbers);
+            string[]s=Properties.Resources.dictionary.Split('\n');
+            filling(dataGridViewGamer1, s, x, y);
+            filling(dataGridViewGamer2, s, x, y);
+            timerChangePicture.Interval = t * 1000;
+            timerChangePicture.Enabled = true;
         }
 
         private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -52,6 +55,25 @@ namespace IronLoto2v
         private void dataGridViewGamer2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
+        }
+        void filling(DataGridView data, string[] array, int a, int b)
+        {
+            Random rand = new Random();
+            int value;
+            for (int i = 0; i < a; i++)
+            {
+                for (int j = 0; j < b; j++)
+                {
+                    value = rand.Next(0, array.Length);
+                    word temp = new word(array[value]);
+                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
+                }
+            }
+        }
+
+        private void timerChangePicture_Tick(object sender, EventArgs e)
+        {
+
         }
         void antirepeat(string[] array)
         {
@@ -65,7 +87,6 @@ namespace IronLoto2v
                 array[i] = temp;
             }
         }
-        
     }
 }
 

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelWord = new System.Windows.Forms.Label();
             this.buttonNoWord = new System.Windows.Forms.Button();
             this.labelTime = new System.Windows.Forms.Label();
+            this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -105,6 +107,10 @@
             this.labelTime.Text = "00:00";
             this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // timerChangePicture
+            // 
+            this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,5 +140,6 @@
         private System.Windows.Forms.Label labelWord;
         private System.Windows.Forms.Button buttonNoWord;
         private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Timer timerChangePicture;
     }
 }
