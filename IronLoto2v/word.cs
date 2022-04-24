@@ -13,8 +13,6 @@ namespace IronLoto2v
         string ironword;
         string rusword;
         Image pictureshow;
-        Image ironpicture;
-        Image ruspicture;
         public word(string ss)
         {
             string[]s=ss.Split(' ');
@@ -30,9 +28,9 @@ namespace IronLoto2v
             ironword = mas[2];
             return ironword;
         }
-        public int NumberOf()
+        public int NumberOf() 
         {
-            return Convert.ToInt32(mas[0]); //для вытягивания картинок по словам
+            return Convert.ToInt32(mas[0]); 
         }
         public Image GetPicture()
         {

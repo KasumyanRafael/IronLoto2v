@@ -36,6 +36,7 @@
             this.buttonNoWord = new System.Windows.Forms.Button();
             this.labelTime = new System.Windows.Forms.Label();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
+            this.menuStripSettings = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -107,9 +108,14 @@
             this.labelTime.Text = "00:00";
             this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timerChangePicture
+            // menuStripSettings
             // 
-            this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
+            this.menuStripSettings.BackColor = System.Drawing.Color.Yellow;
+            this.menuStripSettings.Location = new System.Drawing.Point(0, 0);
+            this.menuStripSettings.Name = "menuStripSettings";
+            this.menuStripSettings.Size = new System.Drawing.Size(1445, 24);
+            this.menuStripSettings.TabIndex = 8;
+            this.menuStripSettings.Text = "menuStrip1";
             // 
             // FormGame
             // 
@@ -123,6 +129,8 @@
             this.Controls.Add(this.pictureBoxShow);
             this.Controls.Add(this.dataGridViewGamer2);
             this.Controls.Add(this.dataGridViewGamer1);
+            this.Controls.Add(this.menuStripSettings);
+            this.MainMenuStrip = this.menuStripSettings;
             this.Name = "FormGame";
             this.Text = "Раунд 1. Угадывание слов по картинке, запоминание переводов";
             this.Load += new System.EventHandler(this.FormGame_Load);
@@ -130,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,5 +150,6 @@
         private System.Windows.Forms.Button buttonNoWord;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timerChangePicture;
+        private System.Windows.Forms.MenuStrip menuStripSettings;
     }
 }

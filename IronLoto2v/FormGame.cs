@@ -17,7 +17,7 @@ namespace IronLoto2v
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
         int x = 3;
-        int y = 4;
+        int y = 6;
         int t = 5;
         public FormGame()
         {
@@ -41,7 +41,7 @@ namespace IronLoto2v
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             string[]s=Properties.Resources.dictionary.Split('\n');
-            filling(dataGridViewGamer1, s, x, y);
+            filling(dataGridViewGamer1,s,x,y);
             filling(dataGridViewGamer2, s, x, y);
             timerChangePicture.Interval = t * 1000;
             timerChangePicture.Enabled = true;
@@ -56,35 +56,33 @@ namespace IronLoto2v
         {
             MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
         }
-        void filling(DataGridView data, string[] array, int a, int b)
+        void filling(DataGridView data,string[]array,int a,int b)
         {
-            Random rand = new Random();
-            int value;
+            Random rnd=new Random();
             for (int i = 0; i < a; i++)
             {
                 for (int j = 0; j < b; j++)
                 {
-                    value = rand.Next(0, array.Length);
-                    word temp = new word(array[value]);
-                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
+                    int c=rnd.Next(1,array.Length);
+                    word temp=new word(array[c]);
+                    data.Rows[i].Cells[j].Value=temp.GetIrPicture();
                 }
             }
         }
-
-        private void timerChangePicture_Tick(object sender, EventArgs e)
+        
+        void antirepeat(int[]perm,string[]mas)
         {
-
-        }
-        void antirepeat(string[] array)
-        {
-            Random random = new Random();
-            for (int i = array.Length - 1; i >= 1; i--)
+            int n = mas.Length;
+            perm = Enumerable.Range(1, n).ToArray(); 
+            Random rnd = new Random(); // не создавайте новый Random здесь!
+                                       // а то значения будут одни и те же
+            for (int i = n - 1; i >= 1; i--)
             {
-                int j = random.Next(i + 1);
-                // обменять значения data[j] и data[i]
-                var temp = array[j];
-                array[j] = array[i];
-                array[i] = temp;
+                int j = rnd.Next(i + 1);
+                // exchange perm[j] and perm[i]
+                int temp = perm[j];
+                perm[j] = perm[i];
+                perm[i] = temp;
             }
         }
     }
