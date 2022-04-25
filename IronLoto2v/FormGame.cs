@@ -16,9 +16,12 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        int x = 3;
-        int y = 6;
-        int t = 5;
+        int x = 30;
+        int y = 60;
+        int t = 2;
+        int cnt = 0;
+        string[] s;
+
         public FormGame()
         {
             InitializeComponent();
@@ -40,11 +43,12 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
-            string[]s=Properties.Resources.dictionary.Split('\n');
+            s = Properties.Resources.dictionary.Split('\n');
             filling(dataGridViewGamer1,s,x,y);
             filling(dataGridViewGamer2, s, x, y);
-            timerChangePicture.Interval = t * 1000;
             timerChangePicture.Enabled = true;
+            timerChangePicture.Interval = t*1000;
+            
         }
 
         private void dataGridViewGamer1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,16 +73,13 @@ namespace IronLoto2v
                 }
             }
         }
-        
-        void antirepeat(int[]perm,string[]mas)
+        void antirepeat(int[]perm,int n)
         {
-            int n = mas.Length;
-            perm = Enumerable.Range(1, n).ToArray(); 
-            Random rnd = new Random(); // не создавайте новый Random здесь!
-                                       // а то значения будут одни и те же
+            Random r = new Random(); // не создавайте новый Random здесь!
+                                     // а то значения будут одни и те же
             for (int i = n - 1; i >= 1; i--)
             {
-                int j = rnd.Next(i + 1);
+                int j = r.Next(i + 1);
                 // exchange perm[j] and perm[i]
                 int temp = perm[j];
                 perm[j] = perm[i];
