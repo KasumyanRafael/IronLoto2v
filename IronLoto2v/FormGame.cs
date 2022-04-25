@@ -74,7 +74,7 @@ namespace IronLoto2v
             }
         }
         void antirepeat(int[]perm,int n)
-        {
+        { 
             Random r = new Random(); // не создавайте новый Random здесь!
                                      // а то значения будут одни и те же
             for (int i = n - 1; i >= 1; i--)
