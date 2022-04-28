@@ -83,15 +83,7 @@ namespace IronLoto2v
             }
         }
 
-        private void dataGridViewGamer1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
-        }
-
-        private void dataGridViewGamer2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
-        }
+        
         static word[]ToWord(string[]a)
         {
             word[]temp=new word[a.Length];
