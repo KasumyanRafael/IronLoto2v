@@ -16,8 +16,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        int x = 30;
-        int y = 60;
+        int x = 5;
+        int y = 10;
         int t = 2;
         int cnt = 0;
         string[] s;
@@ -92,58 +92,6 @@ namespace IronLoto2v
         {
             MessageBox.Show("В данной игре запрещено ходить мышкой. Смысл в конкуренции)");
         }
-
-        private void FormGame_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.D)
-            {
-                int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
-                int row = dataGridViewGamer1.CurrentCell.RowIndex;
-                dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-            }
-            if (e.KeyCode == Keys.W)
-            {
-                int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
-                int row = dataGridViewGamer1.CurrentCell.RowIndex - 1;
-                dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-            }
-            if (e.KeyCode == Keys.A)
-            {
-                int col = dataGridViewGamer1.CurrentCell.ColumnIndex - 1;
-                int row = dataGridViewGamer1.CurrentCell.RowIndex;
-                dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-            }
-            if (e.KeyCode == Keys.S)
-            {
-                int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
-                int row = dataGridViewGamer1.CurrentCell.RowIndex + 1;
-                dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-            }
-            if (e.KeyCode == Keys.Up)
-            {
-                int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
-                int row = dataGridViewGamer2.CurrentCell.RowIndex - 1;
-                dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
-                int row = dataGridViewGamer2.CurrentCell.RowIndex + 1;
-                dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-            }
-            if (e.KeyCode == Keys.Left)
-            {
-                int col = dataGridViewGamer2.CurrentCell.ColumnIndex - 1;
-                int row = dataGridViewGamer2.CurrentCell.RowIndex;
-                dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-            }
-            if (e.KeyCode == Keys.Right)
-            {
-                int col = dataGridViewGamer2.CurrentCell.ColumnIndex + 1;
-                int row = dataGridViewGamer2.CurrentCell.RowIndex;
-                dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-            }
-        }
         static word[]ToWord(string[]a)
         {
             word[]temp=new word[a.Length];
@@ -159,6 +107,77 @@ namespace IronLoto2v
             cnt++;
             pictureBoxShow.Image=list[cnt].GetPicture();
             labelWord.Text=list[cnt].LoadRusWord();
+        }
+
+        private void FormGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.D)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                }
+                if (e.KeyCode == Keys.W)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex - 1;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                }
+                if (e.KeyCode == Keys.A)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex - 1;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                }
+                if (e.KeyCode == Keys.S)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex + 1;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                }
+                if (e.KeyCode == Keys.NumPad8)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex - 1;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                }
+                if (e.KeyCode == Keys.NumPad2)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex + 1;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                }
+                if (e.KeyCode == Keys.NumPad4)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex - 1;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                }
+                if (e.KeyCode == Keys.NumPad6)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex + 1;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                }
+                if (e.KeyCode == Keys.Enter)
+                {
+                    MessageBox.Show("Agnetha");
+                }
+            }
+            catch { }
+            dataGridViewGamer1.Enabled = false;
+            dataGridViewGamer2.Enabled = false;
+
         }
     }
 }
