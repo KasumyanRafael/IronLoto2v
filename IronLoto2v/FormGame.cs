@@ -16,11 +16,16 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        int x = 5;
-        int y = 10;
-        int t = 2;
+        static int x = 5;
+        static int y = 10;
+        static int t = 10;
         int cnt = 0;
         string[] s;
+        int[,] firstTable = new int[x,y];
+        int[,] secondTable = new int[x, y];
+        int pictureshow = 0;
+        int firstscore = 0;
+        int secondscore = 0;
         word[] list;
 
         public FormGame()
@@ -49,13 +54,15 @@ namespace IronLoto2v
             s = Properties.Resources.dictionary.Split('\n');
             list = ToWord(s);
             antirepeat(list,s);
-            filling(dataGridViewGamer1,s,x,y);
-            filling(dataGridViewGamer2, s, x, y);
+            filling(dataGridViewGamer1,s,x,y,firstTable);
+            filling(dataGridViewGamer2, s, x, y,secondTable);
             timerChangePicture.Enabled = true;
             timerChangePicture.Interval = t*1000;
-            
+            labelFirstGamer.Text = gamer1;
+            labelSecondGamer.Text = gamer2;
+
         }
-        void filling(DataGridView data,string[]array,int a,int b)
+        void filling(DataGridView data,string[]array,int a,int b,int[,]tr)
         {
             Random rnd=new Random();
             for (int i = 0; i < a; i++)
@@ -65,6 +72,7 @@ namespace IronLoto2v
                     int c=rnd.Next(1,array.Length);
                     word temp=new word(array[c]);
                     data.Rows[i].Cells[j].Value=temp.GetIrPicture();
+                    tr[i, j] = temp.NumberOf();
                 }
             }
         }
@@ -82,7 +90,7 @@ namespace IronLoto2v
                 perm[i] = temp;
             }
         }
-
+        
         
         static word[]ToWord(string[]a)
         {
@@ -93,14 +101,35 @@ namespace IronLoto2v
             }
             return temp;
         }
-
         private void timerChangePicture_Tick(object sender, EventArgs e)
         {
-            cnt++;
-            pictureBoxShow.Image=list[cnt].GetPicture();
-            labelWord.Text=list[cnt].LoadRusWord();
+            try
+            {
+                cnt++;
+                pictureBoxShow.Image = list[cnt].GetPicture();
+                labelWord.Text = list[cnt].LoadRusWord();
+                pictureshow = list[cnt].NumberOf();
+            }
+            catch 
+            {
+                MessageBox.Show("Слова закончились");
+            }
         }
-
+        void CheckPicture(DataGridView data,int picture,int[,]mas,int cnt,Label label)
+        {
+            int a = data.CurrentCell.RowIndex;
+            int b = data.CurrentCell.ColumnIndex; 
+            if(mas[a,b]!=picture)
+            {
+                MessageBox.Show("Ход невозможен");
+            }
+            else
+            {
+                cnt++;
+                label.Text = cnt.ToString();
+                data.CurrentCell.Value = null;                           
+            }
+        }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -161,9 +190,17 @@ namespace IronLoto2v
                     int row = dataGridViewGamer2.CurrentCell.RowIndex;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
                 }
-                if (e.KeyCode == Keys.Enter)
+                
+                if(e.KeyCode == Keys.Space)
                 {
-                    MessageBox.Show("Agnetha");
+                    dataGridViewGamer1.Enabled = true;
+                    CheckPicture(dataGridViewGamer1, pictureshow, firstTable,firstscore, labelFirstGamerCount);
+
+                }
+                if(e.KeyCode == Keys.NumPad5)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    CheckPicture(dataGridViewGamer2, pictureshow, secondTable,secondscore, labelSecondGamerCount);
                 }
             }
             catch { }
