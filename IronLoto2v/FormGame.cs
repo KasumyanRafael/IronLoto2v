@@ -16,9 +16,9 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        static int x = 5;
-        static int y = 10;
-        static int t = 10;
+        static int x = 3;
+        static int y = 4;
+        static int t = 15;
         int cnt = 0;
         string[] s;
         int[,] firstTable = new int[x,y];
@@ -60,7 +60,8 @@ namespace IronLoto2v
             timerChangePicture.Interval = t*1000;
             labelFirstGamer.Text = gamer1;
             labelSecondGamer.Text = gamer2;
-
+            if(cnt>s.Length)
+                timerChangePicture.Enabled = false;
         }
         void filling(DataGridView data,string[]array,int a,int b,int[,]tr)
         {
@@ -112,22 +113,23 @@ namespace IronLoto2v
             }
             catch 
             {
-                MessageBox.Show("Слова закончились");
+                
+                
             }
         }
         void CheckPicture(DataGridView data,int picture,int[,]mas,int cnt,Label label)
         {
             int a = data.CurrentCell.RowIndex;
             int b = data.CurrentCell.ColumnIndex; 
-            if(mas[a,b]!=picture)
+            if(mas[a,b]==picture)
             {
-                MessageBox.Show("Ход невозможен");
-            }
-            else
-            {
+                data.CurrentCell.Value = null;
                 cnt++;
                 label.Text = cnt.ToString();
-                data.CurrentCell.Value = null;                           
+            }
+            else
+            {                
+                MessageBox.Show("Ход невозможен");
             }
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
@@ -199,7 +201,7 @@ namespace IronLoto2v
                 }
                 if(e.KeyCode == Keys.NumPad5)
                 {
-                    dataGridViewGamer1.Enabled = true;
+                    dataGridViewGamer2.Enabled = true;
                     CheckPicture(dataGridViewGamer2, pictureshow, secondTable,secondscore, labelSecondGamerCount);
                 }
             }
