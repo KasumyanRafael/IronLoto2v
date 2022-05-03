@@ -16,8 +16,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        static int x = 3;
-        static int y = 4;
+        static int x = 6;
+        static int y = 2;
         static int t = 15;
         int cnt = 0;
         string[] s;
@@ -41,7 +41,7 @@ namespace IronLoto2v
                 columns[i].Width = 230;
             }
 
-            data.RowTemplate.Height = 260;
+            data.RowTemplate.Height = 280;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
@@ -112,25 +112,24 @@ namespace IronLoto2v
                 pictureshow = list[cnt].NumberOf();
             }
             catch 
-            {
-                
+            {                
                 
             }
         }
-        void CheckPicture(DataGridView data,int picture,int[,]mas,int cnt,Label label)
+        int CheckPicture(DataGridView data,int picture,int[,]mas,int cnt)
         {
             int a = data.CurrentCell.RowIndex;
             int b = data.CurrentCell.ColumnIndex; 
             if(mas[a,b]==picture)
             {
-                data.CurrentCell.Value = null;
                 cnt++;
-                label.Text = cnt.ToString();
+                data.CurrentCell.Value = null;                              
             }
             else
             {                
                 MessageBox.Show("Ход невозможен");
             }
+            return cnt;
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
@@ -195,14 +194,13 @@ namespace IronLoto2v
                 
                 if(e.KeyCode == Keys.Space)
                 {
-                    dataGridViewGamer1.Enabled = true;
-                    CheckPicture(dataGridViewGamer1, pictureshow, firstTable,firstscore, labelFirstGamerCount);
-
+                    dataGridViewGamer1.Enabled = true;                   
+                    labelFirstGamerCount.Text = CheckPicture(dataGridViewGamer1, pictureshow, firstTable, firstscore).ToString();
                 }
                 if(e.KeyCode == Keys.NumPad5)
                 {
                     dataGridViewGamer2.Enabled = true;
-                    CheckPicture(dataGridViewGamer2, pictureshow, secondTable,secondscore, labelSecondGamerCount);
+                    labelSecondGamerCount.Text = CheckPicture(dataGridViewGamer2, pictureshow, secondTable, secondscore).ToString();
                 }
             }
             catch { }
