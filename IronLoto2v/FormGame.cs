@@ -207,6 +207,11 @@ namespace IronLoto2v
             dataGridViewGamer2.Enabled = false;
 
         }
+
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
