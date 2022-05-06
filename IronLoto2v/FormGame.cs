@@ -55,7 +55,11 @@ namespace IronLoto2v
             list = ToWord(s);
             antirepeat(list,s);
             filling(dataGridViewGamer1,s,x,y,firstTable);
-            filling(dataGridViewGamer2, s, x, y,secondTable);
+            do
+            {
+                filling(dataGridViewGamer2, s, x, y, secondTable);
+            }
+            while (antitwin(firstTable, secondTable, x, y) !=false);
             timerChangePicture.Enabled = true;
             timerChangePicture.Interval = t*1000;
             labelFirstGamer.Text = gamer1;
@@ -76,6 +80,17 @@ namespace IronLoto2v
                     tr[i, j] = temp.NumberOf();
                 }
             }
+        }
+        bool antitwin(int[,]a,int[,]b,int c,int d)
+        {
+            for (int i = 0; i < c; i++)
+            {
+                for (int j = 0; j < d; j++)
+                {
+                    if (a[i, j] == b[i, j]) return true;
+                }
+            }
+            return false;
         }
         void antirepeat(word[]perm,string[]s)
         {
@@ -211,6 +226,18 @@ namespace IronLoto2v
         private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
+        {
+            FormIntroduction form=new FormIntroduction();
+            form.Show();
+        }
+
+        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
+        {
+            FormMenu menu=new FormMenu();
+            menu.Show();
         }
     }
 }

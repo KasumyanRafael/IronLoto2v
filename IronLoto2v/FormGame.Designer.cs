@@ -40,7 +40,7 @@
             this.играToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.сменаПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.спецвозможностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.подсказкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +50,7 @@
             this.labelFirstGamer = new System.Windows.Forms.Label();
             this.labelSecondGamerCount = new System.Windows.Forms.Label();
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
+            this.ToolStripMenuItemMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
@@ -156,7 +157,8 @@
             // 
             this.выходToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemExit,
-            this.сменаПользователейToolStripMenuItem});
+            this.ToolStripMenuItemUsers,
+            this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
@@ -168,11 +170,12 @@
             this.ToolStripMenuItemExit.Text = "Из приложения";
             this.ToolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
             // 
-            // сменаПользователейToolStripMenuItem
+            // ToolStripMenuItemUsers
             // 
-            this.сменаПользователейToolStripMenuItem.Name = "сменаПользователейToolStripMenuItem";
-            this.сменаПользователейToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.сменаПользователейToolStripMenuItem.Text = "Смена пользователей";
+            this.ToolStripMenuItemUsers.Name = "ToolStripMenuItemUsers";
+            this.ToolStripMenuItemUsers.Size = new System.Drawing.Size(195, 22);
+            this.ToolStripMenuItemUsers.Text = "Смена пользователей";
+            this.ToolStripMenuItemUsers.Click += new System.EventHandler(this.ToolStripMenuItemUsers_Click);
             // 
             // спецвозможностиToolStripMenuItem
             // 
@@ -267,6 +270,13 @@
             this.labelFirstGamerCount.Text = "0";
             this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ToolStripMenuItemMenu
+            // 
+            this.ToolStripMenuItemMenu.Name = "ToolStripMenuItemMenu";
+            this.ToolStripMenuItemMenu.Size = new System.Drawing.Size(195, 22);
+            this.ToolStripMenuItemMenu.Text = "Меню";
+            this.ToolStripMenuItemMenu.Click += new System.EventHandler(this.ToolStripMenuItemMenu_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,7 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem играToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
-        private System.Windows.Forms.ToolStripMenuItem сменаПользователейToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUsers;
         private System.Windows.Forms.ToolStripMenuItem спецвозможностиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem подсказкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
@@ -314,5 +324,6 @@
         private System.Windows.Forms.Label labelFirstGamer;
         private System.Windows.Forms.Label labelSecondGamerCount;
         private System.Windows.Forms.Label labelFirstGamerCount;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemMenu;
     }
 }
