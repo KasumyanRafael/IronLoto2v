@@ -263,9 +263,10 @@
             // 
             // progressBarIndicator
             // 
+            this.progressBarIndicator.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.progressBarIndicator.Location = new System.Drawing.Point(682, 82);
             this.progressBarIndicator.Name = "progressBarIndicator";
-            this.progressBarIndicator.Size = new System.Drawing.Size(100, 23);
+            this.progressBarIndicator.Size = new System.Drawing.Size(100, 24);
             this.progressBarIndicator.TabIndex = 27;
             // 
             // ToolStripMenuItemStopOrGo
