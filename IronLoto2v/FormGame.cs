@@ -17,7 +17,7 @@ namespace IronLoto2v
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
         static int x = 6;
-        static int y = 2;
+        static int y = 3;
         static int t = 5;
         int cnt = 0;
         string[] s;
@@ -40,7 +40,6 @@ namespace IronLoto2v
                 columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 230;
             }
-
             data.RowTemplate.Height = 290;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
@@ -222,21 +221,20 @@ namespace IronLoto2v
             dataGridViewGamer2.Enabled = false;
 
         }
-
-        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemUsers_Click_1(object sender, EventArgs e)
         {
-            FormIntroduction form=new FormIntroduction();
+            FormIntroduction form = new FormIntroduction();
             form.Show();
         }
 
-        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
+        private void ToolStripMenuItemMenu_Click_1(object sender, EventArgs e)
         {
-            FormMenu menu=new FormMenu();
+            FormMenu menu = new FormMenu();
             menu.Show();
         }
     }
