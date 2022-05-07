@@ -32,7 +32,6 @@
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
-            this.labelTime = new System.Windows.Forms.Label();
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
             this.labelSecondGamerCount = new System.Windows.Forms.Label();
@@ -41,7 +40,7 @@
             this.labelWord = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStripSettings = new System.Windows.Forms.MenuStrip();
-            this.играToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemGame = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemUsers = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,8 @@
             this.подсказкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBarIndicator = new System.Windows.Forms.ProgressBar();
+            this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -88,18 +89,6 @@
             this.dataGridViewGamer1.RowHeadersVisible = false;
             this.dataGridViewGamer1.Size = new System.Drawing.Size(480, 672);
             this.dataGridViewGamer1.TabIndex = 16;
-            // 
-            // labelTime
-            // 
-            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelTime.BackColor = System.Drawing.Color.Yellow;
-            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(676, 65);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(115, 59);
-            this.labelTime.TabIndex = 14;
-            this.labelTime.Text = "00:00";
-            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelFirstGamerCount
             // 
@@ -175,6 +164,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.progressBarIndicator);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.labelWord);
             this.panel1.Controls.Add(this.pictureBoxShow);
@@ -182,7 +172,6 @@
             this.panel1.Controls.Add(this.labelSecondGamerCount);
             this.panel1.Controls.Add(this.labelFirstGamer);
             this.panel1.Controls.Add(this.labelFirstGamerCount);
-            this.panel1.Controls.Add(this.labelTime);
             this.panel1.Controls.Add(this.dataGridViewGamer1);
             this.panel1.Controls.Add(this.dataGridViewGamer2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,7 +184,7 @@
             // 
             this.menuStripSettings.BackColor = System.Drawing.Color.Yellow;
             this.menuStripSettings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.играToolStripMenuItem,
+            this.ToolStripMenuItemGame,
             this.информацияToolStripMenuItem});
             this.menuStripSettings.Location = new System.Drawing.Point(480, 0);
             this.menuStripSettings.Name = "menuStripSettings";
@@ -203,14 +192,15 @@
             this.menuStripSettings.TabIndex = 26;
             this.menuStripSettings.Text = "menuStrip1";
             // 
-            // играToolStripMenuItem
+            // ToolStripMenuItemGame
             // 
-            this.играToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemGame.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выходToolStripMenuItem,
-            this.спецвозможностиToolStripMenuItem});
-            this.играToolStripMenuItem.Name = "играToolStripMenuItem";
-            this.играToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.играToolStripMenuItem.Text = "Игра";
+            this.спецвозможностиToolStripMenuItem,
+            this.ToolStripMenuItemStopOrGo});
+            this.ToolStripMenuItemGame.Name = "ToolStripMenuItemGame";
+            this.ToolStripMenuItemGame.Size = new System.Drawing.Size(46, 20);
+            this.ToolStripMenuItemGame.Text = "Игра";
             // 
             // выходToolStripMenuItem
             // 
@@ -271,6 +261,20 @@
             this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
             // 
+            // progressBarIndicator
+            // 
+            this.progressBarIndicator.Location = new System.Drawing.Point(682, 82);
+            this.progressBarIndicator.Name = "progressBarIndicator";
+            this.progressBarIndicator.Size = new System.Drawing.Size(100, 23);
+            this.progressBarIndicator.TabIndex = 27;
+            // 
+            // ToolStripMenuItemStopOrGo
+            // 
+            this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemStopOrGo.Text = "Пауза";
+            this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +302,6 @@
         private System.Windows.Forms.Timer timerChangePicture;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
         private System.Windows.Forms.DataGridView dataGridViewGamer1;
-        private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Label labelFirstGamerCount;
         private System.Windows.Forms.Label labelFirstGamer;
         private System.Windows.Forms.Label labelSecondGamerCount;
@@ -307,7 +310,7 @@
         private System.Windows.Forms.Label labelWord;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStripSettings;
-        private System.Windows.Forms.ToolStripMenuItem играToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemGame;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUsers;
@@ -316,5 +319,7 @@
         private System.Windows.Forms.ToolStripMenuItem подсказкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;
+        private System.Windows.Forms.ProgressBar progressBarIndicator;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
     }
 }

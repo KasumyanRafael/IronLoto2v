@@ -237,6 +237,20 @@ namespace IronLoto2v
             FormMenu menu = new FormMenu();
             menu.Show();
         }
+
+        private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
+        {
+            if(ToolStripMenuItemStopOrGo.Text=="Пауза")
+            {
+                timerChangePicture.Stop();
+                ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+            }
+            else
+            {
+                timerChangePicture.Start();
+                ToolStripMenuItemStopOrGo.Text = "Пауза";
+            }
+        }
     }
 }
 
