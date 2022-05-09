@@ -49,7 +49,6 @@
             this.подсказкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBarIndicator = new System.Windows.Forms.ProgressBar();
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
@@ -164,7 +163,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.progressBarIndicator);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.labelWord);
             this.panel1.Controls.Add(this.pictureBoxShow);
@@ -261,14 +259,6 @@
             this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
             // 
-            // progressBarIndicator
-            // 
-            this.progressBarIndicator.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.progressBarIndicator.Location = new System.Drawing.Point(682, 82);
-            this.progressBarIndicator.Name = "progressBarIndicator";
-            this.progressBarIndicator.Size = new System.Drawing.Size(100, 24);
-            this.progressBarIndicator.TabIndex = 27;
-            // 
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
@@ -320,7 +310,6 @@
         private System.Windows.Forms.ToolStripMenuItem подсказкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;
-        private System.Windows.Forms.ProgressBar progressBarIndicator;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
     }
 }
