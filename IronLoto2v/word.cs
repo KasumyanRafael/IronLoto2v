@@ -28,6 +28,12 @@ namespace IronLoto2v
             ironword = mas[2];
             return ironword;
         }
+        public Image GetIronWord()
+        {
+            string name = "p" + mas[0] + "irword";
+            pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
+            return pictureshow;
+        }
         public int NumberOf() 
         {
             return Convert.ToInt32(mas[0]); 

@@ -129,6 +129,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p10irword {
+            get {
+                object obj = ResourceManager.GetObject("p10irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p10ru {
             get {
                 object obj = ResourceManager.GetObject("p10ru", resourceCulture);
@@ -152,6 +162,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p11ir {
             get {
                 object obj = ResourceManager.GetObject("p11ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p11irword {
+            get {
+                object obj = ResourceManager.GetObject("p11irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -189,6 +209,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p12irword {
+            get {
+                object obj = ResourceManager.GetObject("p12irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p12ru {
             get {
                 object obj = ResourceManager.GetObject("p12ru", resourceCulture);
@@ -212,6 +242,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p13ir {
             get {
                 object obj = ResourceManager.GetObject("p13ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p13irword {
+            get {
+                object obj = ResourceManager.GetObject("p13irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -249,6 +289,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p14irword {
+            get {
+                object obj = ResourceManager.GetObject("p14irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p14ru {
             get {
                 object obj = ResourceManager.GetObject("p14ru", resourceCulture);
@@ -272,6 +322,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p15ir {
             get {
                 object obj = ResourceManager.GetObject("p15ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p15irword {
+            get {
+                object obj = ResourceManager.GetObject("p15irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -309,6 +369,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p16irword {
+            get {
+                object obj = ResourceManager.GetObject("p16irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p16ru {
             get {
                 object obj = ResourceManager.GetObject("p16ru", resourceCulture);
@@ -332,6 +402,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p17ir {
             get {
                 object obj = ResourceManager.GetObject("p17ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p17irword {
+            get {
+                object obj = ResourceManager.GetObject("p17irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -369,6 +449,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p18irword {
+            get {
+                object obj = ResourceManager.GetObject("p18irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p18ru {
             get {
                 object obj = ResourceManager.GetObject("p18ru", resourceCulture);
@@ -399,6 +489,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p19irword {
+            get {
+                object obj = ResourceManager.GetObject("p19irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p19ru {
             get {
                 object obj = ResourceManager.GetObject("p19ru", resourceCulture);
@@ -412,6 +512,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p1ir {
             get {
                 object obj = ResourceManager.GetObject("p1ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p1irword {
+            get {
+                object obj = ResourceManager.GetObject("p1irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -459,6 +569,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p20irword {
+            get {
+                object obj = ResourceManager.GetObject("p20irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p20ru {
             get {
                 object obj = ResourceManager.GetObject("p20ru", resourceCulture);
@@ -482,6 +602,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p21ir {
             get {
                 object obj = ResourceManager.GetObject("p21ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p21irword {
+            get {
+                object obj = ResourceManager.GetObject("p21irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -519,6 +649,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p22irword {
+            get {
+                object obj = ResourceManager.GetObject("p22irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p22ru {
             get {
                 object obj = ResourceManager.GetObject("p22ru", resourceCulture);
@@ -542,6 +682,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p23ir {
             get {
                 object obj = ResourceManager.GetObject("p23ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p23irword {
+            get {
+                object obj = ResourceManager.GetObject("p23irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -579,6 +729,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p24irword {
+            get {
+                object obj = ResourceManager.GetObject("p24irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p24ru {
             get {
                 object obj = ResourceManager.GetObject("p24ru", resourceCulture);
@@ -602,6 +762,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p25ir {
             get {
                 object obj = ResourceManager.GetObject("p25ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p25irword {
+            get {
+                object obj = ResourceManager.GetObject("p25irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -639,6 +809,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p26irword {
+            get {
+                object obj = ResourceManager.GetObject("p26irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p26ru {
             get {
                 object obj = ResourceManager.GetObject("p26ru", resourceCulture);
@@ -662,6 +842,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p27ir {
             get {
                 object obj = ResourceManager.GetObject("p27ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p27irword {
+            get {
+                object obj = ResourceManager.GetObject("p27irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -699,6 +889,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p28irword {
+            get {
+                object obj = ResourceManager.GetObject("p28irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p28ru {
             get {
                 object obj = ResourceManager.GetObject("p28ru", resourceCulture);
@@ -729,6 +929,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p29irword {
+            get {
+                object obj = ResourceManager.GetObject("p29irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p29ru {
             get {
                 object obj = ResourceManager.GetObject("p29ru", resourceCulture);
@@ -742,6 +952,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p2ir {
             get {
                 object obj = ResourceManager.GetObject("p2ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p2irword {
+            get {
+                object obj = ResourceManager.GetObject("p2irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -789,6 +1009,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p30irword {
+            get {
+                object obj = ResourceManager.GetObject("p30irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p30ru {
             get {
                 object obj = ResourceManager.GetObject("p30ru", resourceCulture);
@@ -812,6 +1042,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p31ir {
             get {
                 object obj = ResourceManager.GetObject("p31ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p31irword {
+            get {
+                object obj = ResourceManager.GetObject("p31irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -849,6 +1089,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p32irword {
+            get {
+                object obj = ResourceManager.GetObject("p32irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p32ru {
             get {
                 object obj = ResourceManager.GetObject("p32ru", resourceCulture);
@@ -872,6 +1122,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p33ir {
             get {
                 object obj = ResourceManager.GetObject("p33ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p33irword {
+            get {
+                object obj = ResourceManager.GetObject("p33irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -909,6 +1169,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p34irword {
+            get {
+                object obj = ResourceManager.GetObject("p34irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p34ru {
             get {
                 object obj = ResourceManager.GetObject("p34ru", resourceCulture);
@@ -932,6 +1202,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p35ir {
             get {
                 object obj = ResourceManager.GetObject("p35ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p35irword {
+            get {
+                object obj = ResourceManager.GetObject("p35irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -969,6 +1249,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p36irword {
+            get {
+                object obj = ResourceManager.GetObject("p36irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p36ru {
             get {
                 object obj = ResourceManager.GetObject("p36ru", resourceCulture);
@@ -992,6 +1282,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p37ir {
             get {
                 object obj = ResourceManager.GetObject("p37ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p37irword {
+            get {
+                object obj = ResourceManager.GetObject("p37irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1029,6 +1329,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p38irword {
+            get {
+                object obj = ResourceManager.GetObject("p38irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p38ru {
             get {
                 object obj = ResourceManager.GetObject("p38ru", resourceCulture);
@@ -1059,6 +1369,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p39irword {
+            get {
+                object obj = ResourceManager.GetObject("p39irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p39ru {
             get {
                 object obj = ResourceManager.GetObject("p39ru", resourceCulture);
@@ -1072,6 +1392,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p3ir {
             get {
                 object obj = ResourceManager.GetObject("p3ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p3irword {
+            get {
+                object obj = ResourceManager.GetObject("p3irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1119,6 +1449,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p40irword {
+            get {
+                object obj = ResourceManager.GetObject("p40irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p40ru {
             get {
                 object obj = ResourceManager.GetObject("p40ru", resourceCulture);
@@ -1142,6 +1482,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p41ir {
             get {
                 object obj = ResourceManager.GetObject("p41ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p41irword {
+            get {
+                object obj = ResourceManager.GetObject("p41irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1179,6 +1529,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p42irword {
+            get {
+                object obj = ResourceManager.GetObject("p42irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p42ru {
             get {
                 object obj = ResourceManager.GetObject("p42ru", resourceCulture);
@@ -1202,6 +1562,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p43ir {
             get {
                 object obj = ResourceManager.GetObject("p43ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p43irword {
+            get {
+                object obj = ResourceManager.GetObject("p43irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1239,6 +1609,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p44irword {
+            get {
+                object obj = ResourceManager.GetObject("p44irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p44ru {
             get {
                 object obj = ResourceManager.GetObject("p44ru", resourceCulture);
@@ -1262,6 +1642,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p45ir {
             get {
                 object obj = ResourceManager.GetObject("p45ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p45irword {
+            get {
+                object obj = ResourceManager.GetObject("p45irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1299,6 +1689,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p46irword {
+            get {
+                object obj = ResourceManager.GetObject("p46irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p46ru {
             get {
                 object obj = ResourceManager.GetObject("p46ru", resourceCulture);
@@ -1322,6 +1722,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p47ir {
             get {
                 object obj = ResourceManager.GetObject("p47ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p47irword {
+            get {
+                object obj = ResourceManager.GetObject("p47irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1359,6 +1769,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p48irword {
+            get {
+                object obj = ResourceManager.GetObject("p48irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p48ru {
             get {
                 object obj = ResourceManager.GetObject("p48ru", resourceCulture);
@@ -1389,6 +1809,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p49irword {
+            get {
+                object obj = ResourceManager.GetObject("p49irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p49ru {
             get {
                 object obj = ResourceManager.GetObject("p49ru", resourceCulture);
@@ -1402,6 +1832,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p4ir {
             get {
                 object obj = ResourceManager.GetObject("p4ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p4irword {
+            get {
+                object obj = ResourceManager.GetObject("p4irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1449,6 +1889,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p50irword {
+            get {
+                object obj = ResourceManager.GetObject("p50irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p50ru {
             get {
                 object obj = ResourceManager.GetObject("p50ru", resourceCulture);
@@ -1472,6 +1922,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p51ir {
             get {
                 object obj = ResourceManager.GetObject("p51ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p51irword {
+            get {
+                object obj = ResourceManager.GetObject("p51irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1509,6 +1969,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p52irword {
+            get {
+                object obj = ResourceManager.GetObject("p52irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p52ru {
             get {
                 object obj = ResourceManager.GetObject("p52ru", resourceCulture);
@@ -1532,6 +2002,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p53ir {
             get {
                 object obj = ResourceManager.GetObject("p53ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p53irword {
+            get {
+                object obj = ResourceManager.GetObject("p53irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1569,6 +2049,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p54irword {
+            get {
+                object obj = ResourceManager.GetObject("p54irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p54ru {
             get {
                 object obj = ResourceManager.GetObject("p54ru", resourceCulture);
@@ -1592,6 +2082,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p55ir {
             get {
                 object obj = ResourceManager.GetObject("p55ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p55irword {
+            get {
+                object obj = ResourceManager.GetObject("p55irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1629,6 +2129,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p56irword {
+            get {
+                object obj = ResourceManager.GetObject("p56irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p56ru {
             get {
                 object obj = ResourceManager.GetObject("p56ru", resourceCulture);
@@ -1652,6 +2162,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p57ir {
             get {
                 object obj = ResourceManager.GetObject("p57ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p57irword {
+            get {
+                object obj = ResourceManager.GetObject("p57irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1689,6 +2209,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p58irword {
+            get {
+                object obj = ResourceManager.GetObject("p58irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p58ru {
             get {
                 object obj = ResourceManager.GetObject("p58ru", resourceCulture);
@@ -1719,6 +2249,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p59irword {
+            get {
+                object obj = ResourceManager.GetObject("p59irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p59ru {
             get {
                 object obj = ResourceManager.GetObject("p59ru", resourceCulture);
@@ -1732,6 +2272,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p5ir {
             get {
                 object obj = ResourceManager.GetObject("p5ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p5irword {
+            get {
+                object obj = ResourceManager.GetObject("p5irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1779,6 +2329,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p60irword {
+            get {
+                object obj = ResourceManager.GetObject("p60irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p60ru {
             get {
                 object obj = ResourceManager.GetObject("p60ru", resourceCulture);
@@ -1802,6 +2362,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p61ir {
             get {
                 object obj = ResourceManager.GetObject("p61ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p61irword {
+            get {
+                object obj = ResourceManager.GetObject("p61irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1839,6 +2409,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p62irword {
+            get {
+                object obj = ResourceManager.GetObject("p62irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p62ru {
             get {
                 object obj = ResourceManager.GetObject("p62ru", resourceCulture);
@@ -1862,6 +2442,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p63ir {
             get {
                 object obj = ResourceManager.GetObject("p63ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p63irword {
+            get {
+                object obj = ResourceManager.GetObject("p63irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1899,6 +2489,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p64irword {
+            get {
+                object obj = ResourceManager.GetObject("p64irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p64ru {
             get {
                 object obj = ResourceManager.GetObject("p64ru", resourceCulture);
@@ -1922,6 +2522,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p65ir {
             get {
                 object obj = ResourceManager.GetObject("p65ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p65irword {
+            get {
+                object obj = ResourceManager.GetObject("p65irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1959,6 +2569,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p66irword {
+            get {
+                object obj = ResourceManager.GetObject("p66irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p66ru {
             get {
                 object obj = ResourceManager.GetObject("p66ru", resourceCulture);
@@ -1982,6 +2602,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p67ir {
             get {
                 object obj = ResourceManager.GetObject("p67ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p67irword {
+            get {
+                object obj = ResourceManager.GetObject("p67irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2019,6 +2649,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p68irword {
+            get {
+                object obj = ResourceManager.GetObject("p68irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p68ru {
             get {
                 object obj = ResourceManager.GetObject("p68ru", resourceCulture);
@@ -2049,6 +2689,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p69irword {
+            get {
+                object obj = ResourceManager.GetObject("p69irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p69ru {
             get {
                 object obj = ResourceManager.GetObject("p69ru", resourceCulture);
@@ -2062,6 +2712,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p6ir {
             get {
                 object obj = ResourceManager.GetObject("p6ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p6irword {
+            get {
+                object obj = ResourceManager.GetObject("p6irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2109,6 +2769,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p70irword {
+            get {
+                object obj = ResourceManager.GetObject("p70irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p70ru {
             get {
                 object obj = ResourceManager.GetObject("p70ru", resourceCulture);
@@ -2132,6 +2802,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p71ir {
             get {
                 object obj = ResourceManager.GetObject("p71ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p71irword {
+            get {
+                object obj = ResourceManager.GetObject("p71irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2169,6 +2849,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p72irword {
+            get {
+                object obj = ResourceManager.GetObject("p72irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p72ru {
             get {
                 object obj = ResourceManager.GetObject("p72ru", resourceCulture);
@@ -2192,6 +2882,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p73ir {
             get {
                 object obj = ResourceManager.GetObject("p73ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p73irword {
+            get {
+                object obj = ResourceManager.GetObject("p73irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2229,6 +2929,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p74irword {
+            get {
+                object obj = ResourceManager.GetObject("p74irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p74ru {
             get {
                 object obj = ResourceManager.GetObject("p74ru", resourceCulture);
@@ -2252,6 +2962,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p75ir {
             get {
                 object obj = ResourceManager.GetObject("p75ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p75irword {
+            get {
+                object obj = ResourceManager.GetObject("p75irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2289,6 +3009,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p76irword {
+            get {
+                object obj = ResourceManager.GetObject("p76irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p76ru {
             get {
                 object obj = ResourceManager.GetObject("p76ru", resourceCulture);
@@ -2312,6 +3042,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p77ir {
             get {
                 object obj = ResourceManager.GetObject("p77ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p77irword {
+            get {
+                object obj = ResourceManager.GetObject("p77irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2349,6 +3089,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p78irword {
+            get {
+                object obj = ResourceManager.GetObject("p78irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p78ru {
             get {
                 object obj = ResourceManager.GetObject("p78ru", resourceCulture);
@@ -2379,6 +3129,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p79irword {
+            get {
+                object obj = ResourceManager.GetObject("p79irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p79ru {
             get {
                 object obj = ResourceManager.GetObject("p79ru", resourceCulture);
@@ -2392,6 +3152,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p7ir {
             get {
                 object obj = ResourceManager.GetObject("p7ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p7irword {
+            get {
+                object obj = ResourceManager.GetObject("p7irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2439,6 +3209,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p80irword {
+            get {
+                object obj = ResourceManager.GetObject("p80irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p80ru {
             get {
                 object obj = ResourceManager.GetObject("p80ru", resourceCulture);
@@ -2462,6 +3242,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p81ir {
             get {
                 object obj = ResourceManager.GetObject("p81ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p81irword {
+            get {
+                object obj = ResourceManager.GetObject("p81irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2499,6 +3289,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p82irword {
+            get {
+                object obj = ResourceManager.GetObject("p82irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p82ru {
             get {
                 object obj = ResourceManager.GetObject("p82ru", resourceCulture);
@@ -2522,6 +3322,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p83ir {
             get {
                 object obj = ResourceManager.GetObject("p83ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p83irword {
+            get {
+                object obj = ResourceManager.GetObject("p83irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2559,6 +3369,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p84irword {
+            get {
+                object obj = ResourceManager.GetObject("p84irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p84ru {
             get {
                 object obj = ResourceManager.GetObject("p84ru", resourceCulture);
@@ -2582,6 +3402,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p85ir {
             get {
                 object obj = ResourceManager.GetObject("p85ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p85irword {
+            get {
+                object obj = ResourceManager.GetObject("p85irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2619,6 +3449,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p86irword {
+            get {
+                object obj = ResourceManager.GetObject("p86irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p86ru {
             get {
                 object obj = ResourceManager.GetObject("p86ru", resourceCulture);
@@ -2642,6 +3482,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p87ir {
             get {
                 object obj = ResourceManager.GetObject("p87ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p87irword {
+            get {
+                object obj = ResourceManager.GetObject("p87irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2679,6 +3529,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p88irword {
+            get {
+                object obj = ResourceManager.GetObject("p88irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p88ru {
             get {
                 object obj = ResourceManager.GetObject("p88ru", resourceCulture);
@@ -2709,6 +3569,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p89irword {
+            get {
+                object obj = ResourceManager.GetObject("p89irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p89ru {
             get {
                 object obj = ResourceManager.GetObject("p89ru", resourceCulture);
@@ -2722,6 +3592,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p8ir {
             get {
                 object obj = ResourceManager.GetObject("p8ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p8irword {
+            get {
+                object obj = ResourceManager.GetObject("p8irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2769,6 +3649,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p90irword {
+            get {
+                object obj = ResourceManager.GetObject("p90irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p90ru {
             get {
                 object obj = ResourceManager.GetObject("p90ru", resourceCulture);
@@ -2792,6 +3682,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p91ir {
             get {
                 object obj = ResourceManager.GetObject("p91ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p91irword {
+            get {
+                object obj = ResourceManager.GetObject("p91irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2829,6 +3729,16 @@ namespace IronLoto2v.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap p92irword {
+            get {
+                object obj = ResourceManager.GetObject("p92irword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p92ru {
             get {
                 object obj = ResourceManager.GetObject("p92ru", resourceCulture);
@@ -2842,6 +3752,16 @@ namespace IronLoto2v.Properties {
         internal static System.Drawing.Bitmap p9ir {
             get {
                 object obj = ResourceManager.GetObject("p9ir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p9irword {
+            get {
+                object obj = ResourceManager.GetObject("p9irword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

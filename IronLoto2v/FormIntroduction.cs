@@ -23,7 +23,7 @@ namespace IronLoto2v
         {
             firstgamer = textBoxGamer1.Text;
             secondgamer = textBoxGamer2.Text;
-            MessageBox.Show("Желаем вам приятной игры и пусть победит сильнейший.");
+            MessageBox.Show("Желаем вам приятной игры и пусть победит сильнейший.");            
             FormGame form=new FormGame();           
             form.gamer1 = firstgamer;
             form.gamer2 = secondgamer;

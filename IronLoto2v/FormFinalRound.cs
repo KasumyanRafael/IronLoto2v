@@ -32,10 +32,10 @@ namespace IronLoto2v
         }
         void drawData(DataGridView data, int a, int b)
         {
-            DataGridViewTextBoxColumn[] columns = new DataGridViewTextBoxColumn[b];
+            DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
             for (int i = 0; i < b; i++)
             {
-                columns[i] = new DataGridViewTextBoxColumn();
+                columns[i] = new DataGridViewImageColumn();
                 columns[i].Width = 230;
             }
             data.RowTemplate.Height = 290;
@@ -73,7 +73,7 @@ namespace IronLoto2v
                 {
                     int c = rnd.Next(1, array.Length);
                     word temp = new word(array[c]);
-                    data.Rows[i].Cells[j].Value = temp.LoadIronWord();
+                    data.Rows[i].Cells[j].Value = temp.GetIronWord();
                     tr[i, j] = temp.NumberOf();
                 }
             }
