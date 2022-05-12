@@ -18,7 +18,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 6;
         static int y = 3;
-        static int t = 2;
+        static int t = 6;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -125,11 +125,12 @@ namespace IronLoto2v
                 pictureBoxShow.Image = list[cnt].GetPicture();
                 labelWord.Text = list[cnt].LoadRusWord();
                 pictureshow = list[cnt].NumberOf();
+                
             }
             catch 
             {
                 timerChangePicture.Stop();
-                MessageBox.Show("Картинки закончились");
+                Winner(gamer1,gamer2,firstscore,secondscore);
             }
         }
         int CheckPicture(DataGridView data,int picture,int[,]mas)
@@ -254,6 +255,12 @@ namespace IronLoto2v
                 ToolStripMenuItemStopOrGo.Text = "Пауза";
                 IsPause=false;
             }
+        }
+        void Winner(string first, string second, int one, int two)
+        { 
+            if(one>two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
+            if(one<two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
+            if(one==two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
         }
     }
 }
