@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace IronLoto2v
         static int t = 2;
         bool IsPause = false;
         int cnt = 0;
+        string[] prMeans;
         string[] s;
         int[,] firstTable = new int[x, y];
         int[,] secondTable = new int[x, y];
@@ -46,6 +48,9 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
+            StreamReader file = new StreamReader("results");
+            prMeans = file.ReadLine().Split(' ');
+            file.Close();
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
             s = Properties.Resources.dictionary.Split('\n');
@@ -124,7 +129,7 @@ namespace IronLoto2v
             catch
             {
                 timerChangePicture.Stop();
-                MessageBox.Show("Картинки закончились");
+                Winner(gamer1, gamer2, firstscore, secondscore);
             }
         }
         int CheckPicture(DataGridView data, int picture, int[,] mas)
@@ -250,6 +255,16 @@ namespace IronLoto2v
                 ToolStripMenuItemStopOrGo.Text = "Пауза";
                 IsPause = false;
             }
+        }
+        void Winner(string first, string second, int one, int two)
+        {
+            if (one > two) MessageBox.Show("Ура,у нас есть победитель. Это " + gamer1+" . Поздравляем!");
+            if (one < two) MessageBox.Show("Ура,у нас есть победитель. Это " + gamer2+ " . Поздравляем!");
+            if (one == two) MessageBox.Show("Ура! Победила дружба! Все молодцы!");
+            StreamWriter file = new StreamWriter("results");
+            file.Write(one + Convert.ToInt32(prMeans[0]) + " ");
+            file.Write(two + Convert.ToInt32(prMeans[1]));
+            file.Close();
         }
     }
 }

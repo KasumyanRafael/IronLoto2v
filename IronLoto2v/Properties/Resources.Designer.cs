@@ -3775,14 +3775,5 @@ namespace IronLoto2v.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на .
-        /// </summary>
-        internal static string results {
-            get {
-                return ResourceManager.GetString("results", resourceCulture);
-            }
-        }
     }
 }

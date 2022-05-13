@@ -17,7 +17,7 @@ namespace IronLoto2v
         {
             string[]s=ss.Split(' ');
             mas = s;
-        }
+        }        
         public string LoadRusWord()
         {
             rusword = mas[1];

@@ -47,6 +47,7 @@ namespace IronLoto2v
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
+            File.Create("results");
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
@@ -261,6 +262,14 @@ namespace IronLoto2v
             if(one>two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
             if(one<two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
             if(one==two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
+            StreamWriter file = new StreamWriter("results");
+            file.Write(one+" ");
+            file.Write(two);
+            file.Close();
+            FormSecond form=new FormSecond();
+            form.gamer1 = gamer1;
+            form.gamer2 = gamer2;
+            form.Show();
         }
     }
 }
