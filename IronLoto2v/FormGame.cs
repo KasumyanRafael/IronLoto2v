@@ -19,6 +19,7 @@ namespace IronLoto2v
         static int x = 6;
         static int y = 3;
         static int t = 6;
+        int prompts = 3;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -275,6 +276,11 @@ namespace IronLoto2v
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
+        }
+
+        private void ToolStripMenuItemPrompts_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

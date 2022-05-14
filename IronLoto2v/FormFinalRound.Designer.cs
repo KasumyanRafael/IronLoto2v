@@ -131,8 +131,9 @@
             // ToolStripMenuItemPrompts
             // 
             this.ToolStripMenuItemPrompts.Name = "ToolStripMenuItemPrompts";
-            this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(131, 22);
+            this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemPrompts.Text = "Подсказка";
+            this.ToolStripMenuItemPrompts.Click += new System.EventHandler(this.ToolStripMenuItemPrompts_Click);
             // 
             // ToolStripMenuItemStopOrGo
             // 

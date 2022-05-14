@@ -17,7 +17,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 6;
         static int y = 3;
-        static int t = 2;
+        static int t = 6;
         bool IsPause = false;
         int cnt = 0;
         string[] prMeans;
@@ -279,6 +279,11 @@ namespace IronLoto2v
         private void ToolStripMenuItemCount_Click(object sender, EventArgs e)
         {
             MessageBox.Show(prMeans[0] + ":" + prMeans[1]);
+        }
+
+        private void ToolStripMenuItemPrompts_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
