@@ -50,6 +50,8 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
+            this.ToolStripMenuItemCount = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelPause = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStripSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -60,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.labelPause);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.pictureBoxShow);
             this.panel1.Controls.Add(this.labelSecondGamer);
@@ -103,7 +106,7 @@
             this.ToolStripMenuItemUsers,
             this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // ToolStripMenuItemExit
@@ -130,20 +133,21 @@
             // ToolStripMenuItemPrompts
             // 
             this.ToolStripMenuItemPrompts.Name = "ToolStripMenuItemPrompts";
-            this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(131, 22);
             this.ToolStripMenuItemPrompts.Text = "Подсказка";
             // 
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
-            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(131, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
             this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
             // информацияToolStripMenuItem
             // 
             this.информацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.обИгреToolStripMenuItem});
+            this.обИгреToolStripMenuItem,
+            this.ToolStripMenuItemCount});
             this.информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
             this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.информацияToolStripMenuItem.Text = "Информация";
@@ -151,7 +155,7 @@
             // обИгреToolStripMenuItem
             // 
             this.обИгреToolStripMenuItem.Name = "обИгреToolStripMenuItem";
-            this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
             // 
             // pictureBoxShow
@@ -262,6 +266,27 @@
             // 
             this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
             // 
+            // ToolStripMenuItemCount
+            // 
+            this.ToolStripMenuItemCount.Name = "ToolStripMenuItemCount";
+            this.ToolStripMenuItemCount.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemCount.Text = "Узнать текущий счёт";
+            this.ToolStripMenuItemCount.Click += new System.EventHandler(this.ToolStripMenuItemCount_Click);
+            // 
+            // labelPause
+            // 
+            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPause.BackColor = System.Drawing.Color.Yellow;
+            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPause.ForeColor = System.Drawing.Color.Black;
+            this.labelPause.Location = new System.Drawing.Point(677, 37);
+            this.labelPause.Name = "labelPause";
+            this.labelPause.Size = new System.Drawing.Size(98, 32);
+            this.labelPause.TabIndex = 28;
+            this.labelPause.Text = "пауза";
+            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPause.Visible = false;
+            // 
             // FormSecond
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +331,7 @@
         private System.Windows.Forms.DataGridView dataGridViewGamer1;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
         private System.Windows.Forms.Timer timerChangePicture;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCount;
+        private System.Windows.Forms.Label labelPause;
     }
 }

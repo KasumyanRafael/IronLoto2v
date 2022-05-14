@@ -213,12 +213,14 @@ namespace IronLoto2v
                     dataGridViewGamer1.Enabled = true;
                     firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
                     labelFirstGamerCount.Text = firstscore.ToString();
+                    if (firstscore == x * y) Winner(gamer1, gamer2, firstscore, secondscore);
                 }
                 if (e.KeyCode == Keys.NumPad5 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
                     secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
                     labelSecondGamerCount.Text = secondscore.ToString();
+                    if (secondscore == x * y) Winner(gamer1, gamer2, firstscore, secondscore);
                 }
             }
             catch { }
@@ -251,12 +253,14 @@ namespace IronLoto2v
                 timerChangePicture.Stop();
                 ToolStripMenuItemStopOrGo.Text = "Вперёд!";
                 IsPause = true;
+                labelPause.Visible = true;
             }
             else
             {
                 timerChangePicture.Start();
                 ToolStripMenuItemStopOrGo.Text = "Пауза";
                 IsPause = false;
+                labelPause.Visible = false;
             }
         }
         void Winner(string first, string second, int one, int two)
@@ -272,6 +276,11 @@ namespace IronLoto2v
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
+        }
+
+        private void ToolStripMenuItemCount_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(prMeans[0] + ":" + prMeans[1]);
         }
     }
 }
