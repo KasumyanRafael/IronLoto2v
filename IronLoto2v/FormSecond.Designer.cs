@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPause = new System.Windows.Forms.Label();
             this.menuStripSettings = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemGame = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,7 @@
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemCount = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelSecondGamer = new System.Windows.Forms.Label();
             this.labelSecondGamerCount = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
-            this.ToolStripMenuItemCount = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelPause = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStripSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -76,6 +76,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1457, 672);
             this.panel1.TabIndex = 17;
+            // 
+            // labelPause
+            // 
+            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPause.BackColor = System.Drawing.Color.Yellow;
+            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPause.ForeColor = System.Drawing.Color.Black;
+            this.labelPause.Location = new System.Drawing.Point(677, 37);
+            this.labelPause.Name = "labelPause";
+            this.labelPause.Size = new System.Drawing.Size(98, 32);
+            this.labelPause.TabIndex = 28;
+            this.labelPause.Text = "пауза";
+            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPause.Visible = false;
             // 
             // menuStripSettings
             // 
@@ -106,7 +120,7 @@
             this.ToolStripMenuItemUsers,
             this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // ToolStripMenuItemExit
@@ -135,12 +149,11 @@
             this.ToolStripMenuItemPrompts.Name = "ToolStripMenuItemPrompts";
             this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemPrompts.Text = "Подсказка";
-            this.ToolStripMenuItemPrompts.Click += new System.EventHandler(this.ToolStripMenuItemPrompts_Click);
             // 
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
-            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(131, 22);
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
             this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
@@ -158,6 +171,13 @@
             this.обИгреToolStripMenuItem.Name = "обИгреToolStripMenuItem";
             this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
+            // 
+            // ToolStripMenuItemCount
+            // 
+            this.ToolStripMenuItemCount.Name = "ToolStripMenuItemCount";
+            this.ToolStripMenuItemCount.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemCount.Text = "Узнать текущий счёт";
+            this.ToolStripMenuItemCount.Click += new System.EventHandler(this.ToolStripMenuItemCount_Click);
             // 
             // pictureBoxShow
             // 
@@ -224,14 +244,14 @@
             this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewGamer1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridViewGamer1.Enabled = false;
             this.dataGridViewGamer1.Location = new System.Drawing.Point(0, 0);
@@ -246,14 +266,14 @@
             this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewGamer2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridViewGamer2.Enabled = false;
             this.dataGridViewGamer2.Location = new System.Drawing.Point(977, 0);
@@ -266,27 +286,6 @@
             // timerChangePicture
             // 
             this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
-            // 
-            // ToolStripMenuItemCount
-            // 
-            this.ToolStripMenuItemCount.Name = "ToolStripMenuItemCount";
-            this.ToolStripMenuItemCount.Size = new System.Drawing.Size(188, 22);
-            this.ToolStripMenuItemCount.Text = "Узнать текущий счёт";
-            this.ToolStripMenuItemCount.Click += new System.EventHandler(this.ToolStripMenuItemCount_Click);
-            // 
-            // labelPause
-            // 
-            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelPause.BackColor = System.Drawing.Color.Yellow;
-            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(677, 37);
-            this.labelPause.Name = "labelPause";
-            this.labelPause.Size = new System.Drawing.Size(98, 32);
-            this.labelPause.TabIndex = 28;
-            this.labelPause.Text = "пауза";
-            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPause.Visible = false;
             // 
             // FormSecond
             // 

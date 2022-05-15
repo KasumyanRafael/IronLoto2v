@@ -264,7 +264,8 @@ namespace IronLoto2v
             }
         }
         void Winner(string first, string second, int one, int two)
-        { 
+        {
+        
             if(one>two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
             if(one<two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
             if(one==two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
@@ -276,12 +277,7 @@ namespace IronLoto2v
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
-        }
-
-        private void ToolStripMenuItemPrompts_Click(object sender, EventArgs e)
-        {
-            
-        }
+        }      
     }
 }
 

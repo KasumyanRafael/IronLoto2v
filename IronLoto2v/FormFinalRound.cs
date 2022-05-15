@@ -280,10 +280,5 @@ namespace IronLoto2v
         {
             MessageBox.Show(prMeans[0] + ":" + prMeans[1]);
         }
-
-        private void ToolStripMenuItemPrompts_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
