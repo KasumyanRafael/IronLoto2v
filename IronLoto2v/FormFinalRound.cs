@@ -282,7 +282,7 @@ namespace IronLoto2v
             StreamReader file2 = new StreamReader("first.txt");
             string[] balls2 = file2.ReadLine().Split(' ');
             file.Close();
-            MessageBox.Show("Первый раунд" + balls[0] + ":" + balls[1]+"\n"+ MessageBox.Show("Второй раунд" + balls2[0] + ":" + balls2[1]));
+            MessageBox.Show("Первый раунд " + balls[0] + ":" + balls[1]+"\n"+"Второй раунд " + balls2[0] + ":" + balls2[1]);
         }
     }
 }
