@@ -37,7 +37,6 @@
             this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemPrompts = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,7 +104,6 @@
             // 
             this.ToolStripMenuItemGame.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выходToolStripMenuItem,
-            this.ToolStripMenuItemPrompts,
             this.ToolStripMenuItemStopOrGo});
             this.ToolStripMenuItemGame.Name = "ToolStripMenuItemGame";
             this.ToolStripMenuItemGame.Size = new System.Drawing.Size(46, 20);
@@ -141,12 +139,6 @@
             this.ToolStripMenuItemMenu.Size = new System.Drawing.Size(195, 22);
             this.ToolStripMenuItemMenu.Text = "Меню";
             this.ToolStripMenuItemMenu.Click += new System.EventHandler(this.ToolStripMenuItemMenu_Click);
-            // 
-            // ToolStripMenuItemPrompts
-            // 
-            this.ToolStripMenuItemPrompts.Name = "ToolStripMenuItemPrompts";
-            this.ToolStripMenuItemPrompts.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuItemPrompts.Text = "Подсказка";
             // 
             // ToolStripMenuItemStopOrGo
             // 
@@ -301,7 +293,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUsers;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemMenu;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemPrompts;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;

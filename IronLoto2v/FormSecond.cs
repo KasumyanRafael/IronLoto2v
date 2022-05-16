@@ -213,14 +213,22 @@ namespace IronLoto2v
                     dataGridViewGamer1.Enabled = true;
                     firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
                     labelFirstGamerCount.Text = firstscore.ToString();
-                    if (firstscore == x * y) Winner(gamer1, gamer2, firstscore, secondscore);
+                    if (firstscore == x * y)
+                    {
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+                        timerChangePicture.Stop();
+                    }
                 }
                 if (e.KeyCode == Keys.NumPad5 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
                     secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
                     labelSecondGamerCount.Text = secondscore.ToString();
-                    if (secondscore == x * y) Winner(gamer1, gamer2, firstscore, secondscore);
+                    if (secondscore == x * y)
+                    {
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+                        timerChangePicture.Stop();
+                    }
                 }
             }
             catch { }
@@ -268,10 +276,9 @@ namespace IronLoto2v
             if (one > two) MessageBox.Show("Во втором раунде лидирует " + gamer1);
             if (one < two) MessageBox.Show("Во втором раунде лидирует " + gamer2);
             if (one == two) MessageBox.Show("Пока победил(a) дружба. Все молодцы");
-            StreamWriter file = new StreamWriter("results");
-            file.Write(one+Convert.ToInt32(prMeans[0]) + " ");
-            file.Write(two+Convert.ToInt32(prMeans[1]));
-            file.Close();
+            StreamWriter file2 = new StreamWriter("second.txt");
+            file2.Write(one + " " + two);
+            file2.Close();
             FormFinalRound form=new FormFinalRound();
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
