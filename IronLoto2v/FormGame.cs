@@ -19,7 +19,6 @@ namespace IronLoto2v
         static int x = 6;
         static int y = 3;
         static int t = 6;
-        int prompts = 3;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -215,9 +214,10 @@ namespace IronLoto2v
                     firstscore+=CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
-                    {
-                        Winner(gamer1, gamer2, firstscore, secondscore);
+                    { 
                         timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+                        
                     }
                 }
                 if(e.KeyCode == Keys.NumPad5 && IsPause == false)
@@ -227,8 +227,8 @@ namespace IronLoto2v
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if(secondscore==x*y)
                     {
-                        Winner(gamer1, gamer2, firstscore, secondscore);
                         timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
                     }    
                         
                 }

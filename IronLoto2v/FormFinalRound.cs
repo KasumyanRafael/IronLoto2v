@@ -20,7 +20,6 @@ namespace IronLoto2v
         static int t = 6;
         bool IsPause = false;
         int cnt = 0;
-        string[] prMeans;
         string[] s;
         int[,] firstTable = new int[x, y];
         int[,] secondTable = new int[x, y];
@@ -48,9 +47,6 @@ namespace IronLoto2v
         {
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
-            StreamReader file = new StreamReader("results");
-            prMeans = file.ReadLine().Split(' ');
-            file.Close();
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
             s = Properties.Resources.dictionary.Split('\n');
@@ -213,8 +209,8 @@ namespace IronLoto2v
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
                     {
-                        Winner(gamer1, gamer2, firstscore, secondscore);
                         timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
                     }
                 }
                 if (e.KeyCode == Keys.NumPad5 && IsPause == false)
@@ -224,8 +220,8 @@ namespace IronLoto2v
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if (secondscore == x * y)
                     {
-                        Winner(gamer1, gamer2, firstscore, secondscore);
                         timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
                     }
                 }
             }
@@ -280,7 +276,13 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemCount_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(prMeans[0] + ":" + prMeans[1]);
+            StreamReader file = new StreamReader("first.txt");
+            string[] balls = file.ReadLine().Split(' ');
+            file.Close();
+            StreamReader file2 = new StreamReader("first.txt");
+            string[] balls2 = file2.ReadLine().Split(' ');
+            file.Close();
+            MessageBox.Show("Первый раунд" + balls[0] + ":" + balls[1]+"\n"+ MessageBox.Show("Второй раунд" + balls2[0] + ":" + balls2[1]));
         }
     }
 }
