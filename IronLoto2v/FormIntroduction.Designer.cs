@@ -80,6 +80,7 @@
             this.Controls.Add(this.textBoxGamer2);
             this.Controls.Add(this.textBoxGamer1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(263, 349);
             this.Name = "FormIntroduction";
             this.Text = "Авторизация игроков";
             this.ResumeLayout(false);

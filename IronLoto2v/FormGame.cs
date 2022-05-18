@@ -18,7 +18,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 6;
         static int y = 3;
-        static int t = 6;
+        static int t = 1;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -276,7 +276,7 @@ namespace IronLoto2v
 
             if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
             if (one < two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
-            if (one == two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
+            if (one == two) MessageBox.Show("В первом раунде победилf дружба. Все молодцы");
             StreamWriter file2 = new StreamWriter("first.txt");
             file2.Write(one + " " + two);
             file2.Close();

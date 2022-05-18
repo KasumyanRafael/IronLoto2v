@@ -90,6 +90,7 @@
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
             this.Text = "Главное меню";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

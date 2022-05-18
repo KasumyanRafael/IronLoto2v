@@ -17,7 +17,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 6;
         static int y = 3;
-        static int t = 6;
+        static int t = 1;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -268,10 +268,14 @@ namespace IronLoto2v
         {
             if (one > two) MessageBox.Show("В третьем раунде лидирует " + gamer1);
             if (one < two) MessageBox.Show("В третьем раунде лидирует " + gamer2);
-            if (one == two) MessageBox.Show("Пока победил(a) дружба. Все молодцы");
+            if (one == two) MessageBox.Show("Пока победилa дружба. Все молодцы");
             StreamWriter file2 = new StreamWriter("final.txt");
             file2.Write(one + " " + two);
             file2.Close();
+            FormResults form = new FormResults();
+            form.gamer1 = gamer1;
+            form.gamer2 = gamer2;
+            form.Show();
         }
 
         private void ToolStripMenuItemCount_Click(object sender, EventArgs e)
@@ -282,7 +286,7 @@ namespace IronLoto2v
             StreamReader file2 = new StreamReader("first.txt");
             string[] balls2 = file2.ReadLine().Split(' ');
             file.Close();
-            MessageBox.Show("Первый раунд " + balls[0] + ":" + balls[1]+"\n"+"Второй раунд " + balls2[0] + ":" + balls2[1]);
+            MessageBox.Show("Первый раунд " + balls[0] + ":" + balls[1] + "\n" + "Второй раунд " + balls2[0] + ":" + balls2[1]);
         }
     }
 }
