@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include="ImagesWithIronMeaning\1.png" />
     <Content Include="ImagesWithIronMeaning\10.png" />
+    <None Include="Resources\NoWay.png" />
     <None Include="Resources\results.txt" />
     <None Include="Resources\p92irword.png" />
     <None Include="Resources\p91irword.png" />

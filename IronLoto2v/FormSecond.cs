@@ -138,7 +138,7 @@ namespace IronLoto2v
             {
                 data.CurrentCell.Value = null;
                 return 1;
-            }
+            }            
             MessageBox.Show("Ход невозможен");
             return 0;
         }

@@ -22,11 +22,12 @@ namespace IronLoto2v
         bool IsPause = false;
         int cnt = 0;
         string[] s;
-        int[,] firstTable = new int[x,y];
+        int[,] firstTable = new int[x, y];
         int[,] secondTable = new int[x, y];
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
+        bool NoWay;
         word[] list;
 
         public FormGame()
@@ -47,42 +48,41 @@ namespace IronLoto2v
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
-            File.Create("results");
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
             s = Properties.Resources.dictionary.Split('\n');
             list = ToWord(s);
-            antirepeat(list,s);
-            filling(dataGridViewGamer1,s,x,y,firstTable);
+            antirepeat(list, s);
+            filling(dataGridViewGamer1, s, x, y, firstTable);
             do
             {
                 filling(dataGridViewGamer2, s, x, y, secondTable);
             }
-            while (antitwin(firstTable, secondTable, x, y) !=false);
+            while (antitwin(firstTable, secondTable, x, y) != false);
             timerChangePicture.Enabled = true;
-            timerChangePicture.Interval = t*1000;
+            timerChangePicture.Interval = t * 1000;
             labelFirstGamer.Text = gamer1;
             labelSecondGamer.Text = gamer2;
-            if(cnt>s.Length)
+            if (cnt > s.Length)
                 timerChangePicture.Enabled = false;
         }
-        void filling(DataGridView data,string[]array,int a,int b,int[,]tr)
+        void filling(DataGridView data, string[] array, int a, int b, int[,] tr)
         {
-            Random rnd=new Random();
+            Random rnd = new Random();
             for (int i = 0; i < a; i++)
             {
                 for (int j = 0; j < b; j++)
                 {
-                    int c=rnd.Next(1,array.Length);
-                    word temp=new word(array[c]);
-                    data.Rows[i].Cells[j].Value=temp.GetIrPicture();
+                    int c = rnd.Next(1, array.Length);
+                    word temp = new word(array[c]);
+                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
                     tr[i, j] = temp.NumberOf();
                 }
             }
         }
-        bool antitwin(int[,]a,int[,]b,int c,int d)
+        bool antitwin(int[,] a, int[,] b, int c, int d)
         {
             for (int i = 0; i < c; i++)
             {
@@ -93,7 +93,7 @@ namespace IronLoto2v
             }
             return false;
         }
-        void antirepeat(word[]perm,string[]s)
+        void antirepeat(word[] perm, string[] s)
         {
             Random r = new Random(); // не создавайте новый Random здесь!
                                      // а то значения будут одни и те же
@@ -107,11 +107,11 @@ namespace IronLoto2v
                 perm[i] = temp;
             }
         }
-        
-        
-        static word[]ToWord(string[]a)
+
+
+        static word[] ToWord(string[] a)
         {
-            word[]temp=new word[a.Length];
+            word[] temp = new word[a.Length];
             for (int i = 0; i < a.Length; i++)
             {
                 temp[i] = new word(a[i]);
@@ -126,32 +126,31 @@ namespace IronLoto2v
                 pictureBoxShow.Image = list[cnt].GetPicture();
                 labelWord.Text = list[cnt].LoadRusWord();
                 pictureshow = list[cnt].NumberOf();
-                
+
             }
-            catch 
+            catch
             {
                 timerChangePicture.Stop();
-                Winner(gamer1,gamer2,firstscore,secondscore);
+                Winner(gamer1, gamer2, firstscore, secondscore);
             }
         }
-        int CheckPicture(DataGridView data,int picture,int[,]mas)
+        int CheckPicture(DataGridView data, int picture, int[,] mas)
         {
             int a = data.CurrentCell.RowIndex;
-            int b = data.CurrentCell.ColumnIndex; 
-            if(mas[a,b]==picture)
+            int b = data.CurrentCell.ColumnIndex;
+            if (mas[a, b] == picture)
             {
                 data.CurrentCell.Value = null;
                 return 1;
             }
             MessageBox.Show("Ход невозможен");
             return 0;
-            
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
-                if (e.KeyCode == Keys.D && IsPause==false)
+                if (e.KeyCode == Keys.D && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
                     int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
@@ -207,30 +206,30 @@ namespace IronLoto2v
                     int row = dataGridViewGamer2.CurrentCell.RowIndex;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
                 }
-                
-                if(e.KeyCode == Keys.Space && IsPause == false)
+
+                if (e.KeyCode == Keys.Space && IsPause == false)
                 {
-                    dataGridViewGamer1.Enabled = true;                   
-                    firstscore+=CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
+                    dataGridViewGamer1.Enabled = true;
+                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
-                    { 
-                        timerChangePicture.Stop();
-                        Winner(gamer1, gamer2, firstscore, secondscore);
-                        
-                    }
-                }
-                if(e.KeyCode == Keys.NumPad5 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    secondscore+=CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
-                    labelSecondGamerCount.Text = secondscore.ToString();
-                    if(secondscore==x*y)
                     {
                         timerChangePicture.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
-                    }    
-                        
+
+                    }
+                }
+                if (e.KeyCode == Keys.NumPad5 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
+                    labelSecondGamerCount.Text = secondscore.ToString();
+                    if (secondscore == x * y)
+                    {
+                        timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+                    }
+
                 }
             }
             catch { }
@@ -257,7 +256,7 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
         {
-            if(ToolStripMenuItemStopOrGo.Text=="Пауза")
+            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
             {
                 timerChangePicture.Stop();
                 ToolStripMenuItemStopOrGo.Text = "Вперёд!";
@@ -268,24 +267,24 @@ namespace IronLoto2v
             {
                 timerChangePicture.Start();
                 ToolStripMenuItemStopOrGo.Text = "Пауза";
-                IsPause=false;
+                IsPause = false;
                 labelPause.Visible = false;
             }
         }
         void Winner(string first, string second, int one, int two)
         {
-        
-            if(one>two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
-            if(one<two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
-            if(one==two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
+
+            if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
+            if (one < two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
+            if (one == two) MessageBox.Show("В первом раунде победил(a) дружба. Все молодцы");
             StreamWriter file2 = new StreamWriter("first.txt");
-            file2.Write(one+" "+two);
+            file2.Write(one + " " + two);
             file2.Close();
-            FormSecond form=new FormSecond();
+            FormSecond form = new FormSecond();
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
-        }      
+        }
     }
 }
 
