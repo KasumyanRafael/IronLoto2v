@@ -49,6 +49,8 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStripSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -59,6 +61,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.labelNoWayGamer2);
+            this.panel1.Controls.Add(this.labelNoWayGamer1);
             this.panel1.Controls.Add(this.labelPause);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.pictureBoxShow);
@@ -116,7 +120,7 @@
             this.ToolStripMenuItemUsers,
             this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // ToolStripMenuItemExit
@@ -143,7 +147,7 @@
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
-            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
             this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
@@ -261,6 +265,32 @@
             // 
             this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
             // 
+            // labelNoWayGamer1
+            // 
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.LightGray;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(51, 206);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer1.TabIndex = 30;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.LightGray;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1055, 206);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer2.TabIndex = 31;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
+            // 
             // FormFinalRound
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +336,7 @@
         private System.Windows.Forms.Timer timerChangePicture;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCount;
         private System.Windows.Forms.Label labelPause;
+        private System.Windows.Forms.Label labelNoWayGamer2;
+        private System.Windows.Forms.Label labelNoWayGamer1;
     }
 }

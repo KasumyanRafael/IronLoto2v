@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelPause = new System.Windows.Forms.Label();
             this.menuStripSettings = new System.Windows.Forms.MenuStrip();
@@ -51,6 +51,8 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStripSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -61,6 +63,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.labelNoWayGamer2);
+            this.panel1.Controls.Add(this.labelNoWayGamer1);
             this.panel1.Controls.Add(this.labelPause);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.pictureBoxShow);
@@ -236,14 +240,14 @@
             this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewGamer1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridViewGamer1.Enabled = false;
             this.dataGridViewGamer1.Location = new System.Drawing.Point(0, 0);
@@ -258,14 +262,14 @@
             this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewGamer2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridViewGamer2.Enabled = false;
             this.dataGridViewGamer2.Location = new System.Drawing.Point(977, 0);
@@ -278,6 +282,32 @@
             // timerChangePicture
             // 
             this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
+            // 
+            // labelNoWayGamer1
+            // 
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(48, 147);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer1.TabIndex = 29;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1050, 158);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer2.TabIndex = 30;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
             // 
             // FormSecond
             // 
@@ -324,5 +354,7 @@
         private System.Windows.Forms.Timer timerChangePicture;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCount;
         private System.Windows.Forms.Label labelPause;
+        private System.Windows.Forms.Label labelNoWayGamer2;
+        private System.Windows.Forms.Label labelNoWayGamer1;
     }
 }

@@ -49,6 +49,8 @@
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -162,6 +164,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelNoWayGamer2);
+            this.panel1.Controls.Add(this.labelNoWayGamer1);
             this.panel1.Controls.Add(this.labelPause);
             this.panel1.Controls.Add(this.menuStripSettings);
             this.panel1.Controls.Add(this.labelWord);
@@ -265,6 +269,32 @@
             this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
             // 
+            // labelNoWayGamer1
+            // 
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(47, 168);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer1.TabIndex = 28;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1062, 168);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer2.TabIndex = 29;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,5 +339,7 @@
         private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
         private System.Windows.Forms.Label labelPause;
+        private System.Windows.Forms.Label labelNoWayGamer2;
+        private System.Windows.Forms.Label labelNoWayGamer1;
     }
 }

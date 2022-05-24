@@ -130,7 +130,7 @@ namespace IronLoto2v
                 Winner(gamer1, gamer2, firstscore, secondscore);
             }
         }
-        int CheckPicture(DataGridView data, int picture, int[,] mas)
+        int CheckPicture(DataGridView data, int picture, int[,] mas, Label label)
         {
             int a = data.CurrentCell.RowIndex;
             int b = data.CurrentCell.ColumnIndex;
@@ -138,8 +138,9 @@ namespace IronLoto2v
             {
                 data.CurrentCell.Value = null;
                 return 1;
-            }            
-            MessageBox.Show("Ход невозможен");
+            }
+            label.Visible = true;
+            //MessageBox.Show("Ход невозможен");
             return 0;
         }
 
@@ -150,6 +151,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.D && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
+                    labelNoWayGamer1.Visible = false;
                     int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
                     int row = dataGridViewGamer1.CurrentCell.RowIndex;
                     dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
@@ -157,6 +159,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.W && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
+                    labelNoWayGamer1.Visible = false;
                     int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
                     int row = dataGridViewGamer1.CurrentCell.RowIndex - 1;
                     dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
@@ -164,6 +167,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.A && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
+                    labelNoWayGamer1.Visible = false;
                     int col = dataGridViewGamer1.CurrentCell.ColumnIndex - 1;
                     int row = dataGridViewGamer1.CurrentCell.RowIndex;
                     dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
@@ -171,6 +175,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.S && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
+                    labelNoWayGamer1.Visible = false;
                     int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
                     int row = dataGridViewGamer1.CurrentCell.RowIndex + 1;
                     dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
@@ -178,6 +183,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.NumPad8 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
+                    labelNoWayGamer2.Visible = false;
                     int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
                     int row = dataGridViewGamer2.CurrentCell.RowIndex - 1;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
@@ -185,6 +191,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.NumPad2 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
+                    labelNoWayGamer2.Visible = false;
                     int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
                     int row = dataGridViewGamer2.CurrentCell.RowIndex + 1;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
@@ -192,6 +199,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.NumPad4 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
+                    labelNoWayGamer2.Visible = false;
                     int col = dataGridViewGamer2.CurrentCell.ColumnIndex - 1;
                     int row = dataGridViewGamer2.CurrentCell.RowIndex;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
@@ -199,6 +207,7 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.NumPad6 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
+                    labelNoWayGamer2.Visible = false;
                     int col = dataGridViewGamer2.CurrentCell.ColumnIndex + 1;
                     int row = dataGridViewGamer2.CurrentCell.RowIndex;
                     dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
@@ -207,26 +216,28 @@ namespace IronLoto2v
                 if (e.KeyCode == Keys.Space && IsPause == false)
                 {
                     dataGridViewGamer1.Enabled = true;
-                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
+                    labelNoWayGamer1.Visible = false;
+                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable, labelNoWayGamer1);
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
                     {
                         timerChangePicture.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
-                        
+
                     }
                 }
                 if (e.KeyCode == Keys.NumPad5 && IsPause == false)
                 {
                     dataGridViewGamer2.Enabled = true;
-                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
+                    labelNoWayGamer2.Visible = false;
+                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable, labelNoWayGamer2);
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if (secondscore == x * y)
                     {
                         timerChangePicture.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
-                        
                     }
+
                 }
             }
             catch { }
