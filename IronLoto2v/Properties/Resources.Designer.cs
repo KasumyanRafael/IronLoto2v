@@ -3785,5 +3785,16 @@ namespace IronLoto2v.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 3
+        ///6
+        ///5.
+        /// </summary>
+        internal static string sets {
+            get {
+                return ResourceManager.GetString("sets", resourceCulture);
+            }
+        }
     }
 }

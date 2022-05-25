@@ -27,5 +27,11 @@ namespace IronLoto2v
             FormIntroduction frm = new FormIntroduction();
             frm.Show();
         }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            FormSettings frm = new FormSettings();
+            frm.Show();
+        }
     }
 }
