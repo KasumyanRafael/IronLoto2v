@@ -36,10 +36,12 @@ namespace IronLoto2v
         }
         void GetResourse(string[]s)
         {
-            using (StreamWriter input = new StreamWriter(WindowsFormsSection.Properties.Resources.sets))
+            StreamWriter file = new StreamWriter(Properties.Resources.sets);
+            for (int i = 0; i < s.Length; i++)
             {
-                input.WriteLine(s[0] + '\n' + s[1] + '\n' + s[2]);
+                file.WriteLine(s[i]);
             }
+            file.Close();
         }
     }
 }
