@@ -39,6 +39,8 @@
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelWord = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
             this.menuStripSettings = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemGame = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +51,6 @@
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
-            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -73,7 +73,7 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(480, 672);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(480, 616);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
             // dataGridViewGamer1
@@ -87,7 +87,7 @@
             this.dataGridViewGamer1.Name = "dataGridViewGamer1";
             this.dataGridViewGamer1.ReadOnly = true;
             this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(480, 672);
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(480, 616);
             this.dataGridViewGamer1.TabIndex = 16;
             // 
             // labelFirstGamerCount
@@ -155,7 +155,7 @@
             this.labelWord.BackColor = System.Drawing.Color.Yellow;
             this.labelWord.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWord.Location = new System.Drawing.Point(480, 613);
+            this.labelWord.Location = new System.Drawing.Point(480, 557);
             this.labelWord.Name = "labelWord";
             this.labelWord.Size = new System.Drawing.Size(497, 59);
             this.labelWord.TabIndex = 12;
@@ -179,8 +179,34 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1457, 672);
+            this.panel1.Size = new System.Drawing.Size(1457, 616);
             this.panel1.TabIndex = 16;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1062, 168);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer2.TabIndex = 29;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
+            // 
+            // labelNoWayGamer1
+            // 
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(47, 168);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(329, 126);
+            this.labelNoWayGamer1.TabIndex = 28;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
             // 
             // labelPause
             // 
@@ -269,38 +295,12 @@
             this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.обИгреToolStripMenuItem.Text = "Об игре";
             // 
-            // labelNoWayGamer1
-            // 
-            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer1.Location = new System.Drawing.Point(47, 168);
-            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
-            this.labelNoWayGamer1.Size = new System.Drawing.Size(329, 126);
-            this.labelNoWayGamer1.TabIndex = 28;
-            this.labelNoWayGamer1.Text = "ход невозможен";
-            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNoWayGamer1.Visible = false;
-            // 
-            // labelNoWayGamer2
-            // 
-            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer2.Location = new System.Drawing.Point(1062, 168);
-            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
-            this.labelNoWayGamer2.Size = new System.Drawing.Size(329, 126);
-            this.labelNoWayGamer2.TabIndex = 29;
-            this.labelNoWayGamer2.Text = "ход невозможен";
-            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNoWayGamer2.Visible = false;
-            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1457, 672);
+            this.ClientSize = new System.Drawing.Size(1457, 616);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "FormGame";
