@@ -14,7 +14,7 @@ namespace IronLoto2v
 {
     public partial class FormSettings : Form
     {
-        string[] parametres;
+        
         public FormSettings()
         {
             InitializeComponent();
@@ -22,26 +22,13 @@ namespace IronLoto2v
 
         private void FormSettings_Load(object sender, EventArgs e)
         {
-            parametres= Properties.Resources.sets.Split('\n');
-            comboBoxCols.Text=parametres[0];
-            comboBoxRows.Text=parametres[1];
-            comboBoxTime.Text=parametres[2];
+            
         }
 
         private void buttonAccept_Click(object sender, EventArgs e)
         {
-            GetResourse(parametres);
-            FormMenu formMenu = new FormMenu();
-            formMenu.Show();
+            
         }
-        void GetResourse(string[]s)
-        {
-            StreamWriter file = new StreamWriter(Properties.Resources.sets);
-            for (int i = 0; i < s.Length; i++)
-            {
-                file.WriteLine(s[i]);
-            }
-            file.Close();
-        }
+        
     }
 }

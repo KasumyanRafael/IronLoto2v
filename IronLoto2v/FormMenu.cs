@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,12 +26,6 @@ namespace IronLoto2v
         private void buttonStart_Click(object sender, EventArgs e)
         {
             FormIntroduction frm = new FormIntroduction();
-            frm.Show();
-        }
-
-        private void buttonSettings_Click(object sender, EventArgs e)
-        {
-            FormSettings frm = new FormSettings();
             frm.Show();
         }
     }
