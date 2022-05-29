@@ -28,5 +28,11 @@ namespace IronLoto2v
             FormIntroduction frm = new FormIntroduction();
             frm.Show();
         }
+
+        private void buttonDirections_Click(object sender, EventArgs e)
+        {
+            FormDirections frm = new FormDirections();
+            frm.Show();
+        }
     }
 }

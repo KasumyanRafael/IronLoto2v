@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonDirections = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             this.buttonStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(12, 262);
+            this.buttonStart.Location = new System.Drawing.Point(12, 171);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(245, 85);
             this.buttonStart.TabIndex = 3;
@@ -81,18 +82,31 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // buttonDirections
+            // 
+            this.buttonDirections.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonDirections.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDirections.Location = new System.Drawing.Point(12, 262);
+            this.buttonDirections.Name = "buttonDirections";
+            this.buttonDirections.Size = new System.Drawing.Size(245, 85);
+            this.buttonDirections.TabIndex = 5;
+            this.buttonDirections.Text = "Инструкция";
+            this.buttonDirections.UseVisualStyleBackColor = false;
+            this.buttonDirections.Click += new System.EventHandler(this.buttonDirections_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonDirections);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
-            this.Text = "Главное меню";
+            this.Text = "Главное меню. НОВИЧКАМ СОВЕТУЕМ СНАЧАЛА ПРОЧИТАТЬ ИНСТРУКЦИЮ.";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -104,6 +118,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonDirections;
     }
 }
 

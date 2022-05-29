@@ -12,23 +12,14 @@ using System.IO;
 
 namespace IronLoto2v
 {
-    public partial class FormSettings : Form
+    public partial class FormDirections : Form
     {
         
-        public FormSettings()
+        public FormDirections()
         {
             InitializeComponent();
         }
 
-        private void FormSettings_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonAccept_Click(object sender, EventArgs e)
-        {
-            
-        }
         
     }
 }

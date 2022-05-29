@@ -18,7 +18,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x=6;
         static int y=3;
-        static int t=1;
+        static int t=5;
         bool IsPause = false;
         int cnt = 0;
         string[] s;

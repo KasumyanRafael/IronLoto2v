@@ -82,11 +82,11 @@
     <Compile Include="FormSecond.Designer.cs">
       <DependentUpon>FormSecond.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSettings.cs">
+    <Compile Include="FormDirections.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSettings.Designer.cs">
-      <DependentUpon>FormSettings.cs</DependentUpon>
+    <Compile Include="FormDirections.Designer.cs">
+      <DependentUpon>FormDirections.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="FormSecond.resx">
       <DependentUpon>FormSecond.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSettings.resx">
-      <DependentUpon>FormSettings.cs</DependentUpon>
+    <EmbeddedResource Include="FormDirections.resx">
+      <DependentUpon>FormDirections.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +139,7 @@
   <ItemGroup>
     <Content Include="ImagesWithIronMeaning\1.png" />
     <Content Include="ImagesWithIronMeaning\10.png" />
+    <None Include="Resources\directions.txt" />
     <None Include="Resources\sets.txt" />
     <None Include="Resources\NoWay.png" />
     <None Include="Resources\results.txt" />
