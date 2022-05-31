@@ -260,6 +260,7 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemMenu_Click_1(object sender, EventArgs e)
         {
+            timerChangePicture.Stop();
             FormMenu menu = new FormMenu();
             menu.Show();
         }
