@@ -27,7 +27,8 @@ namespace IronLoto2v
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
-        word[] list;
+        int countPictures = 0;
+        Word[] list;
 
         public FormGame()
         {
@@ -75,7 +76,7 @@ namespace IronLoto2v
                 for (int j = 0; j < b; j++)
                 {
                     int c = rnd.Next(1, array.Length);
-                    word temp = new word(array[c]);
+                    Word temp = new Word(array[c]);
                     data.Rows[i].Cells[j].Value = temp.GetIrPicture();
                     tr[i, j] = temp.NumberOf();
                 }
@@ -92,7 +93,7 @@ namespace IronLoto2v
             }
             return false;
         }
-        void antirepeat(word[] perm, string[] s)
+        void antirepeat(Word[] perm, string[] s)
         {
             Random r = new Random(); // не создавайте новый Random здесь!
                                      // а то значения будут одни и те же
@@ -101,19 +102,19 @@ namespace IronLoto2v
             {
                 int j = r.Next(i + 1);
                 // exchange perm[j] and perm[i]
-                word temp = perm[j];
+                Word temp = perm[j];
                 perm[j] = perm[i];
                 perm[i] = temp;
             }
         }
 
 
-        static word[] ToWord(string[] a)
+        static Word[] ToWord(string[] a)
         {
-            word[] temp = new word[a.Length];
+            Word[] temp = new Word[a.Length];
             for (int i = 0; i < a.Length; i++)
             {
-                temp[i] = new word(a[i]);
+                temp[i] = new Word(a[i]);
             }
             return temp;
         }
@@ -125,6 +126,8 @@ namespace IronLoto2v
                 pictureBoxShow.Image = list[cnt].GetPicture();
                 labelWord.Text = list[cnt].LoadRusWord();
                 pictureshow = list[cnt].NumberOf();
+                countPictures++;
+                labelCount.Text = countPictures.ToString();
 
             }
             catch
@@ -295,6 +298,15 @@ namespace IronLoto2v
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
+        }
+
+        private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
+        {
+            timerChangePicture.Stop();
+            labelPause.Visible = true;
+            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+            FormDirections frm=new FormDirections();
+            frm.Show();
         }
     }
 }

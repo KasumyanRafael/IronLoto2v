@@ -7,13 +7,13 @@ using System.Drawing;
 
 namespace IronLoto2v
 {
-    public class word
+    public class Word
     {
         string[] mas;
         string ironword;
         string rusword;
         Image pictureshow;
-        public word(string ss)
+        public Word(string ss)
         {
             string[]s=ss.Split(' ');
             mas = s;

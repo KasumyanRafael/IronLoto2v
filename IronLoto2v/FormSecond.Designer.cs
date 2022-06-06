@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.ToolStripMenuItemMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCount = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelSecondGamer = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
+            this.labelCount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStripSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -74,6 +75,7 @@
             this.panel1.Controls.Add(this.labelFirstGamerCount);
             this.panel1.Controls.Add(this.dataGridViewGamer1);
             this.panel1.Controls.Add(this.dataGridViewGamer2);
+            this.panel1.Controls.Add(this.labelCount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -114,7 +116,7 @@
             this.labelPause.ForeColor = System.Drawing.Color.Black;
             this.labelPause.Location = new System.Drawing.Point(677, 37);
             this.labelPause.Name = "labelPause";
-            this.labelPause.Size = new System.Drawing.Size(98, 32);
+            this.labelPause.Size = new System.Drawing.Size(98, 63);
             this.labelPause.TabIndex = 28;
             this.labelPause.Text = "пауза";
             this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,17 +184,18 @@
             // информацияToolStripMenuItem
             // 
             this.информацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.обИгреToolStripMenuItem,
+            this.ToolStripMenuItemInformation,
             this.ToolStripMenuItemCount});
             this.информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
             this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.информацияToolStripMenuItem.Text = "Информация";
             // 
-            // обИгреToolStripMenuItem
+            // ToolStripMenuItemInformation
             // 
-            this.обИгреToolStripMenuItem.Name = "обИгреToolStripMenuItem";
-            this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.обИгреToolStripMenuItem.Text = "Об игре";
+            this.ToolStripMenuItemInformation.Name = "ToolStripMenuItemInformation";
+            this.ToolStripMenuItemInformation.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemInformation.Text = "Об игре";
+            this.ToolStripMenuItemInformation.Click += new System.EventHandler(this.ToolStripMenuItemInformation_Click);
             // 
             // ToolStripMenuItemCount
             // 
@@ -266,14 +269,14 @@
             this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewGamer1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridViewGamer1.Enabled = false;
             this.dataGridViewGamer1.Location = new System.Drawing.Point(0, 0);
@@ -288,14 +291,14 @@
             this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGamer2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewGamer2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridViewGamer2.Enabled = false;
             this.dataGridViewGamer2.Location = new System.Drawing.Point(977, 0);
@@ -308,6 +311,19 @@
             // timerChangePicture
             // 
             this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
+            // 
+            // labelCount
+            // 
+            this.labelCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCount.BackColor = System.Drawing.Color.Yellow;
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCount.ForeColor = System.Drawing.Color.Black;
+            this.labelCount.Location = new System.Drawing.Point(660, 37);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(140, 63);
+            this.labelCount.TabIndex = 31;
+            this.labelCount.Text = "0";
+            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormSecond
             // 
@@ -343,7 +359,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemMenu;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemInformation;
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.Label labelSecondGamer;
         private System.Windows.Forms.Label labelSecondGamerCount;
@@ -356,5 +372,6 @@
         private System.Windows.Forms.Label labelPause;
         private System.Windows.Forms.Label labelNoWayGamer2;
         private System.Windows.Forms.Label labelNoWayGamer1;
+        private System.Windows.Forms.Label labelCount;
     }
 }

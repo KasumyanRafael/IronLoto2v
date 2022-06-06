@@ -26,7 +26,8 @@ namespace IronLoto2v
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
-        word[] list;
+        int countPictures = 0;
+        Word[] list;
         public FormFinalRound()
         {
             InitializeComponent();
@@ -73,7 +74,7 @@ namespace IronLoto2v
                 for (int j = 0; j < b; j++)
                 {
                     int c = rnd.Next(1, array.Length);
-                    word temp = new word(array[c]);
+                    Word temp = new Word(array[c]);
                     data.Rows[i].Cells[j].Value = temp.GetIronWord();
                     tr[i, j] = temp.NumberOf();
                 }
@@ -90,7 +91,7 @@ namespace IronLoto2v
             }
             return false;
         }
-        void antirepeat(word[] perm, string[] s)
+        void antirepeat(Word[] perm, string[] s)
         {
             Random r = new Random(); // не создавайте новый Random здесь!
                                      // а то значения будут одни и те же
@@ -99,17 +100,17 @@ namespace IronLoto2v
             {
                 int j = r.Next(i + 1);
                 // exchange perm[j] and perm[i]
-                word temp = perm[j];
+                Word temp = perm[j];
                 perm[j] = perm[i];
                 perm[i] = temp;
             }
         }
-        static word[] ToWord(string[] a)
+        static Word[] ToWord(string[] a)
         {
-            word[] temp = new word[a.Length];
+            Word[] temp = new Word[a.Length];
             for (int i = 0; i < a.Length; i++)
             {
-                temp[i] = new word(a[i]);
+                temp[i] = new Word(a[i]);
             }
             return temp;
         }
@@ -121,6 +122,8 @@ namespace IronLoto2v
                 cnt++;
                 pictureBoxShow.Image = list[cnt].GetPicture();
                 pictureshow = list[cnt].NumberOf();
+                countPictures++;
+                labelCount.Text=countPictures.ToString();
             }
             catch
             {
@@ -301,6 +304,15 @@ namespace IronLoto2v
             string[] balls2 = file2.ReadLine().Split(' ');
             file.Close();
             MessageBox.Show("Первый раунд " + balls[0] + ":" + balls[1] + "\n" + "Второй раунд " + balls2[0] + ":" + balls2[1]);
+        }
+
+        private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
+        {
+            timerChangePicture.Stop();
+            labelPause.Visible = true;
+            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+            FormDirections frm = new FormDirections();
+            frm.Show();
         }
     }
 }

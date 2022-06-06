@@ -50,7 +50,8 @@
             this.ToolStripMenuItemMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemStopOrGo = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.обИгреToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -176,6 +177,7 @@
             this.panel1.Controls.Add(this.labelFirstGamerCount);
             this.panel1.Controls.Add(this.dataGridViewGamer1);
             this.panel1.Controls.Add(this.dataGridViewGamer2);
+            this.panel1.Controls.Add(this.labelCount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -214,9 +216,9 @@
             this.labelPause.BackColor = System.Drawing.Color.Yellow;
             this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(676, 37);
+            this.labelPause.Location = new System.Drawing.Point(677, 24);
             this.labelPause.Name = "labelPause";
-            this.labelPause.Size = new System.Drawing.Size(98, 32);
+            this.labelPause.Size = new System.Drawing.Size(98, 63);
             this.labelPause.TabIndex = 27;
             this.labelPause.Text = "пауза";
             this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,16 +286,30 @@
             // информацияToolStripMenuItem
             // 
             this.информацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.обИгреToolStripMenuItem});
+            this.ToolStripMenuItemInformation});
             this.информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
             this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.информацияToolStripMenuItem.Text = "Информация";
             // 
-            // обИгреToolStripMenuItem
+            // ToolStripMenuItemInformation
             // 
-            this.обИгреToolStripMenuItem.Name = "обИгреToolStripMenuItem";
-            this.обИгреToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.обИгреToolStripMenuItem.Text = "Об игре";
+            this.ToolStripMenuItemInformation.Name = "ToolStripMenuItemInformation";
+            this.ToolStripMenuItemInformation.Size = new System.Drawing.Size(118, 22);
+            this.ToolStripMenuItemInformation.Text = "Об игре";
+            this.ToolStripMenuItemInformation.Click += new System.EventHandler(this.ToolStripMenuItemInformation_Click);
+            // 
+            // labelCount
+            // 
+            this.labelCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCount.BackColor = System.Drawing.Color.Yellow;
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCount.ForeColor = System.Drawing.Color.Black;
+            this.labelCount.Location = new System.Drawing.Point(660, 24);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(140, 63);
+            this.labelCount.TabIndex = 30;
+            this.labelCount.Text = "0";
+            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGame
             // 
@@ -336,10 +352,11 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUsers;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemMenu;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem обИгреToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemInformation;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
         private System.Windows.Forms.Label labelPause;
         private System.Windows.Forms.Label labelNoWayGamer2;
         private System.Windows.Forms.Label labelNoWayGamer1;
+        private System.Windows.Forms.Label labelCount;
     }
 }
