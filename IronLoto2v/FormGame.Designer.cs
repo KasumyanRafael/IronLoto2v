@@ -50,7 +50,8 @@
             this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
             this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelNoWay = new System.Windows.Forms.ToolStripStatusLabel();
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -139,6 +140,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelNoWayGamer2);
+            this.panel1.Controls.Add(this.labelNoWayGamer1);
             this.panel1.Controls.Add(this.labelPause);
             this.panel1.Controls.Add(this.pictureBoxShow);
             this.panel1.Controls.Add(this.labelSecondGamer);
@@ -261,8 +264,7 @@
             // statusStripFirstLevel
             // 
             this.statusStripFirstLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabelNoWay});
+            this.toolStripStatusLabel1});
             this.statusStripFirstLevel.Location = new System.Drawing.Point(0, 594);
             this.statusStripFirstLevel.Name = "statusStripFirstLevel";
             this.statusStripFirstLevel.Size = new System.Drawing.Size(1457, 22);
@@ -275,11 +277,33 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
             this.toolStripStatusLabel1.Text = "Первый раунд";
             // 
-            // toolStripStatusLabelNoWay
+            // labelNoWayGamer1
             // 
-            this.toolStripStatusLabelNoWay.Name = "toolStripStatusLabelNoWay";
-            this.toolStripStatusLabelNoWay.Size = new System.Drawing.Size(78, 17);
-            this.toolStripStatusLabelNoWay.Text = "Объявления:";
+            this.labelNoWayGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(10, 296);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(220, 126);
+            this.labelNoWayGamer1.TabIndex = 29;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1211, 296);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(199, 126);
+            this.labelNoWayGamer2.TabIndex = 30;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
             // 
             // FormGame
             // 
@@ -330,6 +354,7 @@
         private System.Windows.Forms.Timer timerChangePicture;
         private System.Windows.Forms.StatusStrip statusStripFirstLevel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNoWay;
+        private System.Windows.Forms.Label labelNoWayGamer2;
+        private System.Windows.Forms.Label labelNoWayGamer1;
     }
 }
