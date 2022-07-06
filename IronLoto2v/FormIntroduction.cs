@@ -12,7 +12,7 @@ namespace IronLoto2v
 {
     public partial class FormIntroduction : Form
     {
-        public string firstgamer;
+        public string firstgamer=String.Empty;
         public string secondgamer=String.Empty;
         public FormIntroduction()
         {

@@ -16,9 +16,9 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        static int x=6;
-        static int y=3;
-        static int t=5;
+        static int x = 3;
+        static int y = 2;
+        static int t = 5;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -27,9 +27,7 @@ namespace IronLoto2v
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
-        int countPictures = 0;
         Word[] list;
-
         public FormGame()
         {
             InitializeComponent();
@@ -40,14 +38,15 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 230;
+                columns[i].Width = 160;
             }
-            data.RowTemplate.Height = 290;
+            data.RowTemplate.Height = 160;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
@@ -118,154 +117,32 @@ namespace IronLoto2v
             }
             return temp;
         }
-        private void timerChangePicture_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                cnt++;
-                pictureBoxShow.Image = list[cnt].GetPicture();
-                labelWord.Text = list[cnt].LoadRusWord();
-                pictureshow = list[cnt].NumberOf();
-                countPictures++;
-                labelCount.Text = countPictures.ToString();
 
-            }
-            catch
-            {
-                timerChangePicture.Stop();
-                Winner(gamer1, gamer2, firstscore, secondscore);
-            }
-        }
-        int CheckPicture(DataGridView data, int picture, int[,] mas,Label label)
-        {
-            int a = data.CurrentCell.RowIndex;
-            int b = data.CurrentCell.ColumnIndex;
-            if (mas[a, b] == picture)
-            {
-                data.CurrentCell.Value = null;
-                return 1;
-            }
-            label.Visible = true;
-            //MessageBox.Show("Ход невозможен");
-            return 0;
-        }
-        private void FormGame_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.D && IsPause == false)
-                {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
-                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
-                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-                }
-                if (e.KeyCode == Keys.W && IsPause == false)
-                {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
-                    int row = dataGridViewGamer1.CurrentCell.RowIndex - 1;
-                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-                }
-                if (e.KeyCode == Keys.A && IsPause == false)
-                {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex - 1;
-                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
-                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-                }
-                if (e.KeyCode == Keys.S && IsPause == false)
-                {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
-                    int row = dataGridViewGamer1.CurrentCell.RowIndex + 1;
-                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
-                }
-                if (e.KeyCode == Keys.NumPad8 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
-                    int row = dataGridViewGamer2.CurrentCell.RowIndex - 1;
-                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-                }
-                if (e.KeyCode == Keys.NumPad2 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
-                    int row = dataGridViewGamer2.CurrentCell.RowIndex + 1;
-                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-                }
-                if (e.KeyCode == Keys.NumPad4 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex - 1;
-                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
-                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-                }
-                if (e.KeyCode == Keys.NumPad6 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex + 1;
-                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
-                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
-                }
-
-                if (e.KeyCode == Keys.Space && IsPause == false)
-                {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable, labelNoWayGamer1);
-                    labelFirstGamerCount.Text = firstscore.ToString();
-                    if (firstscore == x * y)
-                    {
-                        timerChangePicture.Stop();
-                        Winner(gamer1, gamer2, firstscore, secondscore);
-
-                    }
-                }
-                if (e.KeyCode == Keys.NumPad5 && IsPause == false)
-                {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable,labelNoWayGamer2);
-                    labelSecondGamerCount.Text = secondscore.ToString();
-                    if (secondscore == x * y)
-                    {
-                        timerChangePicture.Stop();
-                        Winner(gamer1, gamer2, firstscore, secondscore);
-                    }
-
-                }
-            }
-            catch { }
-            dataGridViewGamer1.Enabled = false;
-            dataGridViewGamer2.Enabled = false;
-
-        }
-        private void ToolStripMenuItemExit_Click_1(object sender, EventArgs e)
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ToolStripMenuItemUsers_Click_1(object sender, EventArgs e)
+        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
         {
             FormIntroduction form = new FormIntroduction();
             form.Show();
         }
 
-        private void ToolStripMenuItemMenu_Click_1(object sender, EventArgs e)
+        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
         {
             timerChangePicture.Stop();
             FormMenu menu = new FormMenu();
             menu.Show();
+        }
+
+        private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
+        {
+            timerChangePicture.Stop();
+            labelPause.Visible = true;
+            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+            FormDirections frm = new FormDirections();
+            frm.Show();
         }
 
         private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
@@ -300,13 +177,132 @@ namespace IronLoto2v
             form.Show();
         }
 
-        private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
+        private void timerChangePicture_Tick(object sender, EventArgs e)
         {
-            timerChangePicture.Stop();
-            labelPause.Visible = true;
-            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
-            FormDirections frm=new FormDirections();
-            frm.Show();
+            try
+            {
+                cnt++;
+                pictureBoxShow.Image = list[cnt].GetRusPicture();
+                pictureshow = list[cnt].NumberOf();
+            }
+            catch
+            {
+                timerChangePicture.Stop();
+                Winner(gamer1, gamer2, firstscore, secondscore);
+            }
+        }
+        int CheckPicture(DataGridView data, int picture, int[,] mas)
+        {
+            int a = data.CurrentCell.RowIndex;
+            int b = data.CurrentCell.ColumnIndex;
+            if (mas[a, b] == picture)
+            {
+                data.CurrentCell.Value = null;
+                return 1;
+            }
+            toolStripStatusLabelNoWay.Text = "Объявления: данный ход невозможен";
+            //MessageBox.Show("Ход невозможен");
+            return 0;
+        }
+
+        private void FormGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.D && IsPause == false)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex + 1;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.W && IsPause == false)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex - 1;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.A && IsPause == false)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex - 1;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.S && IsPause == false)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    int col = dataGridViewGamer1.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer1.CurrentCell.RowIndex + 1;
+                    dataGridViewGamer1.CurrentCell = dataGridViewGamer1[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.NumPad8 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex - 1;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.NumPad2 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex + 1;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.NumPad4 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex - 1;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+                if (e.KeyCode == Keys.NumPad6 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    int col = dataGridViewGamer2.CurrentCell.ColumnIndex + 1;
+                    int row = dataGridViewGamer2.CurrentCell.RowIndex;
+                    dataGridViewGamer2.CurrentCell = dataGridViewGamer2[col, row];
+                    toolStripStatusLabelNoWay.Text = "Объявления: ";
+                }
+
+                if (e.KeyCode == Keys.Space && IsPause == false)
+                {
+                    dataGridViewGamer1.Enabled = true;
+                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable);
+                    labelFirstGamerCount.Text = firstscore.ToString();
+                    if (firstscore == x * y)
+                    {
+                        timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+
+                    }
+                }
+                if (e.KeyCode == Keys.NumPad5 && IsPause == false)
+                {
+                    dataGridViewGamer2.Enabled = true;
+                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable);
+                    labelSecondGamerCount.Text = secondscore.ToString();
+                    if (secondscore == x * y)
+                    {
+                        timerChangePicture.Stop();
+                        Winner(gamer1, gamer2, firstscore, secondscore);
+                    }
+
+                }
+            }
+            catch { }
+            dataGridViewGamer1.Enabled = false;
+            dataGridViewGamer2.Enabled = false;
+
         }
     }
 }
