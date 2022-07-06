@@ -293,7 +293,7 @@
             // 
             // labelNoWayGamer2
             // 
-            this.labelNoWayGamer2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelNoWayGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
             this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
