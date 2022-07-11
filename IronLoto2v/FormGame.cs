@@ -18,7 +18,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 3;
         static int y = 2;
-        static int t = 5;
+        static int t = 600;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -29,6 +29,7 @@ namespace IronLoto2v
         int secondscore = 0;
         Word[] list;
         Word[] extract;
+        int countdown=10;
         public FormGame()
         {
             InitializeComponent();
@@ -62,12 +63,12 @@ namespace IronLoto2v
                 filling(dataGridViewGamer2, extract, x, y, secondTable);
             }
             while (antitwin(firstTable, secondTable, x, y) != false);
-            timerChangePicture.Enabled = true;
-            timerChangePicture.Interval = t * 1000;
+            timerCountdown.Enabled = true;
+            timerCountdown.Interval = t;
             labelFirstGamer.Text = gamer1;
             labelSecondGamer.Text = gamer2;
             if (cnt > s.Length)
-                timerChangePicture.Enabled = false;
+                timerCountdown.Enabled = false;
         }
 
         void filling(DataGridView data, Word[]array, int a, int b, int[,] tr)
@@ -142,14 +143,14 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
         {
-            timerChangePicture.Stop();
+            timerCountdown.Stop();
             FormMenu menu = new FormMenu();
             menu.Show();
         }
 
         private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
         {
-            timerChangePicture.Stop();
+            timerCountdown.Stop();
             labelPause.Visible = true;
             ToolStripMenuItemStopOrGo.Text = "Вперёд!";
             FormDirections frm = new FormDirections();
@@ -160,14 +161,14 @@ namespace IronLoto2v
         {
             if (ToolStripMenuItemStopOrGo.Text == "Пауза")
             {
-                timerChangePicture.Stop();
+                timerCountdown.Stop();
                 ToolStripMenuItemStopOrGo.Text = "Вперёд!";
                 IsPause = true;
                 labelPause.Visible = true;
             }
             else
             {
-                timerChangePicture.Start();
+                timerCountdown.Start();
                 ToolStripMenuItemStopOrGo.Text = "Пауза";
                 IsPause = false;
                 labelPause.Visible = false;
@@ -186,21 +187,6 @@ namespace IronLoto2v
             form.gamer1 = gamer1;
             form.gamer2 = gamer2;
             form.Show();
-        }
-
-        private void timerChangePicture_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                cnt++;
-                pictureBoxShow.Image = extract[cnt].GetRusPicture();
-                pictureshow = extract[cnt].NumberOf();
-            }
-            catch
-            {
-                timerChangePicture.Stop();
-                Winner(gamer1, gamer2, firstscore, secondscore);
-            }
         }
         int CheckPicture(DataGridView data, int picture, int[,] mas, Label label)
         {
@@ -293,7 +279,7 @@ namespace IronLoto2v
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
                     {
-                        timerChangePicture.Stop();
+                        timerCountdown.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
 
                     }
@@ -306,7 +292,7 @@ namespace IronLoto2v
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if (secondscore == x * y)
                     {
-                        timerChangePicture.Stop();
+                        timerCountdown.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
                     }
 
@@ -316,6 +302,29 @@ namespace IronLoto2v
             dataGridViewGamer1.Enabled = false;
             dataGridViewGamer2.Enabled = false;
 
+        }
+
+        private void timerCountdown_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+            labelCountdown.Text=countdown.ToString();
+            if(countdown<5) labelCountdown.ForeColor = Color.Red;
+            else labelCountdown.ForeColor = Color.Black;
+            if(countdown==0)
+            {
+                countdown = 10;
+                try
+                {
+                    cnt++;
+                    pictureBoxShow.Image = extract[cnt].GetRusPicture();
+                    pictureshow = extract[cnt].NumberOf();
+                }
+                catch
+                {
+                    timerCountdown.Stop();
+                    Winner(gamer1, gamer2, firstscore, secondscore);
+                }
+            }
         }
     }
 }

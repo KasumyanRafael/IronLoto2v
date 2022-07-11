@@ -39,6 +39,8 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
+            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelSecondGamer = new System.Windows.Forms.Label();
@@ -47,11 +49,10 @@
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
-            this.timerChangePicture = new System.Windows.Forms.Timer(this.components);
             this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.labelNoWayGamer1 = new System.Windows.Forms.Label();
-            this.labelNoWayGamer2 = new System.Windows.Forms.Label();
+            this.timerCountdown = new System.Windows.Forms.Timer(this.components);
+            this.labelCountdown = new System.Windows.Forms.Label();
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -88,7 +89,7 @@
             this.ToolStripMenuItemUsers,
             this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // ToolStripMenuItemExit
@@ -115,7 +116,7 @@
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
-            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
             this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
@@ -130,7 +131,7 @@
             // ToolStripMenuItemInformation
             // 
             this.ToolStripMenuItemInformation.Name = "ToolStripMenuItemInformation";
-            this.ToolStripMenuItemInformation.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemInformation.Size = new System.Drawing.Size(118, 22);
             this.ToolStripMenuItemInformation.Text = "Об игре";
             this.ToolStripMenuItemInformation.Click += new System.EventHandler(this.ToolStripMenuItemInformation_Click);
             // 
@@ -140,6 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelCountdown);
             this.panel1.Controls.Add(this.labelNoWayGamer2);
             this.panel1.Controls.Add(this.labelNoWayGamer1);
             this.panel1.Controls.Add(this.labelPause);
@@ -154,6 +156,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1426, 524);
             this.panel1.TabIndex = 32;
+            // 
+            // labelNoWayGamer2
+            // 
+            this.labelNoWayGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1211, 296);
+            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(199, 126);
+            this.labelNoWayGamer2.TabIndex = 30;
+            this.labelNoWayGamer2.Text = "ход невозможен";
+            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer2.Visible = false;
+            // 
+            // labelNoWayGamer1
+            // 
+            this.labelNoWayGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(10, 296);
+            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(220, 126);
+            this.labelNoWayGamer1.TabIndex = 29;
+            this.labelNoWayGamer1.Text = "ход невозможен";
+            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoWayGamer1.Visible = false;
             // 
             // labelPause
             // 
@@ -257,10 +287,6 @@
             this.dataGridViewGamer2.Size = new System.Drawing.Size(320, 417);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
-            // timerChangePicture
-            // 
-            this.timerChangePicture.Tick += new System.EventHandler(this.timerChangePicture_Tick);
-            // 
             // statusStripFirstLevel
             // 
             this.statusStripFirstLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -277,33 +303,23 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
             this.toolStripStatusLabel1.Text = "Первый раунд";
             // 
-            // labelNoWayGamer1
+            // timerCountdown
             // 
-            this.labelNoWayGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer1.Location = new System.Drawing.Point(10, 296);
-            this.labelNoWayGamer1.Name = "labelNoWayGamer1";
-            this.labelNoWayGamer1.Size = new System.Drawing.Size(220, 126);
-            this.labelNoWayGamer1.TabIndex = 29;
-            this.labelNoWayGamer1.Text = "ход невозможен";
-            this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNoWayGamer1.Visible = false;
+            this.timerCountdown.Enabled = true;
+            this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
             // 
-            // labelNoWayGamer2
+            // labelCountdown
             // 
-            this.labelNoWayGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer2.Location = new System.Drawing.Point(1211, 296);
-            this.labelNoWayGamer2.Name = "labelNoWayGamer2";
-            this.labelNoWayGamer2.Size = new System.Drawing.Size(199, 126);
-            this.labelNoWayGamer2.TabIndex = 30;
-            this.labelNoWayGamer2.Text = "ход невозможен";
-            this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNoWayGamer2.Visible = false;
+            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountdown.ForeColor = System.Drawing.Color.Black;
+            this.labelCountdown.Location = new System.Drawing.Point(656, 6);
+            this.labelCountdown.Name = "labelCountdown";
+            this.labelCountdown.Size = new System.Drawing.Size(98, 63);
+            this.labelCountdown.TabIndex = 31;
+            this.labelCountdown.Text = "10";
+            this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGame
             // 
@@ -351,10 +367,11 @@
         private System.Windows.Forms.Label labelFirstGamerCount;
         private System.Windows.Forms.DataGridView dataGridViewGamer1;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
-        private System.Windows.Forms.Timer timerChangePicture;
         private System.Windows.Forms.StatusStrip statusStripFirstLevel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label labelNoWayGamer2;
         private System.Windows.Forms.Label labelNoWayGamer1;
+        private System.Windows.Forms.Timer timerCountdown;
+        private System.Windows.Forms.Label labelCountdown;
     }
 }
