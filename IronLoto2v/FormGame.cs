@@ -179,7 +179,7 @@ namespace IronLoto2v
 
             if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
             if (one < two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
-            if (one == two) MessageBox.Show("В первом раунде победилf дружба. Все молодцы");
+            if (one == two) MessageBox.Show("В первом раунде победила дружба. Все молодцы");
             StreamWriter file2 = new StreamWriter("first.txt");
             file2.Write(one + " " + two);
             file2.Close();
