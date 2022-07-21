@@ -18,7 +18,7 @@ namespace IronLoto2v
         public string gamer2 = String.Empty;
         static int x = 3;
         static int y = 2;
-        static int t = 600;
+        static int t = 1000;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -108,6 +108,17 @@ namespace IronLoto2v
                 Word temp = perm[j];
                 perm[j] = perm[i];
                 perm[i] = temp;
+            }
+        }
+        void Shuffling(Word[]data)
+        {
+            Random rnd = new Random();
+            for (int i = data.Length - 1; i >= 1; i--)
+            {
+                int j = rnd.Next(i + 1);
+                var temp = data[j];
+                data[j] = data[i];
+                data[i] = temp;
             }
         }
         Word[] GetExtract(Word[] perm) //выбираем первые 10 карточек из перетасованного массива

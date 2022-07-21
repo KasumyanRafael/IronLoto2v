@@ -39,6 +39,7 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelCountdown = new System.Windows.Forms.Label();
             this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerCountdown = new System.Windows.Forms.Timer(this.components);
-            this.labelCountdown = new System.Windows.Forms.Label();
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
@@ -157,6 +157,19 @@
             this.panel1.Size = new System.Drawing.Size(1426, 524);
             this.panel1.TabIndex = 32;
             // 
+            // labelCountdown
+            // 
+            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountdown.ForeColor = System.Drawing.Color.Black;
+            this.labelCountdown.Location = new System.Drawing.Point(656, 6);
+            this.labelCountdown.Name = "labelCountdown";
+            this.labelCountdown.Size = new System.Drawing.Size(98, 63);
+            this.labelCountdown.TabIndex = 31;
+            this.labelCountdown.Text = "10";
+            this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // labelNoWayGamer2
             // 
             this.labelNoWayGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -187,7 +200,7 @@
             // 
             // labelPause
             // 
-            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPause.ForeColor = System.Drawing.Color.Black;
@@ -307,19 +320,6 @@
             // 
             this.timerCountdown.Enabled = true;
             this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
-            // 
-            // labelCountdown
-            // 
-            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(656, 6);
-            this.labelCountdown.Name = "labelCountdown";
-            this.labelCountdown.Size = new System.Drawing.Size(98, 63);
-            this.labelCountdown.TabIndex = 31;
-            this.labelCountdown.Text = "10";
-            this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGame
             // 
