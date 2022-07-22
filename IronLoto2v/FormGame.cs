@@ -73,7 +73,7 @@ namespace IronLoto2v
 
         void filling(DataGridView data, Word[]array, int a, int b, int[,] tr)
         {
-            Random rnd = new Random();
+            /*Random rnd = new Random();
             for (int i = 0; i < a; i++)
             {
                 for (int j = 0; j < b; j++)
@@ -83,7 +83,21 @@ namespace IronLoto2v
                     data.Rows[i].Cells[j].Value = temp.GetIrPicture();
                     tr[i, j] = temp.NumberOf();
                 }
+            }*/
+            int k = 0;
+            while(k<6)
+            {
+                for (int i = 0; i < a; i++)
+                {
+                    for (int j = 0; j < b; j++)
+                    {
+                        data.Rows[i].Cells[j].Value=array[k].GetIrPicture();
+                        tr[i, j] = array[k].NumberOf();
+                        k++;
+                    }
+                }
             }
+            Shuffling(array);
         }
         bool antitwin(int[,] a, int[,] b, int c, int d)
         {
