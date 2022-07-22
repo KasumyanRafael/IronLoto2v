@@ -85,7 +85,7 @@ namespace IronLoto2v
                 }
             }*/
             int k = 0;
-            while(k<6)
+            try
             {
                 for (int i = 0; i < a; i++)
                 {
@@ -97,6 +97,7 @@ namespace IronLoto2v
                     }
                 }
             }
+            catch { }
             Shuffling(array);
         }
         bool antitwin(int[,] a, int[,] b, int c, int d)
