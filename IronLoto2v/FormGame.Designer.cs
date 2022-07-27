@@ -313,8 +313,8 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
-            this.toolStripStatusLabel1.Text = "Первый раунд";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(262, 17);
+            this.toolStripStatusLabel1.Text = "Первый раунд(слова с русскими переводами)";
             // 
             // timerCountdown
             // 
