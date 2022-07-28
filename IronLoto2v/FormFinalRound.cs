@@ -15,9 +15,9 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        static int x = 6;
-        static int y = 3;
-        static int t = 5;
+        static int x = 3;
+        static int y = 2;
+        static int t = 1000;
         bool IsPause = false;
         int cnt = 0;
         string[] s;
@@ -26,8 +26,9 @@ namespace IronLoto2v
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
-        int countPictures = 0;
         Word[] list;
+        Word[] extract;
+        int countdown = 10;
         public FormFinalRound()
         {
             InitializeComponent();
@@ -38,46 +39,63 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 230;
+                columns[i].Width = 150;
             }
-            data.RowTemplate.Height = 290;
+            data.RowTemplate.Height = 139;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
         private void FormFinalRound_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
             s = Properties.Resources.dictionary.Split('\n');
-            list = ToWord(s);
+            list = ToWord(s); //это массив сo словами (типа word)
             antirepeat(list, s);
-            filling(dataGridViewGamer1, s, x, y, firstTable);
+            extract = GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
+            filling(dataGridViewGamer1, extract, x, y, firstTable);
             do
             {
-                filling(dataGridViewGamer2, s, x, y, secondTable);
+                filling(dataGridViewGamer2, extract, x, y, secondTable);
             }
             while (antitwin(firstTable, secondTable, x, y) != false);
-            timerChangePicture.Enabled = true;
-            timerChangePicture.Interval = t * 1000;
+            timerCountdown.Enabled = true;
+            timerCountdown.Interval = t;
             labelFirstGamer.Text = gamer1;
             labelSecondGamer.Text = gamer2;
             if (cnt > s.Length)
-                timerChangePicture.Enabled = false;
+                timerCountdown.Enabled = false;
         }
-        void filling(DataGridView data, string[] array, int a, int b, int[,] tr)
+        void filling(DataGridView data, Word[] array, int a, int b, int[,] tr)
+        {
+            int k = 0;
+            try
+            {
+                for (int i = 0; i < a; i++)
+                {
+                    for (int j = 0; j < b; j++)
+                    {
+                        data.Rows[i].Cells[j].Value = array[k].GetIronWord();
+                        tr[i, j] = array[k].NumberOf();
+                        k++;
+                    }
+                }
+            }
+            catch { }
+            Shuffling(array);
+        }
+        void Shuffling(Word[] data)
         {
             Random rnd = new Random();
-            for (int i = 0; i < a; i++)
+            for (int i = data.Length - 1; i >= 1; i--)
             {
-                for (int j = 0; j < b; j++)
-                {
-                    int c = rnd.Next(1, array.Length);
-                    Word temp = new Word(array[c]);
-                    data.Rows[i].Cells[j].Value = temp.GetIronWord();
-                    tr[i, j] = temp.NumberOf();
-                }
+                int j = rnd.Next(i + 1);
+                var temp = data[j];
+                data[j] = data[i];
+                data[i] = temp;
             }
         }
         bool antitwin(int[,] a, int[,] b, int c, int d)
@@ -105,6 +123,16 @@ namespace IronLoto2v
                 perm[i] = temp;
             }
         }
+        Word[] GetExtract(Word[] perm) //выбираем первые 10 карточек из перетасованного массива
+        {
+            Word[] result = new Word[10];
+            for (int i = 0; i < 10; i++)
+            {
+                result[i] = perm[i];
+            }
+            return result;
+        }
+
         static Word[] ToWord(string[] a)
         {
             Word[] temp = new Word[a.Length];
@@ -113,23 +141,6 @@ namespace IronLoto2v
                 temp[i] = new Word(a[i]);
             }
             return temp;
-        }
-
-        private void timerChangePicture_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                cnt++;
-                pictureBoxShow.Image = list[cnt].GetPicture();
-                pictureshow = list[cnt].NumberOf();
-                countPictures++;
-                labelCount.Text=countPictures.ToString();
-            }
-            catch
-            {
-                timerChangePicture.Stop();
-                Winner(gamer1, gamer2, firstscore, secondscore);
-            }
         }
         int CheckPicture(DataGridView data, int picture, int[,] mas, Label label)
         {
@@ -222,7 +233,7 @@ namespace IronLoto2v
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
                     {
-                        timerChangePicture.Stop();
+                        timerCountdown.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
 
                     }
@@ -235,7 +246,7 @@ namespace IronLoto2v
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if (secondscore == x * y)
                     {
-                        timerChangePicture.Stop();
+                        timerCountdown.Stop();
                         Winner(gamer1, gamer2, firstscore, secondscore);
                     }
 
@@ -244,42 +255,6 @@ namespace IronLoto2v
             catch { }
             dataGridViewGamer1.Enabled = false;
             dataGridViewGamer2.Enabled = false;
-        }
-
-        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
-        {
-            FormIntroduction form = new FormIntroduction();
-            form.Show();
-        }
-
-        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
-        {
-            timerChangePicture.Stop();
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
-
-        private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
-        {
-            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
-            {
-                timerChangePicture.Stop();
-                ToolStripMenuItemStopOrGo.Text = "Вперёд!";
-                IsPause = true;
-                labelPause.Visible = true;
-            }
-            else
-            {
-                timerChangePicture.Start();
-                ToolStripMenuItemStopOrGo.Text = "Пауза";
-                IsPause = false;
-                labelPause.Visible = false;
-            }
         }
         void Winner(string first, string second, int one, int two)
         {
@@ -295,6 +270,29 @@ namespace IronLoto2v
             form.Show();
         }
 
+        private void timerCountdown_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+            labelCountdown.Text = countdown.ToString();
+            if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+            else labelCountdown.ForeColor = Color.Black;
+            if (countdown == 0)
+            {
+                countdown = 10;
+                try
+                {
+                    cnt++;
+                    pictureBoxShow.Image = extract[cnt].GetPicture();
+                    pictureshow = extract[cnt].NumberOf();
+                }
+                catch
+                {
+                    timerCountdown.Stop();
+                    Winner(gamer1, gamer2, firstscore, secondscore);
+                }
+            }
+        }
+
         private void ToolStripMenuItemCount_Click(object sender, EventArgs e)
         {
             StreamReader file = new StreamReader("first.txt");
@@ -308,11 +306,48 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
         {
-            timerChangePicture.Stop();
+            timerCountdown.Stop();
             labelPause.Visible = true;
             ToolStripMenuItemStopOrGo.Text = "Вперёд!";
             FormDirections frm = new FormDirections();
             frm.Show();
+        }
+
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
+        {
+            timerCountdown.Stop();
+            FormIntroduction form = new FormIntroduction();
+            form.Show();
+        }
+
+        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
+        {
+            timerCountdown.Stop();
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
+
+        private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
+        {
+            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
+            {
+                timerCountdown.Stop();
+                ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+                IsPause = true;
+                labelPause.Visible = true;
+            }
+            else
+            {
+                timerCountdown.Start();
+                ToolStripMenuItemStopOrGo.Text = "Пауза";
+                IsPause = false;
+                labelPause.Visible = false;
+            }
         }
     }
 }

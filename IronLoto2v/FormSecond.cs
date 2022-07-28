@@ -308,6 +308,7 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
         {
+            timerCountdown.Stop();
             FormIntroduction form = new FormIntroduction();
             form.Show();
         }

@@ -92,7 +92,7 @@
             this.Controls.Add(this.dataGridViewResults);
             this.MaximumSize = new System.Drawing.Size(517, 493);
             this.Name = "FormResults";
-            this.Text = "FormResults";
+            this.Text = "Результаты игры";
             this.Load += new System.EventHandler(this.FormResults_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             this.ResumeLayout(false);

@@ -51,7 +51,7 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemCount = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
+            this.statusStripSecondLevel = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerCountdown = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             this.menuStripSettings.SuspendLayout();
-            this.statusStripFirstLevel.SuspendLayout();
+            this.statusStripSecondLevel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -255,7 +255,7 @@
             this.ToolStripMenuItemUsers,
             this.ToolStripMenuItemMenu});
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // ToolStripMenuItemExit
@@ -282,7 +282,7 @@
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
-            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
             this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
@@ -309,16 +309,16 @@
             this.ToolStripMenuItemCount.Text = "Узнать текущий счёт";
             this.ToolStripMenuItemCount.Click += new System.EventHandler(this.ToolStripMenuItemCount_Click_1);
             // 
-            // statusStripFirstLevel
+            // statusStripSecondLevel
             // 
-            this.statusStripFirstLevel.BackColor = System.Drawing.Color.IndianRed;
-            this.statusStripFirstLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripSecondLevel.BackColor = System.Drawing.Color.IndianRed;
+            this.statusStripSecondLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStripFirstLevel.Location = new System.Drawing.Point(0, 594);
-            this.statusStripFirstLevel.Name = "statusStripFirstLevel";
-            this.statusStripFirstLevel.Size = new System.Drawing.Size(1457, 22);
-            this.statusStripFirstLevel.TabIndex = 35;
-            this.statusStripFirstLevel.Text = "statusStrip1";
+            this.statusStripSecondLevel.Location = new System.Drawing.Point(0, 594);
+            this.statusStripSecondLevel.Name = "statusStripSecondLevel";
+            this.statusStripSecondLevel.Size = new System.Drawing.Size(1457, 22);
+            this.statusStripSecondLevel.TabIndex = 35;
+            this.statusStripSecondLevel.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
@@ -337,7 +337,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(1457, 616);
-            this.Controls.Add(this.statusStripFirstLevel);
+            this.Controls.Add(this.statusStripSecondLevel);
             this.Controls.Add(this.menuStripSettings);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
@@ -350,8 +350,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).EndInit();
             this.menuStripSettings.ResumeLayout(false);
             this.menuStripSettings.PerformLayout();
-            this.statusStripFirstLevel.ResumeLayout(false);
-            this.statusStripFirstLevel.PerformLayout();
+            this.statusStripSecondLevel.ResumeLayout(false);
+            this.statusStripSecondLevel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +379,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemStopOrGo;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemInformation;
-        private System.Windows.Forms.StatusStrip statusStripFirstLevel;
+        private System.Windows.Forms.StatusStrip statusStripSecondLevel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Timer timerCountdown;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCount;
