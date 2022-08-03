@@ -141,11 +141,11 @@
             // 
             // pictureBoxShow
             // 
-            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(606, 141);
+            this.pictureBoxShow.Location = new System.Drawing.Point(486, 98);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(217, 281);
+            this.pictureBoxShow.Size = new System.Drawing.Size(370, 423);
             this.pictureBoxShow.TabIndex = 18;
             this.pictureBoxShow.TabStop = false;
             // 
@@ -201,7 +201,6 @@
             // 
             // dataGridViewGamer1
             // 
-            this.dataGridViewGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer1.ColumnHeadersVisible = false;
@@ -210,12 +209,13 @@
             this.dataGridViewGamer1.Name = "dataGridViewGamer1";
             this.dataGridViewGamer1.ReadOnly = true;
             this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(320, 426);
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(720, 1080);
             this.dataGridViewGamer1.TabIndex = 16;
             // 
             // dataGridViewGamer2
             // 
-            this.dataGridViewGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
@@ -224,7 +224,7 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(320, 417);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(720, 1080);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
             // menuStripSettings

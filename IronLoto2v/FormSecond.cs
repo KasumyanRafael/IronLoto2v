@@ -39,9 +39,9 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 150;
+                columns[i].Width = 380;
             }
-            data.RowTemplate.Height = 139;
+            data.RowTemplate.Height = 400;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }

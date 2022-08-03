@@ -40,9 +40,9 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 360;
+                columns[i].Width = 380;
             }
-            data.RowTemplate.Height = 360;
+            data.RowTemplate.Height = 400;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
@@ -154,52 +154,6 @@ namespace IronLoto2v
                 temp[i] = new Word(a[i]);
             }
             return temp;
-        }
-
-        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
-        {
-            timerCountdown.Stop();
-            FormIntroduction form = new FormIntroduction();
-            form.Show();
-        }
-
-        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
-        {
-            timerCountdown.Stop();
-            FormMenu menu = new FormMenu();
-            menu.Show();
-        }
-
-        private void ToolStripMenuItemInformation_Click(object sender, EventArgs e)
-        {
-            timerCountdown.Stop();
-            labelPause.Visible = true;
-            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
-            FormDirections frm = new FormDirections();
-            frm.Show();
-        }
-
-        private void ToolStripMenuItemStopOrGo_Click(object sender, EventArgs e)
-        {
-            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
-            {
-                timerCountdown.Stop();
-                ToolStripMenuItemStopOrGo.Text = "Вперёд!";
-                IsPause = true;
-                labelPause.Visible = true;
-            }
-            else
-            {
-                timerCountdown.Start();
-                ToolStripMenuItemStopOrGo.Text = "Пауза";
-                IsPause = false;
-                labelPause.Visible = false;
-            }
         }
         void Winner(string first, string second, int one, int two)
         {
@@ -351,6 +305,53 @@ namespace IronLoto2v
                     timerCountdown.Stop();
                     Winner(gamer1, gamer2, firstscore, secondscore);
                 }
+            }
+        }
+
+        private void ToolStripMenuItemExits_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ToolStripMenuItemMenues_Click(object sender, EventArgs e)
+        {
+            timerCountdown.Stop();
+            FormMenu menu = new FormMenu();
+            menu.Show();
+        }
+
+        private void ToolStripMenuItemUsersChange_Click(object sender, EventArgs e)
+        {
+            timerCountdown.Stop();
+            FormIntroduction form = new FormIntroduction();
+            form.Show();
+        }
+
+
+        private void ToolStripMenuItemDirections_Click(object sender, EventArgs e)
+        {
+            timerCountdown.Stop();
+            labelPause.Visible = true;
+            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
+            FormDirections frm = new FormDirections();
+            frm.Show();
+        }
+
+        private void ToolStripMenuItemPause_Click(object sender, EventArgs e)
+        {
+            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
+            {
+                timerCountdown.Stop();
+                ToolStripMenuItemPause.Text = "Вперёд!";
+                IsPause = true;
+                labelPause.Visible = true;
+            }
+            else
+            {
+                timerCountdown.Start();
+                ToolStripMenuItemStopOrGo.Text = "Пауза";
+                IsPause = false;
+                labelPause.Visible = false;
             }
         }
     }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStripSettings = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemGame = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,25 +49,26 @@
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
-            this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerCountdown = new System.Windows.Forms.Timer(this.components);
-            this.menuStripSettings.SuspendLayout();
+            this.statusStripFirstLevel = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.играToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItemxits = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemExits = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemMenues = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemUsersChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemPause = new System.Windows.Forms.ToolStripMenuItem();
+            this.информацияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemDirections = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).BeginInit();
             this.statusStripFirstLevel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStripSettings
-            // 
-            this.menuStripSettings.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.menuStripSettings.Location = new System.Drawing.Point(0, 0);
-            this.menuStripSettings.Name = "menuStripSettings";
-            this.menuStripSettings.Size = new System.Drawing.Size(1457, 24);
-            this.menuStripSettings.TabIndex = 29;
-            this.menuStripSettings.Text = "menuStrip1";
             // 
             // ToolStripMenuItemGame
             // 
@@ -94,28 +94,24 @@
             this.ToolStripMenuItemExit.Name = "ToolStripMenuItemExit";
             this.ToolStripMenuItemExit.Size = new System.Drawing.Size(195, 22);
             this.ToolStripMenuItemExit.Text = "Из приложения";
-            this.ToolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
             // 
             // ToolStripMenuItemUsers
             // 
             this.ToolStripMenuItemUsers.Name = "ToolStripMenuItemUsers";
             this.ToolStripMenuItemUsers.Size = new System.Drawing.Size(195, 22);
             this.ToolStripMenuItemUsers.Text = "Смена пользователей";
-            this.ToolStripMenuItemUsers.Click += new System.EventHandler(this.ToolStripMenuItemUsers_Click);
             // 
             // ToolStripMenuItemMenu
             // 
             this.ToolStripMenuItemMenu.Name = "ToolStripMenuItemMenu";
             this.ToolStripMenuItemMenu.Size = new System.Drawing.Size(195, 22);
             this.ToolStripMenuItemMenu.Text = "Меню";
-            this.ToolStripMenuItemMenu.Click += new System.EventHandler(this.ToolStripMenuItemMenu_Click);
             // 
             // ToolStripMenuItemStopOrGo
             // 
             this.ToolStripMenuItemStopOrGo.Name = "ToolStripMenuItemStopOrGo";
             this.ToolStripMenuItemStopOrGo.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemStopOrGo.Text = "Пауза";
-            this.ToolStripMenuItemStopOrGo.Click += new System.EventHandler(this.ToolStripMenuItemStopOrGo_Click);
             // 
             // информацияToolStripMenuItem
             // 
@@ -130,7 +126,6 @@
             this.ToolStripMenuItemInformation.Name = "ToolStripMenuItemInformation";
             this.ToolStripMenuItemInformation.Size = new System.Drawing.Size(118, 22);
             this.ToolStripMenuItemInformation.Text = "Об игре";
-            this.ToolStripMenuItemInformation.Click += new System.EventHandler(this.ToolStripMenuItemInformation_Click);
             // 
             // panel1
             // 
@@ -211,11 +206,11 @@
             // 
             // pictureBoxShow
             // 
-            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(606, 141);
+            this.pictureBoxShow.Location = new System.Drawing.Point(486, 98);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(217, 281);
+            this.pictureBoxShow.Size = new System.Drawing.Size(370, 423);
             this.pictureBoxShow.TabIndex = 18;
             this.pictureBoxShow.TabStop = false;
             // 
@@ -271,7 +266,6 @@
             // 
             // dataGridViewGamer1
             // 
-            this.dataGridViewGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer1.ColumnHeadersVisible = false;
@@ -280,12 +274,13 @@
             this.dataGridViewGamer1.Name = "dataGridViewGamer1";
             this.dataGridViewGamer1.ReadOnly = true;
             this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(320, 426);
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(720, 1080);
             this.dataGridViewGamer1.TabIndex = 16;
             // 
             // dataGridViewGamer2
             // 
-            this.dataGridViewGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
@@ -294,16 +289,8 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(320, 426);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(720, 1080);
             this.dataGridViewGamer2.TabIndex = 18;
-            // 
-            // statusStripFirstLevel
-            // 
-            this.statusStripFirstLevel.Location = new System.Drawing.Point(0, 594);
-            this.statusStripFirstLevel.Name = "statusStripFirstLevel";
-            this.statusStripFirstLevel.Size = new System.Drawing.Size(1457, 22);
-            this.statusStripFirstLevel.TabIndex = 33;
-            this.statusStripFirstLevel.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
@@ -316,6 +303,95 @@
             this.timerCountdown.Enabled = true;
             this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
             // 
+            // statusStripFirstLevel
+            // 
+            this.statusStripFirstLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel2});
+            this.statusStripFirstLevel.Location = new System.Drawing.Point(0, 594);
+            this.statusStripFirstLevel.Name = "statusStripFirstLevel";
+            this.statusStripFirstLevel.Size = new System.Drawing.Size(1457, 22);
+            this.statusStripFirstLevel.TabIndex = 35;
+            this.statusStripFirstLevel.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(262, 17);
+            this.toolStripStatusLabel2.Text = "Первый раунд(слова с русскими переводами)";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.играToolStripMenuItem,
+            this.информацияToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1457, 24);
+            this.menuStrip1.TabIndex = 36;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // играToolStripMenuItem
+            // 
+            this.играToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.выходToolStripMenuItemxits,
+            this.ToolStripMenuItemPause});
+            this.играToolStripMenuItem.Name = "играToolStripMenuItem";
+            this.играToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.играToolStripMenuItem.Text = "Игра";
+            // 
+            // выходToolStripMenuItemxits
+            // 
+            this.выходToolStripMenuItemxits.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemExits,
+            this.ToolStripMenuItemMenues,
+            this.ToolStripMenuItemUsersChange});
+            this.выходToolStripMenuItemxits.Name = "выходToolStripMenuItemxits";
+            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItemxits.Text = "Выход";
+            // 
+            // ToolStripMenuItemExits
+            // 
+            this.ToolStripMenuItemExits.Name = "ToolStripMenuItemExits";
+            this.ToolStripMenuItemExits.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemExits.Text = "Из приложения";
+            this.ToolStripMenuItemExits.Click += new System.EventHandler(this.ToolStripMenuItemExits_Click);
+            // 
+            // ToolStripMenuItemMenues
+            // 
+            this.ToolStripMenuItemMenues.Name = "ToolStripMenuItemMenues";
+            this.ToolStripMenuItemMenues.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemMenues.Text = "Меню";
+            this.ToolStripMenuItemMenues.Click += new System.EventHandler(this.ToolStripMenuItemMenues_Click);
+            // 
+            // ToolStripMenuItemUsersChange
+            // 
+            this.ToolStripMenuItemUsersChange.Name = "ToolStripMenuItemUsersChange";
+            this.ToolStripMenuItemUsersChange.Size = new System.Drawing.Size(188, 22);
+            this.ToolStripMenuItemUsersChange.Text = "Смена пользователя";
+            this.ToolStripMenuItemUsersChange.Click += new System.EventHandler(this.ToolStripMenuItemUsersChange_Click);
+            // 
+            // ToolStripMenuItemPause
+            // 
+            this.ToolStripMenuItemPause.Name = "ToolStripMenuItemPause";
+            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemPause.Text = "Пауза";
+            this.ToolStripMenuItemPause.Click += new System.EventHandler(this.ToolStripMenuItemPause_Click);
+            // 
+            // информацияToolStripMenuItem1
+            // 
+            this.информацияToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemDirections});
+            this.информацияToolStripMenuItem1.Name = "информацияToolStripMenuItem1";
+            this.информацияToolStripMenuItem1.Size = new System.Drawing.Size(93, 20);
+            this.информацияToolStripMenuItem1.Text = "Информация";
+            // 
+            // ToolStripMenuItemDirections
+            // 
+            this.ToolStripMenuItemDirections.Name = "ToolStripMenuItemDirections";
+            this.ToolStripMenuItemDirections.Size = new System.Drawing.Size(118, 22);
+            this.ToolStripMenuItemDirections.Text = "Об игре";
+            this.ToolStripMenuItemDirections.Click += new System.EventHandler(this.ToolStripMenuItemDirections_Click);
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,28 +399,27 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1457, 616);
             this.Controls.Add(this.statusStripFirstLevel);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStripSettings);
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormGame";
             this.Load += new System.EventHandler(this.FormGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGame_KeyDown);
-            this.menuStripSettings.ResumeLayout(false);
-            this.menuStripSettings.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer2)).EndInit();
             this.statusStripFirstLevel.ResumeLayout(false);
             this.statusStripFirstLevel.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStripSettings;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemGame;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
@@ -362,11 +437,21 @@
         private System.Windows.Forms.Label labelFirstGamerCount;
         private System.Windows.Forms.DataGridView dataGridViewGamer1;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
-        private System.Windows.Forms.StatusStrip statusStripFirstLevel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label labelNoWayGamer2;
         private System.Windows.Forms.Label labelNoWayGamer1;
         private System.Windows.Forms.Timer timerCountdown;
         private System.Windows.Forms.Label labelCountdown;
+        private System.Windows.Forms.StatusStrip statusStripFirstLevel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem играToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItemxits;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExits;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemMenues;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUsersChange;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemPause;
+        private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemDirections;
     }
 }
