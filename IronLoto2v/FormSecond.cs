@@ -52,7 +52,7 @@ namespace IronLoto2v
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
-            s = Properties.Resources.dictionary.Split('\n');
+            s = Properties.Resources.dictionary__1_.Split('\n');
             list = ToWord(s); //это массив сo словами (типа word)
             antirepeat(list, s);
             extract = GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+

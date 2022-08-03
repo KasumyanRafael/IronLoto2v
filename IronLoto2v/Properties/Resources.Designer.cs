@@ -75,7 +75,7 @@ namespace IronLoto2v.Properties {
         ///12 тридцать æртын
         ///13 чиж дзылы
         ///14 фрукты дыргътæ
-        ///15 восемьдесят цыппарыссæдзы
+        ///15 восемьдесять цыппарыссæдзы
         ///16 собака куыдз
         ///17 мельница куырой
         ///18 курица карк
@@ -88,21 +88,13 @@ namespace IronLoto2v.Properties {
         ///25 черемша давон
         ///26 редис булкъ
         ///27 гвоздика даричин
-        ///28 поле бы [остаток строки не уместился]&quot;;.
+        ///28 поле быдыр
+        ///29 тысяча мин
+        ///30 шар к [остаток строки не уместился]&quot;;.
         /// </summary>
-        internal static string dictionary {
+        internal static string dictionary__1_ {
             get {
-                return ResourceManager.GetString("dictionary", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap NoWay {
-            get {
-                object obj = ResourceManager.GetObject("NoWay", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("dictionary__1_", resourceCulture);
             }
         }
         

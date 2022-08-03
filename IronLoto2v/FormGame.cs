@@ -40,9 +40,9 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 150;
+                columns[i].Width = 360;
             }
-            data.RowTemplate.Height = 139;
+            data.RowTemplate.Height = 360;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
@@ -53,7 +53,7 @@ namespace IronLoto2v
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
-            s = Properties.Resources.dictionary.Split('\n');
+            s = Properties.Resources.dictionary__1_.Split('\n');
             list = ToWord(s); //это массив сo словами (типа word)
             antirepeat(list, s);
             extract=GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+

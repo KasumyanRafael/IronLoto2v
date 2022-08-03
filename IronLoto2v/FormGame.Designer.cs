@@ -64,9 +64,6 @@
             // menuStripSettings
             // 
             this.menuStripSettings.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.menuStripSettings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemGame,
-            this.информацияToolStripMenuItem});
             this.menuStripSettings.Location = new System.Drawing.Point(0, 0);
             this.menuStripSettings.Name = "menuStripSettings";
             this.menuStripSettings.Size = new System.Drawing.Size(1457, 24);
@@ -297,13 +294,11 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(320, 417);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(320, 426);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
             // statusStripFirstLevel
             // 
-            this.statusStripFirstLevel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
             this.statusStripFirstLevel.Location = new System.Drawing.Point(0, 594);
             this.statusStripFirstLevel.Name = "statusStripFirstLevel";
             this.statusStripFirstLevel.Size = new System.Drawing.Size(1457, 22);
