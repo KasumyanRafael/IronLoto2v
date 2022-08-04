@@ -346,7 +346,7 @@
             this.ToolStripMenuItemMenues,
             this.ToolStripMenuItemUsersChange});
             this.выходToolStripMenuItemxits.Name = "выходToolStripMenuItemxits";
-            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItemxits.Text = "Выход";
             // 
             // ToolStripMenuItemExits
@@ -373,7 +373,7 @@
             // ToolStripMenuItemPause
             // 
             this.ToolStripMenuItemPause.Name = "ToolStripMenuItemPause";
-            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemPause.Text = "Пауза";
             this.ToolStripMenuItemPause.Click += new System.EventHandler(this.ToolStripMenuItemPause_Click);
             // 

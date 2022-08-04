@@ -139,6 +139,11 @@
   <ItemGroup>
     <Content Include="ImagesWithIronMeaning\1.png" />
     <Content Include="ImagesWithIronMeaning\10.png" />
+    <None Include="Resources\p15ru.png" />
+    <None Include="Resources\p15irword.png" />
+    <None Include="Resources\p15ir.png" />
+    <None Include="Resources\p53irword.png" />
+    <None Include="Resources\p53ir.png" />
     <None Include="Resources\p92ru.png" />
     <None Include="Resources\p92irword.png" />
     <None Include="Resources\p92ir.png" />
@@ -296,8 +301,6 @@
     <None Include="Resources\p54ir.png" />
     <None Include="Resources\p54.png" />
     <None Include="Resources\p53ru.png" />
-    <None Include="Resources\p53irword.png" />
-    <None Include="Resources\p53ir.png" />
     <None Include="Resources\p53.png" />
     <None Include="Resources\p52ru.png" />
     <None Include="Resources\p52irword.png" />
@@ -447,9 +450,6 @@
     <None Include="Resources\p16irword.png" />
     <None Include="Resources\p16ir.png" />
     <None Include="Resources\p16.png" />
-    <None Include="Resources\p15ru.png" />
-    <None Include="Resources\p15irword.png" />
-    <None Include="Resources\p15ir.png" />
     <None Include="Resources\p15.png" />
     <None Include="Resources\p14ru.png" />
     <None Include="Resources\p14irword.png" />
