@@ -175,10 +175,11 @@ namespace IronLoto2v
             int b = data.CurrentCell.ColumnIndex;
             if (mas[a, b] == picture)
             {
-                data.CurrentCell.Value = null;
+                data.CurrentCell.Value = Properties.Resources.p0;
+                mas[a, b] = 0;
                 return 1;
             }
-            label.Visible = true;
+            else if (mas[a,b]!=0) label.Visible = true;
             //MessageBox.Show("Ход невозможен");
             return 0;
         }
