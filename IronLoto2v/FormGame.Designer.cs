@@ -38,11 +38,11 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelCountdown = new System.Windows.Forms.Label();
             this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
-            this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.labelSecondGamer = new System.Windows.Forms.Label();
             this.labelSecondGamerCount = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
@@ -133,11 +133,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelPause);
+            this.panel1.Controls.Add(this.pictureBoxShow);
             this.panel1.Controls.Add(this.labelCountdown);
             this.panel1.Controls.Add(this.labelNoWayGamer2);
             this.panel1.Controls.Add(this.labelNoWayGamer1);
-            this.panel1.Controls.Add(this.labelPause);
-            this.panel1.Controls.Add(this.pictureBoxShow);
             this.panel1.Controls.Add(this.labelSecondGamer);
             this.panel1.Controls.Add(this.labelSecondGamerCount);
             this.panel1.Controls.Add(this.labelFirstGamer);
@@ -148,6 +148,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1426, 524);
             this.panel1.TabIndex = 32;
+            // 
+            // pictureBoxShow
+            // 
+            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBoxShow.Location = new System.Drawing.Point(486, 98);
+            this.pictureBoxShow.Name = "pictureBoxShow";
+            this.pictureBoxShow.Size = new System.Drawing.Size(367, 423);
+            this.pictureBoxShow.TabIndex = 18;
+            this.pictureBoxShow.TabStop = false;
             // 
             // labelCountdown
             // 
@@ -203,16 +213,6 @@
             this.labelPause.Text = "пауза";
             this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelPause.Visible = false;
-            // 
-            // pictureBoxShow
-            // 
-            this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(486, 98);
-            this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(370, 423);
-            this.pictureBoxShow.TabIndex = 18;
-            this.pictureBoxShow.TabStop = false;
             // 
             // labelSecondGamer
             // 

@@ -339,7 +339,7 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemPause_Click(object sender, EventArgs e)
         {
-            if (ToolStripMenuItemStopOrGo.Text == "Пауза")
+            if (ToolStripMenuItemPause.Text == "Пауза")
             {
                 timerCountdown.Stop();
                 ToolStripMenuItemPause.Text = "Вперёд!";
@@ -349,7 +349,7 @@ namespace IronLoto2v
             else
             {
                 timerCountdown.Start();
-                ToolStripMenuItemStopOrGo.Text = "Пауза";
+                ToolStripMenuItemPause.Text = "Пауза";
                 IsPause = false;
                 labelPause.Visible = false;
             }
