@@ -185,11 +185,11 @@
             // 
             // labelCountdown
             // 
-            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(656, 6);
+            this.labelCountdown.Location = new System.Drawing.Point(666, 292);
             this.labelCountdown.Name = "labelCountdown";
             this.labelCountdown.Size = new System.Drawing.Size(98, 63);
             this.labelCountdown.TabIndex = 31;
@@ -199,12 +199,12 @@
             // labelNoWayGamer2
             // 
             this.labelNoWayGamer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNoWayGamer2.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer2.Location = new System.Drawing.Point(1211, 296);
+            this.labelNoWayGamer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelNoWayGamer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer2.ForeColor = System.Drawing.Color.Blue;
+            this.labelNoWayGamer2.Location = new System.Drawing.Point(1081, 0);
             this.labelNoWayGamer2.Name = "labelNoWayGamer2";
-            this.labelNoWayGamer2.Size = new System.Drawing.Size(199, 126);
+            this.labelNoWayGamer2.Size = new System.Drawing.Size(345, 220);
             this.labelNoWayGamer2.TabIndex = 30;
             this.labelNoWayGamer2.Text = "ход невозможен";
             this.labelNoWayGamer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,12 +213,12 @@
             // labelNoWayGamer1
             // 
             this.labelNoWayGamer1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNoWayGamer1.BackColor = System.Drawing.Color.White;
-            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Black;
-            this.labelNoWayGamer1.Location = new System.Drawing.Point(10, 296);
+            this.labelNoWayGamer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Blue;
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(-3, 0);
             this.labelNoWayGamer1.Name = "labelNoWayGamer1";
-            this.labelNoWayGamer1.Size = new System.Drawing.Size(220, 126);
+            this.labelNoWayGamer1.Size = new System.Drawing.Size(345, 220);
             this.labelNoWayGamer1.TabIndex = 29;
             this.labelNoWayGamer1.Text = "ход невозможен";
             this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,9 +242,9 @@
             // 
             this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(488, 98);
+            this.pictureBoxShow.Location = new System.Drawing.Point(487, 6);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(370, 423);
+            this.pictureBoxShow.Size = new System.Drawing.Size(424, 452);
             this.pictureBoxShow.TabIndex = 18;
             this.pictureBoxShow.TabStop = false;
             // 
