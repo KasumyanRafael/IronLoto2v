@@ -38,9 +38,9 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelCountdown = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
-            this.labelCountdown = new System.Windows.Forms.Label();
             this.labelNoWayGamer2 = new System.Windows.Forms.Label();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelSecondGamer = new System.Windows.Forms.Label();
@@ -149,13 +149,26 @@
             this.panel1.Size = new System.Drawing.Size(1426, 524);
             this.panel1.TabIndex = 32;
             // 
+            // labelCountdown
+            // 
+            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountdown.ForeColor = System.Drawing.Color.Black;
+            this.labelCountdown.Location = new System.Drawing.Point(606, 309);
+            this.labelCountdown.Name = "labelCountdown";
+            this.labelCountdown.Size = new System.Drawing.Size(98, 63);
+            this.labelCountdown.TabIndex = 31;
+            this.labelCountdown.Text = "10";
+            this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // labelPause
             // 
             this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(666, 458);
+            this.labelPause.Location = new System.Drawing.Point(610, 461);
             this.labelPause.Name = "labelPause";
             this.labelPause.Size = new System.Drawing.Size(98, 63);
             this.labelPause.TabIndex = 27;
@@ -167,24 +180,11 @@
             // 
             this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(480, 6);
+            this.pictureBoxShow.Location = new System.Drawing.Point(477, 98);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(429, 452);
+            this.pictureBoxShow.Size = new System.Drawing.Size(320, 320);
             this.pictureBoxShow.TabIndex = 18;
             this.pictureBoxShow.TabStop = false;
-            // 
-            // labelCountdown
-            // 
-            this.labelCountdown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(666, 307);
-            this.labelCountdown.Name = "labelCountdown";
-            this.labelCountdown.Size = new System.Drawing.Size(98, 63);
-            this.labelCountdown.TabIndex = 31;
-            this.labelCountdown.Text = "10";
-            this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelNoWayGamer2
             // 
@@ -273,7 +273,7 @@
             this.dataGridViewGamer1.Name = "dataGridViewGamer1";
             this.dataGridViewGamer1.ReadOnly = true;
             this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(720, 1080);
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(630, 930);
             this.dataGridViewGamer1.TabIndex = 16;
             // 
             // dataGridViewGamer2
@@ -288,7 +288,7 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(720, 1080);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(630, 930);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
             // toolStripStatusLabel1

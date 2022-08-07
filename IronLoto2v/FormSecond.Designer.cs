@@ -90,7 +90,7 @@
             this.labelCountdown.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(666, 284);
+            this.labelCountdown.Location = new System.Drawing.Point(602, 335);
             this.labelCountdown.Name = "labelCountdown";
             this.labelCountdown.Size = new System.Drawing.Size(98, 63);
             this.labelCountdown.TabIndex = 31;
@@ -131,7 +131,7 @@
             this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(666, 458);
+            this.labelPause.Location = new System.Drawing.Point(606, 461);
             this.labelPause.Name = "labelPause";
             this.labelPause.Size = new System.Drawing.Size(98, 63);
             this.labelPause.TabIndex = 27;
@@ -143,9 +143,9 @@
             // 
             this.pictureBoxShow.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(477, 3);
+            this.pictureBoxShow.Location = new System.Drawing.Point(464, 98);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(427, 452);
+            this.pictureBoxShow.Size = new System.Drawing.Size(320, 320);
             this.pictureBoxShow.TabIndex = 18;
             this.pictureBoxShow.TabStop = false;
             // 
@@ -209,7 +209,7 @@
             this.dataGridViewGamer1.Name = "dataGridViewGamer1";
             this.dataGridViewGamer1.ReadOnly = true;
             this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(720, 1080);
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(630, 930);
             this.dataGridViewGamer1.TabIndex = 16;
             // 
             // dataGridViewGamer2
@@ -224,7 +224,7 @@
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.ReadOnly = true;
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(720, 1080);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(650, 950);
             this.dataGridViewGamer2.TabIndex = 18;
             // 
             // menuStripSettings
