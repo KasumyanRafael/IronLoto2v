@@ -91,5 +91,28 @@ namespace IronLoto2v
                 }
             }
         }
+
+        private void ToolStripMenuItemNewGame_Click(object sender, EventArgs e)
+        {
+            FormGame game = new FormGame();
+            game.Show();
+        }
+
+        private void ToolStripMenuItemMenu_Click(object sender, EventArgs e)
+        {
+            FormMenu formMenu = new FormMenu();
+            formMenu.Show();
+        }
+
+        private void ToolStripMenuItemUsers_Click(object sender, EventArgs e)
+        {
+            FormIntroduction formIntroduction = new FormIntroduction();
+            formIntroduction.Show();
+        }
+
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
