@@ -157,7 +157,7 @@ namespace IronLoto2v
         }
         void Winner(string first, string second, int one, int two)
         {
-
+            timerCountdown.Stop();
             if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
             if (one < two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
             if (one == two) MessageBox.Show("В первом раунде победила дружба. Все молодцы");
@@ -177,6 +177,11 @@ namespace IronLoto2v
             {
                 data.CurrentCell.Value = Properties.Resources.p0;
                 mas[a, b] = 0;
+                cnt++; //Здесь начинается та самая конкуренция!
+                if(cnt==extract.Length) Winner(gamer1, gamer2, firstscore, secondscore);
+                countdown = 10;
+                pictureBoxShow.Image = extract[cnt].GetRusPicture();
+                pictureshow = extract[cnt].NumberOf();
                 return 1;
             }
             else if (mas[a,b]!=0) label.Visible = true;
