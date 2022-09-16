@@ -293,7 +293,7 @@ namespace IronLoto2v
 
         private void timerCountdown_Tick(object sender, EventArgs e)
         {
-            countdown--;
+            /*countdown--;
             labelCountdown.Text=countdown.ToString();
             if(countdown<5) labelCountdown.ForeColor = Color.Red;
             else labelCountdown.ForeColor = Color.Black;
@@ -311,7 +311,25 @@ namespace IronLoto2v
                     timerCountdown.Stop();
                     Winner(gamer1, gamer2, firstscore, secondscore);
                 }
+            }*/
+
+            pictureBoxShow.Image = extract[cnt].GetRusPicture();
+            pictureshow = extract[cnt].NumberOf();
+            countdown--;
+            labelCountdown.Text = countdown.ToString();
+            if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+            else labelCountdown.ForeColor = Color.Black;
+            if (countdown == 0)
+            {
+                countdown = 10;
+                cnt++;
             }
+            if(cnt==10)
+            {
+                timerCountdown.Stop();
+                Winner(gamer1, gamer2, firstscore, secondscore);
+            }
+            
         }
 
         private void ToolStripMenuItemExits_Click(object sender, EventArgs e)

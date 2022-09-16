@@ -153,7 +153,7 @@ namespace IronLoto2v
                 cnt++; //Здесь начинается та самая конкуренция!
                 if (cnt == extract.Length) Winner(gamer1, gamer2, firstscore, secondscore);
                 countdown = 10;
-                pictureBoxShow.Image = extract[cnt].GetRusPicture();
+                pictureBoxShow.Image = extract[cnt].GetPicture();
                 pictureshow = extract[cnt].NumberOf();
                 return 1;
             }
@@ -287,6 +287,8 @@ namespace IronLoto2v
 
         private void timerCountdown_Tick(object sender, EventArgs e)
         {
+            pictureBoxShow.Image = extract[cnt].GetPicture();
+            pictureshow = extract[cnt].NumberOf();
             countdown--;
             labelCountdown.Text = countdown.ToString();
             if (countdown < 5) labelCountdown.ForeColor = Color.Red;
@@ -294,17 +296,12 @@ namespace IronLoto2v
             if (countdown == 0)
             {
                 countdown = 10;
-                try
-                {
-                    cnt++;
-                    pictureBoxShow.Image = extract[cnt].GetPicture();
-                    pictureshow = extract[cnt].NumberOf();
-                }
-                catch
-                {
-                    timerCountdown.Stop();
-                    Winner(gamer1, gamer2, firstscore, secondscore);
-                }
+                cnt++;
+            }
+            if (cnt == 10)
+            {
+                timerCountdown.Stop();
+                Winner(gamer1, gamer2, firstscore, secondscore);
             }
         }
 
