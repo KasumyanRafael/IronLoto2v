@@ -117,7 +117,7 @@
             this.labelNoWayGamer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.labelNoWayGamer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelNoWayGamer1.ForeColor = System.Drawing.Color.Blue;
-            this.labelNoWayGamer1.Location = new System.Drawing.Point(3, 0);
+            this.labelNoWayGamer1.Location = new System.Drawing.Point(-1, 0);
             this.labelNoWayGamer1.Name = "labelNoWayGamer1";
             this.labelNoWayGamer1.Size = new System.Drawing.Size(345, 220);
             this.labelNoWayGamer1.TabIndex = 29;
