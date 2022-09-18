@@ -45,6 +45,9 @@
 12.09.2022 
 Вывод победителя, занесение результатов в таблицу
 
+16.09.2022
+Устранение багов в таймере
+
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
 
