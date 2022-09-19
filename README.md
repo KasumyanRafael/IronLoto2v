@@ -51,6 +51,8 @@
 16.09.2022
 Устранение багов в таймере
 
+18.09.2022
+Внешнее обновление первого раунда, сжатие картинок с 300 до 236
 
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
