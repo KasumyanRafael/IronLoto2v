@@ -20,6 +20,7 @@ namespace IronLoto2v
         static int t = 1000;
         bool IsPause = false;
         int cnt = 0;
+        int countpic;
         string[] s;
         int[,] firstTable = new int[x, y];
         int[,] secondTable = new int[x, y];
@@ -39,9 +40,9 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 320;
+                columns[i].Width = 236;
             }
-            data.RowTemplate.Height = 320;
+            data.RowTemplate.Height = 236;
             data.Columns.AddRange(columns);
             data.Rows.Add(a - 1);
         }
@@ -56,6 +57,7 @@ namespace IronLoto2v
             list = ToWord(s); //это массив сo словами (типа word)
             antirepeat(list, s);
             extract = GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
+            countpic = extract.Length;
             filling(dataGridViewGamer1, extract, x, y, firstTable);
             do
             {
@@ -155,6 +157,8 @@ namespace IronLoto2v
                 countdown = 10;
                 pictureBoxShow.Image = extract[cnt].GetPicture();
                 pictureshow = extract[cnt].NumberOf();
+                countpic--;
+                labelPicturesCount.Text = countpic.ToString() + "/10";
                 return 1;
             }
             else if (mas[a, b] != 0) label.Visible = true;
@@ -289,6 +293,8 @@ namespace IronLoto2v
             {
                 countdown = 10;
                 cnt++;
+                countpic--;
+                labelPicturesCount.Text = countpic.ToString() + "/10";
             }
             if (cnt == 10)
             {
