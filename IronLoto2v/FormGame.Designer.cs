@@ -40,9 +40,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSpace = new System.Windows.Forms.Panel();
             this.panelPictures = new System.Windows.Forms.Panel();
-            this.labelPause = new System.Windows.Forms.Label();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.panelInformation = new System.Windows.Forms.Panel();
+            this.labelPause = new System.Windows.Forms.Label();
             this.labelPicturesCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelCountdown = new System.Windows.Forms.Label();
@@ -183,26 +183,12 @@
             this.panelPictures.Size = new System.Drawing.Size(485, 250);
             this.panelPictures.TabIndex = 1;
             // 
-            // labelPause
-            // 
-            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(177, 49);
-            this.labelPause.Name = "labelPause";
-            this.labelPause.Size = new System.Drawing.Size(98, 49);
-            this.labelPause.TabIndex = 28;
-            this.labelPause.Text = "пауза";
-            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPause.Visible = false;
-            // 
             // pictureBoxShow
             // 
             this.pictureBoxShow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(126, 0);
+            this.pictureBoxShow.Location = new System.Drawing.Point(111, 2);
             this.pictureBoxShow.Name = "pictureBoxShow";
             this.pictureBoxShow.Size = new System.Drawing.Size(236, 257);
             this.pictureBoxShow.TabIndex = 19;
@@ -221,6 +207,20 @@
             this.panelInformation.Name = "panelInformation";
             this.panelInformation.Size = new System.Drawing.Size(485, 213);
             this.panelInformation.TabIndex = 0;
+            // 
+            // labelPause
+            // 
+            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPause.ForeColor = System.Drawing.Color.Black;
+            this.labelPause.Location = new System.Drawing.Point(177, 49);
+            this.labelPause.Name = "labelPause";
+            this.labelPause.Size = new System.Drawing.Size(98, 49);
+            this.labelPause.TabIndex = 28;
+            this.labelPause.Text = "пауза";
+            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPause.Visible = false;
             // 
             // labelPicturesCount
             // 
@@ -285,9 +285,9 @@
             // 
             this.panelGrid2.Controls.Add(this.dataGridViewGamer2);
             this.panelGrid2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrid2.Location = new System.Drawing.Point(0, -307);
+            this.panelGrid2.Location = new System.Drawing.Point(0, -271);
             this.panelGrid2.Name = "panelGrid2";
-            this.panelGrid2.Size = new System.Drawing.Size(477, 770);
+            this.panelGrid2.Size = new System.Drawing.Size(477, 734);
             this.panelGrid2.TabIndex = 33;
             // 
             // dataGridViewGamer2
@@ -298,7 +298,7 @@
             this.dataGridViewGamer2.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(477, 770);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(477, 734);
             this.dataGridViewGamer2.TabIndex = 9;
             // 
             // panelGamer2Info

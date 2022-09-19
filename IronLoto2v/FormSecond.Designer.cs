@@ -46,9 +46,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSpace = new System.Windows.Forms.Panel();
             this.panelPictures = new System.Windows.Forms.Panel();
-            this.labelPause = new System.Windows.Forms.Label();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.panelInformation = new System.Windows.Forms.Panel();
+            this.labelPause = new System.Windows.Forms.Label();
             this.labelPicturesCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelCountdown = new System.Windows.Forms.Label();
@@ -62,11 +62,11 @@
             this.labelSecondGamer = new System.Windows.Forms.Label();
             this.panelGamer1 = new System.Windows.Forms.Panel();
             this.panelGrid1 = new System.Windows.Forms.Panel();
+            this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.panelGamer1Info = new System.Windows.Forms.Panel();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
-            this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.menuStripSettings.SuspendLayout();
             this.statusStripSecondLevel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,8 +80,8 @@
             this.panelGamer2Info.SuspendLayout();
             this.panelGamer1.SuspendLayout();
             this.panelGrid1.SuspendLayout();
-            this.panelGamer1Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).BeginInit();
+            this.panelGamer1Info.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripSettings
@@ -190,7 +190,7 @@
             // 
             // panelButtons
             // 
-            this.panelButtons.BackColor = System.Drawing.Color.IndianRed;
+            this.panelButtons.BackColor = System.Drawing.Color.Firebrick;
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtons.Location = new System.Drawing.Point(0, 24);
             this.panelButtons.Name = "panelButtons";
@@ -206,7 +206,7 @@
             this.panel1.Controls.Add(this.panelSpace);
             this.panel1.Controls.Add(this.panelGamer2);
             this.panel1.Controls.Add(this.panelGamer1);
-            this.panel1.Location = new System.Drawing.Point(12, 114);
+            this.panel1.Location = new System.Drawing.Point(12, 113);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1433, 463);
             this.panel1.TabIndex = 39;
@@ -214,52 +214,37 @@
             // panelSpace
             // 
             this.panelSpace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panelSpace.BackColor = System.Drawing.Color.IndianRed;
             this.panelSpace.Controls.Add(this.panelPictures);
             this.panelSpace.Controls.Add(this.panelInformation);
-            this.panelSpace.Location = new System.Drawing.Point(474, 0);
+            this.panelSpace.Location = new System.Drawing.Point(474, 1);
             this.panelSpace.Name = "panelSpace";
-            this.panelSpace.Size = new System.Drawing.Size(485, 463);
+            this.panelSpace.Size = new System.Drawing.Size(485, 462);
             this.panelSpace.TabIndex = 2;
             // 
             // panelPictures
             // 
-            this.panelPictures.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelPictures.BackColor = System.Drawing.Color.IndianRed;
             this.panelPictures.Controls.Add(this.pictureBoxShow);
-            this.panelPictures.Location = new System.Drawing.Point(0, 1);
+            this.panelPictures.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPictures.Location = new System.Drawing.Point(0, 0);
             this.panelPictures.Name = "panelPictures";
-            this.panelPictures.Size = new System.Drawing.Size(485, 248);
+            this.panelPictures.Size = new System.Drawing.Size(485, 250);
             this.panelPictures.TabIndex = 1;
-            // 
-            // labelPause
-            // 
-            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(178, 49);
-            this.labelPause.Name = "labelPause";
-            this.labelPause.Size = new System.Drawing.Size(98, 45);
-            this.labelPause.TabIndex = 28;
-            this.labelPause.Text = "пауза";
-            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPause.Visible = false;
             // 
             // pictureBoxShow
             // 
             this.pictureBoxShow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxShow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBoxShow.Location = new System.Drawing.Point(111, -1);
+            this.pictureBoxShow.Location = new System.Drawing.Point(111, 2);
             this.pictureBoxShow.Name = "pictureBoxShow";
-            this.pictureBoxShow.Size = new System.Drawing.Size(236, 249);
+            this.pictureBoxShow.Size = new System.Drawing.Size(236, 257);
             this.pictureBoxShow.TabIndex = 19;
             this.pictureBoxShow.TabStop = false;
             // 
             // panelInformation
             // 
-            this.panelInformation.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelInformation.BackColor = System.Drawing.Color.Firebrick;
             this.panelInformation.Controls.Add(this.labelPause);
             this.panelInformation.Controls.Add(this.labelPicturesCount);
             this.panelInformation.Controls.Add(this.label2);
@@ -268,8 +253,22 @@
             this.panelInformation.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelInformation.Location = new System.Drawing.Point(0, 249);
             this.panelInformation.Name = "panelInformation";
-            this.panelInformation.Size = new System.Drawing.Size(485, 214);
+            this.panelInformation.Size = new System.Drawing.Size(485, 213);
             this.panelInformation.TabIndex = 0;
+            // 
+            // labelPause
+            // 
+            this.labelPause.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPause.ForeColor = System.Drawing.Color.Black;
+            this.labelPause.Location = new System.Drawing.Point(177, 49);
+            this.labelPause.Name = "labelPause";
+            this.labelPause.Size = new System.Drawing.Size(98, 49);
+            this.labelPause.TabIndex = 28;
+            this.labelPause.Text = "пауза";
+            this.labelPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPause.Visible = false;
             // 
             // labelPicturesCount
             // 
@@ -277,7 +276,7 @@
             this.labelPicturesCount.BackColor = System.Drawing.Color.White;
             this.labelPicturesCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPicturesCount.ForeColor = System.Drawing.Color.Black;
-            this.labelPicturesCount.Location = new System.Drawing.Point(177, 147);
+            this.labelPicturesCount.Location = new System.Drawing.Point(177, 146);
             this.labelPicturesCount.Name = "labelPicturesCount";
             this.labelPicturesCount.Size = new System.Drawing.Size(108, 49);
             this.labelPicturesCount.TabIndex = 34;
@@ -286,7 +285,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.RosyBrown;
+            this.label2.BackColor = System.Drawing.Color.Firebrick;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(0, 98);
             this.label2.Name = "label2";
@@ -301,7 +300,7 @@
             this.labelCountdown.BackColor = System.Drawing.Color.White;
             this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(177, 49);
+            this.labelCountdown.Location = new System.Drawing.Point(177, 48);
             this.labelCountdown.Name = "labelCountdown";
             this.labelCountdown.Size = new System.Drawing.Size(98, 49);
             this.labelCountdown.TabIndex = 32;
@@ -310,7 +309,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.RosyBrown;
+            this.label1.BackColor = System.Drawing.Color.Firebrick;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -322,7 +321,6 @@
             // 
             // panelGamer2
             // 
-            this.panelGamer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelGamer2.Controls.Add(this.panelGrid2);
             this.panelGamer2.Controls.Add(this.panelGamer2Info);
             this.panelGamer2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -333,24 +331,23 @@
             // 
             // panelGrid2
             // 
-            this.panelGrid2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelGrid2.Controls.Add(this.dataGridViewGamer2);
             this.panelGrid2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrid2.Location = new System.Drawing.Point(0, -307);
+            this.panelGrid2.Location = new System.Drawing.Point(0, -271);
             this.panelGrid2.Name = "panelGrid2";
-            this.panelGrid2.Size = new System.Drawing.Size(477, 770);
+            this.panelGrid2.Size = new System.Drawing.Size(477, 734);
             this.panelGrid2.TabIndex = 33;
             // 
             // dataGridViewGamer2
             // 
-            this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.dataGridViewGamer2.BackgroundColor = System.Drawing.Color.Red;
             this.dataGridViewGamer2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGamer2.ColumnHeadersVisible = false;
             this.dataGridViewGamer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGamer2.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewGamer2.Name = "dataGridViewGamer2";
             this.dataGridViewGamer2.RowHeadersVisible = false;
-            this.dataGridViewGamer2.Size = new System.Drawing.Size(477, 770);
+            this.dataGridViewGamer2.Size = new System.Drawing.Size(477, 734);
             this.dataGridViewGamer2.TabIndex = 9;
             // 
             // panelGamer2Info
@@ -403,7 +400,6 @@
             // 
             // panelGamer1
             // 
-            this.panelGamer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelGamer1.Controls.Add(this.panelGrid1);
             this.panelGamer1.Controls.Add(this.panelGamer1Info);
             this.panelGamer1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -414,13 +410,24 @@
             // 
             // panelGrid1
             // 
-            this.panelGrid1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelGrid1.Controls.Add(this.dataGridViewGamer1);
             this.panelGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrid1.Location = new System.Drawing.Point(0, -219);
+            this.panelGrid1.Location = new System.Drawing.Point(0, -304);
             this.panelGrid1.Name = "panelGrid1";
-            this.panelGrid1.Size = new System.Drawing.Size(477, 682);
+            this.panelGrid1.Size = new System.Drawing.Size(477, 767);
             this.panelGrid1.TabIndex = 4;
+            // 
+            // dataGridViewGamer1
+            // 
+            this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.Red;
+            this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGamer1.ColumnHeadersVisible = false;
+            this.dataGridViewGamer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewGamer1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewGamer1.Name = "dataGridViewGamer1";
+            this.dataGridViewGamer1.RowHeadersVisible = false;
+            this.dataGridViewGamer1.Size = new System.Drawing.Size(477, 767);
+            this.dataGridViewGamer1.TabIndex = 11;
             // 
             // panelGamer1Info
             // 
@@ -470,18 +477,6 @@
             this.labelFirstGamerCount.Text = "0";
             this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridViewGamer1
-            // 
-            this.dataGridViewGamer1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dataGridViewGamer1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGamer1.ColumnHeadersVisible = false;
-            this.dataGridViewGamer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewGamer1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewGamer1.Name = "dataGridViewGamer1";
-            this.dataGridViewGamer1.RowHeadersVisible = false;
-            this.dataGridViewGamer1.Size = new System.Drawing.Size(477, 682);
-            this.dataGridViewGamer1.TabIndex = 13;
-            // 
             // FormSecond
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,8 +506,8 @@
             this.panelGamer2Info.ResumeLayout(false);
             this.panelGamer1.ResumeLayout(false);
             this.panelGrid1.ResumeLayout(false);
-            this.panelGamer1Info.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGamer1)).EndInit();
+            this.panelGamer1Info.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,9 +531,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelSpace;
         private System.Windows.Forms.Panel panelPictures;
-        private System.Windows.Forms.Label labelPause;
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.Panel panelInformation;
+        private System.Windows.Forms.Label labelPause;
         private System.Windows.Forms.Label labelPicturesCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelCountdown;
@@ -552,10 +547,10 @@
         private System.Windows.Forms.Label labelSecondGamer;
         private System.Windows.Forms.Panel panelGamer1;
         private System.Windows.Forms.Panel panelGrid1;
+        private System.Windows.Forms.DataGridView dataGridViewGamer1;
         private System.Windows.Forms.Panel panelGamer1Info;
         private System.Windows.Forms.Label labelNoWayGamer1;
         private System.Windows.Forms.Label labelFirstGamer;
         private System.Windows.Forms.Label labelFirstGamerCount;
-        private System.Windows.Forms.DataGridView dataGridViewGamer1;
     }
 }
