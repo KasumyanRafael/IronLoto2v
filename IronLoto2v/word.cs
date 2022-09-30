@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace IronLoto2v
 {
@@ -55,6 +56,16 @@ namespace IronLoto2v
             string name = "p" + mas[0]+"ir";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
+        }
+    }
+    public class GameUser
+    {
+        public string Name { get; set; }
+        int score;
+        public void RoundLoad(GameUser gamer,Label labelname,Label labelscore)
+        {
+            labelname.Text = gamer.Name;
+            labelscore.Text=score.ToString();
         }
     }
 }

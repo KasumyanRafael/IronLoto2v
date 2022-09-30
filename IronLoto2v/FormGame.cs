@@ -16,6 +16,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
+        GameUser firstgamer = new GameUser();
+        GameUser secondgamer = new GameUser();
         static int x = 3;
         static int y = 2;
         static int t = 1000;
@@ -50,6 +52,10 @@ namespace IronLoto2v
         public void FormGame_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            firstgamer.Name = gamer1;
+            secondgamer.Name = gamer2;
+            firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
+            secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
@@ -67,8 +73,6 @@ namespace IronLoto2v
             while (antitwin(firstTable, secondTable, x, y) != false);
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
-            labelFirstGamer.Text = gamer1;
-            labelSecondGamer.Text = gamer2;
             if (cnt > s.Length)
                 timerCountdown.Enabled = false;
         }
@@ -157,7 +161,7 @@ namespace IronLoto2v
             }
             return temp;
         }
-        void Winner(string first, string second, int one, int two)
+        void Winner(string first, string second, int one, int two) //add to GameUser later!
         {
             timerCountdown.Stop();
             if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
