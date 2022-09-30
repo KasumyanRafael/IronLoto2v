@@ -57,6 +57,9 @@
 19.09.2022
 Внешнее обновление оставшихся раундов
 
+30.09.2022
+Постепенный отказ от длинного кода в пользу внедрения ООП. Создание класса GameUser.
+
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
 
