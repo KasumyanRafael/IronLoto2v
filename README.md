@@ -62,6 +62,8 @@
 
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
+31.09.2022
+Kласс GameField
 
 Ссылка на презентацию: https://docs.google.com/presentation/d/1H-9yBuKbMrasabpaP6SkaKygYZ0sQ1I-O2C6pe1379o/edit#slide=id.p
 
