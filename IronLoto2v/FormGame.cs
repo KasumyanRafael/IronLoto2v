@@ -54,13 +54,13 @@ namespace IronLoto2v
             this.WindowState = FormWindowState.Maximized;
             firstgamer.Name = gamer1;
             secondgamer.Name = gamer2;
+            s = Properties.Resources.dictionary__1_.Split('\n');
             firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
-            drawData(dataGridViewGamer1, x, y);
+            /*drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
             dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
-            s = Properties.Resources.dictionary__1_.Split('\n');
             list = ToWord(s); //это массив сo словами (типа word)
             antirepeat(list, s);
             extract=GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
@@ -70,7 +70,10 @@ namespace IronLoto2v
             {
                 filling(dataGridViewGamer2, extract, x, y, secondTable);
             }
-            while (antitwin(firstTable, secondTable, x, y) != false);
+            while (antitwin(firstTable, secondTable, x, y) != false);*/
+            GameField firstfield=new GameField(dataGridViewGamer1,x,y,s);
+            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s);
+            firstfield.DrawFields(firstfield, secondfield);
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
