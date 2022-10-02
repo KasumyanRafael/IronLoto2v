@@ -78,7 +78,7 @@ namespace IronLoto2v
         int countpic;
         int[,] undertable;//таблица номеров соответствующих картинок
         DataGridView data;
-        public GameField(DataGridView datum,int a, int b,string[]mas) //конструктор строит таблицу
+        public GameField(DataGridView datum,int a, int b,string[]mas,GameUser user) //конструктор строит таблицу
         {
             s = mas;
             x = a;

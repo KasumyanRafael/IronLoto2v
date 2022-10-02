@@ -71,8 +71,8 @@ namespace IronLoto2v
                 filling(dataGridViewGamer2, extract, x, y, secondTable);
             }
             while (antitwin(firstTable, secondTable, x, y) != false);*/
-            GameField firstfield=new GameField(dataGridViewGamer1,x,y,s);
-            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s);
+            GameField firstfield=new GameField(dataGridViewGamer1,x,y,s,firstgamer);
+            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s,secondgamer);
             firstfield.DrawFields(firstfield, secondfield);
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
