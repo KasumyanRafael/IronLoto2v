@@ -549,7 +549,6 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStripSettings;
             this.Name = "FormGame";
-            this.Load += new System.EventHandler(this.FormGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGame_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panelSpace.ResumeLayout(false);

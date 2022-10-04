@@ -8,49 +8,97 @@ using System.Windows.Forms;
 
 namespace IronLoto2v
 {
+    /// <summary>
+    /// Массив, где хранятся номер слова, русское и осетинское слова
+    /// </summary>
     public class Word
     {
-        string[] mas;
-        string ironword;
-        string rusword;
-        Image pictureshow;
+        string[] mas; //word это массив из трёх элементов-номера,русского и осетинского слов
+        string ironword;//осетинское слово
+        string rusword;//русское слово
+        Image pictureshow;//картинка, которая может быть русской, осетинской или без подписи
+        /// <summary>
+        /// Конвертация подающейся из файла строки в массив объекта Word
+        /// </summary>
+        /// <returns></returns>
         public Word(string ss)
         {
-            string[]s=ss.Split(' ');
-            mas = s;
-        }        
-        public string LoadRusWord()  //выгрузка русского слова
+            mas = ss.Split(' ');
+        } 
+        /// <summary>
+        /// выделение русского слова
+        /// </summary>
+        /// <returns>
+        /// русское слово
+        /// </returns>
+        public string LoadRusWord()  
         {
             rusword = mas[1];
             return rusword;
         }
-        public string LoadIronWord() //осетинское слово
+        /// <summary>
+        /// выделение осетинского слова
+        /// </summary>
+        /// <returns>
+        /// осетинское слово (напечатанное)
+        /// </returns>
+        public string LoadIronWord() 
         {
             ironword = mas[2];
             return ironword;
         }
-        public Image GetIronWord() //осетинское слово(в виде изображения)
+        /// <summary>
+        /// выделение осетинского слова Image
+        /// </summary>
+        /// <returns>
+        /// осетинское слово (картинка со словом)
+        /// </returns>
+        public Image GetIronWord() 
         {
             string name = "p" + mas[0] + "irword";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
-        public int NumberOf() //номер элемента
+        /// <summary>
+        /// получение номера слова из списка
+        /// </summary>
+        /// <returns>
+        /// порядковый номер
+        /// </returns>
+        public int NumberOf() 
         {
             return Convert.ToInt32(mas[0]); 
         }
-        public Image GetPicture() //картинка без надписей
+        /// <summary>
+        /// получение картитнки без подписи
+        /// </summary>
+        /// <returns>
+        /// картинка без подписи
+        /// </returns>
+        public Image GetPicture() 
         {
             string name = "p" + mas[0];
             pictureshow=(Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
+        /// <summary>
+        /// получение картитнки с русским названием
+        /// </summary>
+        /// <returns>
+        /// картинка с русской подписью
+        /// </returns>
         public Image GetRusPicture() //русская картинка
         {
             string name = "p" + mas[0]+"ru";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
+        /// <summary>
+        /// получение картитнки с осетинской подписью
+        /// </summary>
+        /// <returns>
+        /// картинка с осетинской подписью
+        /// </returns>
         public Image GetIrPicture() //осетинская картинка
         {
             string name = "p" + mas[0]+"ir";
@@ -58,6 +106,9 @@ namespace IronLoto2v
             return pictureshow;
         }
     }
+    /// <summary>
+    /// Класс, характеризующий пользователя игры
+    /// </summary>
     public class GameUser
     {
         public string Name { get; set; }
@@ -68,6 +119,9 @@ namespace IronLoto2v
             labelscore.Text=score.ToString();
         }
     }
+    /// <summary>
+    /// класс, описывающий поля с картинками
+    /// </summary>
     public class GameField
     {
         int x;
@@ -92,13 +146,18 @@ namespace IronLoto2v
             datum.RowTemplate.Height = 236;
             datum.Columns.AddRange(columns);
             datum.Rows.Add(a - 1);
-            datum.CurrentCell = this.data[0, 0];
             data = datum;
+            data.CurrentCell = this.data[0, 0];
             list = ToWord(s);
             antirepeat(list, s);
             extract = GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
             countpic=extract.Length; //число картинок отображается в лейбле
         }
+        /// <summary>
+        /// Здесь мы заполняем таблицы так,чтобы они никогда не были одинаковыми
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         public void DrawFields(GameField first,GameField second) //использовать в основной программе, заполнение таблицы
         {
             Fill(first, first.extract, first.x, first.y, first.undertable);
@@ -151,6 +210,14 @@ namespace IronLoto2v
                 data[i] = temp;
             }
         }
+        /// <summary>
+        /// Метод заполнения одной таблицы. Используется в DrawFields
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="array"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="tr"></param>
         void Fill(GameField table, Word[] array, int a, int b, int[,] tr)
         {
             /*Random rnd = new Random();
@@ -180,6 +247,14 @@ namespace IronLoto2v
             catch { }
             Shuffling(array);
         }
+        /// <summary>
+        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
         bool antitwin(int[,] a, int[,] b, int c, int d)
         {
             for (int i = 0; i < c; i++)

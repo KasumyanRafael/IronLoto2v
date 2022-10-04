@@ -36,20 +36,9 @@ namespace IronLoto2v
         public FormGame()
         {
             InitializeComponent();
+            start();
         }
-        void drawData(DataGridView data, int a, int b)
-        {
-            DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
-            for (int i = 0; i < b; i++)
-            {
-                columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 236;
-            }
-            data.RowTemplate.Height = 236;
-            data.Columns.AddRange(columns);
-            data.Rows.Add(a - 1);
-        }
-        public void FormGame_Load(object sender, EventArgs e)
+        void start()
         {
             this.WindowState = FormWindowState.Maximized;
             firstgamer.Name = gamer1;
@@ -57,112 +46,13 @@ namespace IronLoto2v
             s = Properties.Resources.dictionary__1_.Split('\n');
             firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
-            /*drawData(dataGridViewGamer1, x, y);
-            drawData(dataGridViewGamer2, x, y);
-            dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];
-            dataGridViewGamer2.CurrentCell = this.dataGridViewGamer2[0, 0];
-            list = ToWord(s); //это массив сo словами (типа word)
-            antirepeat(list, s);
-            extract=GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
-            countpic=extract.Length;
-            filling(dataGridViewGamer1, extract, x, y, firstTable);
-            do
-            {
-                filling(dataGridViewGamer2, extract, x, y, secondTable);
-            }
-            while (antitwin(firstTable, secondTable, x, y) != false);*/
-            GameField firstfield=new GameField(dataGridViewGamer1,x,y,s,firstgamer);
-            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s,secondgamer);
+            GameField firstfield = new GameField(dataGridViewGamer1, x, y, s, firstgamer);
+            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s, secondgamer);
             firstfield.DrawFields(firstfield, secondfield);
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
                 timerCountdown.Enabled = false;
-        }
-
-        void filling(DataGridView data, Word[]array, int a, int b, int[,] tr)
-        {
-            /*Random rnd = new Random();
-            for (int i = 0; i < a; i++)
-            {
-                for (int j = 0; j < b; j++)
-                {
-                    int c = rnd.Next(1, array.Length);
-                    Word temp = array[c];
-                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
-                    tr[i, j] = temp.NumberOf();
-                }
-            }*/
-            int k = 0;
-            try
-            {
-                for (int i = 0; i < a; i++)
-                {
-                    for (int j = 0; j < b; j++)
-                    {
-                        data.Rows[i].Cells[j].Value=array[k].GetIrPicture();
-                        tr[i, j] = array[k].NumberOf();
-                        k++;
-                    }
-                }
-            }
-            catch { }
-            Shuffling(array);
-        }
-        bool antitwin(int[,] a, int[,] b, int c, int d)
-        {
-            for (int i = 0; i < c; i++)
-            {
-                for (int j = 0; j < d; j++)
-                {
-                    if (a[i, j] == b[i, j]) return true;
-                }
-            }
-            return false;
-        }
-        void antirepeat(Word[] perm, string[] s)
-        {
-            Random r = new Random(); // не создавайте новый Random здесь!
-                                     // а то значения будут одни и те же
-            int n = s.Length;
-            for (int i = n - 1; i >= 1; i--)
-            {
-                int j = r.Next(i + 1);
-                // exchange perm[j] and perm[i]
-                Word temp = perm[j];
-                perm[j] = perm[i];
-                perm[i] = temp;
-            }
-        }
-        void Shuffling(Word[]data)
-        {
-            Random rnd = new Random();
-            for (int i = data.Length - 1; i >= 1; i--)
-            {
-                int j = rnd.Next(i + 1);
-                var temp = data[j];
-                data[j] = data[i];
-                data[i] = temp;
-            }
-        }
-        Word[] GetExtract(Word[] perm) //выбираем первые 10 карточек из перетасованного массива
-        {
-            Word[] result = new Word[10];
-            for (int i = 0;i < 10;i++)
-            {
-                result[i] = perm[i];
-            }
-            return result;
-        }
-
-        static Word[] ToWord(string[] a)
-        {
-            Word[] temp = new Word[a.Length];
-            for (int i = 0; i < a.Length; i++) 
-            {
-                temp[i] = new Word(a[i]);
-            }
-            return temp;
         }
         void Winner(string first, string second, int one, int two) //add to GameUser later!
         {
