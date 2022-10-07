@@ -254,6 +254,7 @@ namespace IronLoto2v
         public Card(Word temp)
         {
             word = temp;
+            number = word.NumberOf();
         }
         /// <summary>
         /// получение картитнки с русским названием
