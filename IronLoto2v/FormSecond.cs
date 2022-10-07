@@ -53,8 +53,8 @@ namespace IronLoto2v
             this.WindowState = FormWindowState.Maximized;
             firstgamer.Name = gamer1;
             secondgamer.Name = gamer2;
-            firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
-            secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
+            firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
+            secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];

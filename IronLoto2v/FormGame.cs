@@ -16,8 +16,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        GameUser firstgamer = new GameUser();
-        GameUser secondgamer = new GameUser();
+        public GameUser firstgamer=new GameUser();
+        public GameUser secondgamer=new GameUser();
         static int x = 3;
         static int y = 2;
         static int t = 1000;
@@ -25,11 +25,11 @@ namespace IronLoto2v
         int cnt = 0;
         int countpic;
         string[] s;
-        int[,] firstTable = new int[x, y];
-        int[,] secondTable = new int[x, y];
+        int[,] firstTable = new int[x, y];//
+        int[,] secondTable = new int[x, y];//
         int pictureshow = 0;
-        int firstscore = 0;
-        int secondscore = 0;
+        int firstscore = 0;//
+        int secondscore = 0;//мусор
         WordExtract extract;
         int countdown=10;
         public FormGame()
@@ -40,24 +40,22 @@ namespace IronLoto2v
         void start()
         {
             this.WindowState = FormWindowState.Maximized;
-            firstgamer.Name = gamer1;
-            secondgamer.Name = gamer2;
             s = Properties.Resources.dictionary__1_.Split('\n');
-            firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
-            secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
-            GameTable firstfield = new GameTable(dataGridViewGamer1, x, y,firstgamer);
-            GameTable secondfield = new GameTable(dataGridViewGamer2, x, y,secondgamer);
+            firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
+            secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
+            /*GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
+            GameTable secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
             extract = new WordExtract(s);
-            firstfield.Fill(extract, x, y,"1");
+            firstfield.Fill(extract, x, y, "1");
             do
             {
-                secondfield.Fill(extract, x, y,"1");
+                secondfield.Fill(extract, x, y, "1");
             }
-            while(!antitwin(firstfield.undertable,secondfield.undertable,x,y));
+            while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
-                timerCountdown.Enabled = false;
+                timerCountdown.Enabled = false;*/
         }
         /// <summary>
         /// Нельзя, чтобы таблицы были абсолютно одинаковыми

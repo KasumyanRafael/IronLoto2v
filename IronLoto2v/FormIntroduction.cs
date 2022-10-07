@@ -25,8 +25,8 @@ namespace IronLoto2v
             secondgamer.Name = textBoxGamer2.Text;
             MessageBox.Show("Желаем вам приятной игры и пусть победит сильнейший.");            
             FormGame form=new FormGame();
-            form.gamer1 = firstgamer.Name;
-            form.gamer2 = secondgamer.Name;
+            form.firstgamer=firstgamer;
+            form.secondgamer=secondgamer;
             form.Show();
         }
     }

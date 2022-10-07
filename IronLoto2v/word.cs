@@ -113,9 +113,9 @@ namespace IronLoto2v
     {
         public string Name { get; set; }
         int score;
-        public void RoundLoad(GameUser gamer, Label labelname, Label labelscore)
+        public void RoundLoad(Label labelname, Label labelscore)
         {
-            labelname.Text = gamer.Name;
+            labelname.Text = Name;
             labelscore.Text = score.ToString();
         }
     }
