@@ -40,10 +40,9 @@ namespace IronLoto2v
         void start()
         {
             this.WindowState = FormWindowState.Maximized;
-            s = Properties.Resources.dictionary__1_.Split('\n');
             firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
-            /*GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
+            GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
             GameTable secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
             extract = new WordExtract(s);
             firstfield.Fill(extract, x, y, "1");
@@ -55,7 +54,7 @@ namespace IronLoto2v
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
-                timerCountdown.Enabled = false;*/
+                timerCountdown.Enabled = false;
         }
         /// <summary>
         /// Нельзя, чтобы таблицы были абсолютно одинаковыми
@@ -302,6 +301,11 @@ namespace IronLoto2v
                 IsPause = false;
                 labelPause.Visible = false;
             }
+        }
+
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
