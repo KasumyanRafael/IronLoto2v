@@ -48,10 +48,10 @@ namespace IronLoto2v
             GameTable firstfield = new GameTable(dataGridViewGamer1, x, y,firstgamer);
             GameTable secondfield = new GameTable(dataGridViewGamer2, x, y,secondgamer);
             extract = new WordExtract(s);
-            firstfield.Fill(extract, x, y);
+            firstfield.Fill(extract, x, y,"1");
             do
             {
-                secondfield.Fill(extract, x, y);
+                secondfield.Fill(extract, x, y,"1");
             }
             while(!antitwin(firstfield.undertable,secondfield.undertable,x,y));
             timerCountdown.Enabled = true;
@@ -59,6 +59,14 @@ namespace IronLoto2v
             if (cnt > s.Length)
                 timerCountdown.Enabled = false;
         }
+        /// <summary>
+        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
         bool antitwin(int[,] a, int[,] b, int c, int d)
         {
             for (int i = 0; i < c; i++)
@@ -229,9 +237,9 @@ namespace IronLoto2v
                     Winner(gamer1, gamer2, firstscore, secondscore);
                 }
             }*/
-
-            pictureBoxShow.Image = extract.mas[cnt].GetRusPicture();
-            pictureshow = extract.mas[cnt].NumberOf();
+            Card img = new Card(extract.mas[cnt]);
+            pictureBoxShow.Image = img.CatchRusPicture();
+            pictureshow = img.number;
             countdown--;
             labelCountdown.Text = countdown.ToString();
             if (countdown < 5) labelCountdown.ForeColor = Color.Red;

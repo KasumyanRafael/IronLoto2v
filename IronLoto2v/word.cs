@@ -152,7 +152,7 @@ namespace IronLoto2v
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <param name="tr"></param>
-        public void Fill(WordExtract array, int a, int b)
+        public void Fill(WordExtract array, int a, int b,string regime)
         {
             /*Random rnd = new Random();
             for (int i = 0; i < a; i++)
@@ -172,8 +172,14 @@ namespace IronLoto2v
                 {
                     for (int j = 0; j < b; j++)
                     {
-                        data.Rows[i].Cells[j].Value = array.mas[k].GetIrPicture();
-                        undertable[i, j] = array.mas[k].NumberOf();
+                        Card card = new Card(array.mas[k]);
+                        switch(regime)
+                        {
+                            case "1": data.Rows[i].Cells[j].Value = card.CatchIrPicture();break;
+                            case "2": data.Rows[i].Cells[j].Value = card.CatchPicture(); break;
+                            case "3": data.Rows[i].Cells[j].Value = card.CatchIrWord(); break;
+                        }
+                        undertable[i, j] = card.number;
                         k++;
                     }
                 }
@@ -181,14 +187,6 @@ namespace IronLoto2v
             catch { }
             array.Shuffling();
         }
-        /// <summary>
-        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
-        /// <param name="d"></param>
-        /// <returns></returns>
     }
     /// <summary>
     /// Класс представляет собой массив из 10 объектов Word, используемых в игре
@@ -244,6 +242,62 @@ namespace IronLoto2v
                 mas[j] = mas[i];
                 mas[i] = temp;
             }
+        }
+    }
+    /// <summary>
+    /// Улучшенная карточка. В отличие от Word, имеет свой номер.
+    /// </summary>
+    public class Card
+    {
+        Word word;
+        public int number { get; set; } 
+        public Card(Word temp)
+        {
+            word = temp;
+        }
+        /// <summary>
+        /// получение картитнки с русским названием
+        /// </summary>
+        /// <returns>
+        /// картинка с русской подписью
+        /// </returns>
+        public Image CatchRusPicture()
+        {
+            number = word.NumberOf();
+            return word.GetRusPicture();
+        }
+        /// <summary>
+        /// получение картитнки с осетинской подписью
+        /// </summary>
+        /// <returns>
+        /// картинка с осетинской подписью
+        /// </returns>
+        public Image CatchIrPicture()
+        {
+            number = word.NumberOf();
+            return word.GetIrPicture();
+        }
+        /// <summary>
+        /// получение картитнки без подписи
+        /// </summary>
+        /// <returns>
+        /// картинка без подписи
+        /// </returns>
+        public Image CatchPicture()
+        {
+            number = word.NumberOf();
+            return word.GetPicture();
+        }
+        /// <summary>
+        /// выделение осетинского слова Image
+        /// </summary>
+        /// <returns>
+        /// осетинское слово (картинка со словом)
+        /// </returns>
+        public Image CatchIrWord()
+        {
+            number = word.NumberOf();
+            return word.GetIronWord();
         }
     }
 }
