@@ -35,16 +35,16 @@ namespace IronLoto2v
         public FormGame()
         {
             InitializeComponent();
-            start();
+            
         }
-        void start()
+        private void FormGame_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
             GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
             GameTable secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
-            extract = new WordExtract(s);
+            extract = new WordExtract(s); //alert
             firstfield.Fill(extract, x, y, "1");
             do
             {
@@ -303,10 +303,7 @@ namespace IronLoto2v
             }
         }
 
-        private void FormGame_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }
 
