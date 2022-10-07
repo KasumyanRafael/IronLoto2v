@@ -47,7 +47,7 @@ namespace IronLoto2v
             secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
             GameTable firstfield = new GameTable(dataGridViewGamer1, x, y,firstgamer);
             GameTable secondfield = new GameTable(dataGridViewGamer2, x, y,secondgamer);
-            /*extract = new WordExtract(s);
+            extract = new WordExtract(s);
             firstfield.Fill(extract, x, y);
             do
             {
@@ -57,7 +57,7 @@ namespace IronLoto2v
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
-                timerCountdown.Enabled = false;*/
+                timerCountdown.Enabled = false;
         }
         bool antitwin(int[,] a, int[,] b, int c, int d)
         {
