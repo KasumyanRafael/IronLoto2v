@@ -24,14 +24,14 @@ namespace IronLoto2v
         public Word(string ss)
         {
             mas = ss.Split(' ');
-        } 
+        }
         /// <summary>
         /// выделение русского слова
         /// </summary>
         /// <returns>
         /// русское слово
         /// </returns>
-        public string LoadRusWord()  
+        public string LoadRusWord()
         {
             rusword = mas[1];
             return rusword;
@@ -42,7 +42,7 @@ namespace IronLoto2v
         /// <returns>
         /// осетинское слово (напечатанное)
         /// </returns>
-        public string LoadIronWord() 
+        public string LoadIronWord()
         {
             ironword = mas[2];
             return ironword;
@@ -53,7 +53,7 @@ namespace IronLoto2v
         /// <returns>
         /// осетинское слово (картинка со словом)
         /// </returns>
-        public Image GetIronWord() 
+        public Image GetIronWord()
         {
             string name = "p" + mas[0] + "irword";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
@@ -65,9 +65,9 @@ namespace IronLoto2v
         /// <returns>
         /// порядковый номер
         /// </returns>
-        public int NumberOf() 
+        public int NumberOf()
         {
-            return Convert.ToInt32(mas[0]); 
+            return Convert.ToInt32(mas[0]);
         }
         /// <summary>
         /// получение картитнки без подписи
@@ -75,10 +75,10 @@ namespace IronLoto2v
         /// <returns>
         /// картинка без подписи
         /// </returns>
-        public Image GetPicture() 
+        public Image GetPicture()
         {
             string name = "p" + mas[0];
-            pictureshow=(Image)Properties.Resources.ResourceManager.GetObject(name);
+            pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace IronLoto2v
         /// </returns>
         public Image GetRusPicture() //русская картинка
         {
-            string name = "p" + mas[0]+"ru";
+            string name = "p" + mas[0] + "ru";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
@@ -101,7 +101,7 @@ namespace IronLoto2v
         /// </returns>
         public Image GetIrPicture() //осетинская картинка
         {
-            string name = "p" + mas[0]+"ir";
+            string name = "p" + mas[0] + "ir";
             pictureshow = (Image)Properties.Resources.ResourceManager.GetObject(name);
             return pictureshow;
         }
@@ -113,28 +113,23 @@ namespace IronLoto2v
     {
         public string Name { get; set; }
         int score;
-        public void RoundLoad(GameUser gamer,Label labelname,Label labelscore)
+        public void RoundLoad(GameUser gamer, Label labelname, Label labelscore)
         {
             labelname.Text = gamer.Name;
-            labelscore.Text=score.ToString();
+            labelscore.Text = score.ToString();
         }
     }
     /// <summary>
     /// класс, описывающий поля с картинками
     /// </summary>
-    public class GameField
+    public class GameTable
     {
         int x;
         int y;
-        string[] s;
-        Word[] list;
-        Word[] extract;
-        int countpic;
-        int[,] undertable;//таблица номеров соответствующих картинок
+        public int[,] undertable;//таблица номеров соответствующих картинок
         DataGridView data;
-        public GameField(DataGridView datum,int a, int b,string[]mas,GameUser user) //конструктор строит таблицу
+        public GameTable(DataGridView datum, int a, int b,GameUser user) //конструктор строит таблицу
         {
-            s = mas;
             x = a;
             y = b;
             DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
@@ -148,24 +143,64 @@ namespace IronLoto2v
             datum.Rows.Add(a - 1);
             data = datum;
             data.CurrentCell = this.data[0, 0];
-            list = ToWord(s);
-            antirepeat(list, s);
-            extract = GetExtract(list); //ЭТО МЫ ВЫБРАЛИ 10 КАРТОЧЕК ИЗ 92+
-            countpic=extract.Length; //число картинок отображается в лейбле
+        } 
+        /// <summary>
+        /// Метод заполнения одной таблицы. Используется в DrawFields
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="array"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="tr"></param>
+        public void Fill(WordExtract array, int a, int b)
+        {
+            /*Random rnd = new Random();
+            for (int i = 0; i < a; i++)
+            {
+                for (int j = 0; j < b; j++)
+                {
+                    int c = rnd.Next(1, array.Length);
+                    Word temp = array[c];
+                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
+                    tr[i, j] = temp.NumberOf();
+                }
+            }*/
+            int k = 0;
+            try
+            {
+                for (int i = 0; i < a; i++)
+                {
+                    for (int j = 0; j < b; j++)
+                    {
+                        data.Rows[i].Cells[j].Value = array.mas[k].GetIrPicture();
+                        undertable[i, j] = array.mas[k].NumberOf();
+                        k++;
+                    }
+                }
+            }
+            catch { }
+            array.Shuffling();
         }
         /// <summary>
-        /// Здесь мы заполняем таблицы так,чтобы они никогда не были одинаковыми
+        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
         /// </summary>
-        /// <param name="first"></param>
-        /// <param name="second"></param>
-        public void DrawFields(GameField first,GameField second) //использовать в основной программе, заполнение таблицы
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+    }
+    /// <summary>
+    /// Класс представляет собой массив из 10 объектов Word, используемых в игре
+    /// </summary>
+    public class WordExtract
+    {
+        public Word[] mas;
+        public WordExtract(string[]s)
         {
-            Fill(first, first.extract, first.x, first.y, first.undertable);
-            do
-            {
-                Fill(second, second.extract, second.x, second.y, second.undertable);
-            }
-            while (antitwin(first.undertable, second.undertable, first.x, second.y) != false); //при занесении параметров игрок не имеет значения, так как две таблицы равны
+            mas = ToWord(s);
+            antirepeat(mas, s);
+            mas = GetExtract(mas);
         }
         Word[] ToWord(string[] a)
         {
@@ -199,72 +234,16 @@ namespace IronLoto2v
             }
             return result;
         }
-        void Shuffling(Word[] data)
+        public void Shuffling()
         {
             Random rnd = new Random();
-            for (int i = data.Length - 1; i >= 1; i--)
+            for (int i = mas.Length - 1; i >= 1; i--)
             {
                 int j = rnd.Next(i + 1);
-                var temp = data[j];
-                data[j] = data[i];
-                data[i] = temp;
+                var temp = mas[j];
+                mas[j] = mas[i];
+                mas[i] = temp;
             }
-        }
-        /// <summary>
-        /// Метод заполнения одной таблицы. Используется в DrawFields
-        /// </summary>
-        /// <param name="table"></param>
-        /// <param name="array"></param>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="tr"></param>
-        void Fill(GameField table, Word[] array, int a, int b, int[,] tr)
-        {
-            /*Random rnd = new Random();
-            for (int i = 0; i < a; i++)
-            {
-                for (int j = 0; j < b; j++)
-                {
-                    int c = rnd.Next(1, array.Length);
-                    Word temp = array[c];
-                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
-                    tr[i, j] = temp.NumberOf();
-                }
-            }*/
-            int k = 0;
-            try
-            {
-                for (int i = 0; i < a; i++)
-                {
-                    for (int j = 0; j < b; j++)
-                    {
-                        table.data.Rows[i].Cells[j].Value = array[k].GetIrPicture();
-                        tr[i, j] = array[k].NumberOf();
-                        k++;
-                    }
-                }
-            }
-            catch { }
-            Shuffling(array);
-        }
-        /// <summary>
-        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
-        /// <param name="d"></param>
-        /// <returns></returns>
-        bool antitwin(int[,] a, int[,] b, int c, int d)
-        {
-            for (int i = 0; i < c; i++)
-            {
-                for (int j = 0; j < d; j++)
-                {
-                    if (a[i, j] == b[i, j]) return true;
-                }
-            }
-            return false;
         }
     }
 }

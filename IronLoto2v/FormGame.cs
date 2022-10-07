@@ -30,8 +30,7 @@ namespace IronLoto2v
         int pictureshow = 0;
         int firstscore = 0;
         int secondscore = 0;
-        Word[] list;
-        Word[] extract;
+        WordExtract extract;
         int countdown=10;
         public FormGame()
         {
@@ -46,13 +45,30 @@ namespace IronLoto2v
             s = Properties.Resources.dictionary__1_.Split('\n');
             firstgamer.RoundLoad(firstgamer, labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(secondgamer, labelSecondGamer, labelSecondGamerCount);
-            GameField firstfield = new GameField(dataGridViewGamer1, x, y, s, firstgamer);
-            GameField secondfield = new GameField(dataGridViewGamer2, x, y, s, secondgamer);
-            firstfield.DrawFields(firstfield, secondfield);
+            GameTable firstfield = new GameTable(dataGridViewGamer1, x, y,firstgamer);
+            GameTable secondfield = new GameTable(dataGridViewGamer2, x, y,secondgamer);
+            /*extract = new WordExtract(s);
+            firstfield.Fill(extract, x, y);
+            do
+            {
+                secondfield.Fill(extract, x, y);
+            }
+            while(!antitwin(firstfield.undertable,secondfield.undertable,x,y));
             timerCountdown.Enabled = true;
             timerCountdown.Interval = t;
             if (cnt > s.Length)
-                timerCountdown.Enabled = false;
+                timerCountdown.Enabled = false;*/
+        }
+        bool antitwin(int[,] a, int[,] b, int c, int d)
+        {
+            for (int i = 0; i < c; i++)
+            {
+                for (int j = 0; j < d; j++)
+                {
+                    if (a[i, j] == b[i, j]) return true;
+                }
+            }
+            return false;
         }
         void Winner(string first, string second, int one, int two) //add to GameUser later!
         {
@@ -77,10 +93,10 @@ namespace IronLoto2v
                 data.CurrentCell.Value = Properties.Resources.p0;
                 mas[a, b] = 0;
                 cnt++; //Здесь начинается та самая конкуренция!
-                if(cnt==extract.Length) Winner(gamer1, gamer2, firstscore, secondscore);
+                if(cnt==extract.mas.Length) Winner(gamer1, gamer2, firstscore, secondscore);
                 countdown = 10;
-                pictureBoxShow.Image = extract[cnt].GetRusPicture();
-                pictureshow = extract[cnt].NumberOf();
+                pictureBoxShow.Image = extract.mas[cnt].GetRusPicture();
+                pictureshow = extract.mas[cnt].NumberOf();
                 countpic--;
                 labelPicturesCount.Text = countpic.ToString() + "/10";
                 return 1;
@@ -214,8 +230,8 @@ namespace IronLoto2v
                 }
             }*/
 
-            pictureBoxShow.Image = extract[cnt].GetRusPicture();
-            pictureshow = extract[cnt].NumberOf();
+            pictureBoxShow.Image = extract.mas[cnt].GetRusPicture();
+            pictureshow = extract.mas[cnt].NumberOf();
             countdown--;
             labelCountdown.Text = countdown.ToString();
             if (countdown < 5) labelCountdown.ForeColor = Color.Red;
