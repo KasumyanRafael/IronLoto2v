@@ -198,7 +198,8 @@ namespace IronLoto2v
         {
             mas = ToWord(s);
             antirepeat(mas, s);
-            mas = GetExtract(mas);
+            Word[]a = GetExtract(mas);
+            mas = a;
         }
         Word[] ToWord(string[] a)
         {

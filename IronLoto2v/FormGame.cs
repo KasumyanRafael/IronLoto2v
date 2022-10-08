@@ -45,6 +45,7 @@ namespace IronLoto2v
             GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
             GameTable secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
             extract = new WordExtract(s); //alert
+
             firstfield.Fill(extract, x, y, "1");
             do
             {
@@ -57,7 +58,7 @@ namespace IronLoto2v
                 timerCountdown.Enabled = false;
         }
         /// <summary>
-        /// Нельзя, чтобы таблицы были абсолютно одинаковыми
+        /// Нельзя таблицам быть абсолютно одинаковыми
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
