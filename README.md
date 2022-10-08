@@ -63,6 +63,9 @@
 1.10.2022
 Класс GameField
 
+7.10.2022
+Создание классов WordExtract и Card.
+
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
 
