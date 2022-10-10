@@ -22,7 +22,7 @@ namespace IronLoto2v
         static int y = 2;
         static int t = 1000;
         bool IsPause = false;
-        int cnt = 0;
+        int cnt = 0; //счётчик, не позволяющий выйти за пределы массива
         int countpic;
         string[] s;
         int[,] firstTable = new int[x, y];//
@@ -32,30 +32,30 @@ namespace IronLoto2v
         int secondscore = 0;//мусор
         WordExtract extract;
         int countdown=10;
+        Card img;  //демонстрируемые картинки
+        GameTable firstfield;
+        GameTable secondfield;
+        Switcher switcher;
         public FormGame()
         {
             InitializeComponent();
-            
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
             secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
-            GameTable firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
-            GameTable secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
-            extract = new WordExtract(s); //alert
-
-            firstfield.Fill(extract, x, y, "1");
+            s = Properties.Resources.dictionary__1_.Split('\n');
+            extract = new WordExtract(s); 
+            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
+            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
+            firstfield.Fill(extract, x, y, "1"); //alert
             do
             {
                 secondfield.Fill(extract, x, y, "1");
             }
             while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
-            timerCountdown.Enabled = true;
-            timerCountdown.Interval = t;
-            if (cnt > s.Length)
-                timerCountdown.Enabled = false;
+            switcher = new Switcher(timerCountdown,pictureBoxShow,img,extract,labelCountdown,labelPicturesCount,t,s);
         }
         /// <summary>
         /// Нельзя таблицам быть абсолютно одинаковыми
@@ -90,28 +90,6 @@ namespace IronLoto2v
             form.gamer2 = gamer2;
             form.Show();
         }
-        int CheckPicture(DataGridView data, int picture, int[,] mas, Label label)
-        {
-            int a = data.CurrentCell.RowIndex;
-            int b = data.CurrentCell.ColumnIndex;
-            if (mas[a, b] == picture)
-            {
-                data.CurrentCell.Value = Properties.Resources.p0;
-                mas[a, b] = 0;
-                cnt++; //Здесь начинается та самая конкуренция!
-                if(cnt==extract.mas.Length) Winner(gamer1, gamer2, firstscore, secondscore);
-                countdown = 10;
-                pictureBoxShow.Image = extract.mas[cnt].GetRusPicture();
-                pictureshow = extract.mas[cnt].NumberOf();
-                countpic--;
-                labelPicturesCount.Text = countpic.ToString() + "/10";
-                return 1;
-            }
-            else if (mas[a,b]!=0) label.Visible = true;
-            //MessageBox.Show("Ход невозможен");
-            return 0;
-        }
-
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -185,7 +163,7 @@ namespace IronLoto2v
                 {
                     dataGridViewGamer1.Enabled = true;
                     labelNoWayGamer1.Visible = false;
-                    firstscore += CheckPicture(dataGridViewGamer1, pictureshow, firstTable, labelNoWayGamer1);
+                    firstgamer.localscore += firstfield.CheckingCards(labelNoWayGamer1,labelPicturesCount,firstgamer,secondgamer,switcher,extract);
                     labelFirstGamerCount.Text = firstscore.ToString();
                     if (firstscore == x * y)
                     {
@@ -198,7 +176,7 @@ namespace IronLoto2v
                 {
                     dataGridViewGamer2.Enabled = true;
                     labelNoWayGamer2.Visible = false;
-                    secondscore += CheckPicture(dataGridViewGamer2, pictureshow, secondTable, labelNoWayGamer2);
+                    secondgamer.localscore += secondfield.CheckingCards(labelNoWayGamer2, labelPicturesCount, firstgamer, secondgamer, switcher, extract);
                     labelSecondGamerCount.Text = secondscore.ToString();
                     if (secondscore == x * y)
                     {
@@ -234,8 +212,8 @@ namespace IronLoto2v
                     timerCountdown.Stop();
                     Winner(gamer1, gamer2, firstscore, secondscore);
                 }
-            }*/
-            Card img = new Card(extract.mas[cnt]);
+            }
+            img = new Card(extract.mas[cnt]);
             pictureBoxShow.Image = img.CatchRusPicture();
             pictureshow = img.number;
             countdown--;
@@ -253,8 +231,7 @@ namespace IronLoto2v
             {
                 timerCountdown.Stop();
                 Winner(gamer1, gamer2, firstscore, secondscore);
-            }
-            
+            }*/
         }
 
         private void ToolStripMenuItemExits_Click(object sender, EventArgs e)

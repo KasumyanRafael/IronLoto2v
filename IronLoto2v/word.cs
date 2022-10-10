@@ -112,11 +112,18 @@ namespace IronLoto2v
     public class GameUser
     {
         public string Name { get; set; }
-        int score;
+        public int localscore;
+        public int globalscore;
         public void RoundLoad(Label labelname, Label labelscore)
         {
             labelname.Text = Name;
-            labelscore.Text = score.ToString();
+            labelscore.Text = localscore.ToString();
+        }
+        public void GetWinner()
+        {
+            MessageBox.Show("В данном раунде победил {0}",Name);
+            globalscore += localscore;
+            localscore = 0;
         }
     }
     /// <summary>
@@ -166,6 +173,7 @@ namespace IronLoto2v
                 }
             }*/
             int k = 0;
+            undertable=new int[x,y];
             try
             {
                 for (int i = 0; i < a; i++)
@@ -186,6 +194,95 @@ namespace IronLoto2v
             }
             catch { }
             array.Shuffling();
+        }
+        public int CheckingCards(Label labelway,Label labelPicturesCount,GameUser userone,GameUser usertwo,Switcher switcher, WordExtract extract)
+        {
+            int a = data.CurrentCell.RowIndex;
+            int b = data.CurrentCell.ColumnIndex;
+            if (undertable[a, b] == switcher.contentId)
+            {
+                data.CurrentCell.Value = Properties.Resources.p0;
+                undertable[a, b] = 0;
+                switcher.cnt++; //Здесь начинается та самая конкуренция!
+                if (switcher.cnt == extract.mas.Length) ReturnWinner(userone,usertwo);
+                switcher.countdown = 10;
+                switcher.picturebox.Image = extract.mas[switcher.cnt].GetRusPicture();
+                switcher.contentId = extract.mas[switcher.cnt].NumberOf();
+                switcher.countpic--;
+                labelPicturesCount.Text = switcher.countpic.ToString() + "/10";
+                return 1;
+            }
+            else if (undertable[a, b] != 0) labelway.Visible = true;
+            //MessageBox.Show("Ход невозможен");
+            return 0;
+        }
+        public void ReturnWinner(GameUser userone,GameUser usertwo)
+        {
+            if (userone.localscore > usertwo.localscore)
+            {
+                userone.GetWinner();
+                usertwo.globalscore += usertwo.localscore;
+                usertwo.localscore = 0;
+            } 
+            if (userone.localscore < usertwo.localscore)
+            {
+                usertwo.GetWinner();
+                userone.globalscore += usertwo.localscore;
+                userone.localscore = 0;
+            }
+            MessageBox.Show("В данном раунде победила дружба.");
+        }
+    }
+    public class Switcher
+    {
+        public PictureBox picturebox;
+        public int contentId;
+        public Timer timer;
+        Card img;
+        WordExtract extract;
+        public int cnt;
+        public int countdown = 10;
+        public int countpic = 10;
+        Label labelCountdown;
+        Label labelPicturesCount;
+        public Switcher(Timer havetime, PictureBox havepicture, Card image, WordExtract newextract, Label locallabelCountdown,Label locallabelpicturescount,int t,string[]s)
+        {
+            labelPicturesCount=locallabelpicturescount;
+            labelCountdown = locallabelCountdown;
+            img = image;
+            extract = newextract;
+            picturebox = havepicture;
+            timer = havetime;
+            timer.Enabled = true;
+            img.number = contentId;
+            timer.Enabled = true;
+            timer.Interval = t;
+            if (cnt > s.Length)
+                timer.Enabled = false;
+            this.timer.Tick += Timer_Tick;
+        }
+
+        public void Timer_Tick(object sender, EventArgs e)
+        {
+            img = new Card(extract.mas[cnt]);
+            picturebox.Image = img.CatchRusPicture();
+            contentId = img.number;
+            countdown--;
+            labelCountdown.Text = countdown.ToString();
+            if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+            else labelCountdown.ForeColor = Color.Black;
+            if (countdown == 0)
+            {
+                countdown = 10;
+                cnt++;
+                countpic--;
+                labelPicturesCount.Text = countpic.ToString() + "/10";
+            }
+            if (cnt == 10)
+            {
+                timer.Stop();
+                ///winner
+            }
         }
     }
     /// <summary>
