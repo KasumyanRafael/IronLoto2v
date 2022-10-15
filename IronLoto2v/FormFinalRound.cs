@@ -15,8 +15,8 @@ namespace IronLoto2v
     {
         public string gamer1 = String.Empty;
         public string gamer2 = String.Empty;
-        GameUser firstgamer = new GameUser();
-        GameUser secondgamer = new GameUser();
+        GameUser firstgamer;
+        GameUser secondgamer;
         static int x = 3;
         static int y = 2;
         static int t = 1000;
@@ -51,10 +51,10 @@ namespace IronLoto2v
         private void FormFinalRound_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            //firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount);
+            //secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount);
             firstgamer.Name = gamer1;
             secondgamer.Name = gamer2;
-            firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
-            secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
             drawData(dataGridViewGamer1, x, y);
             drawData(dataGridViewGamer2, x, y);
             dataGridViewGamer1.CurrentCell = this.dataGridViewGamer1[0, 0];

@@ -232,7 +232,7 @@
             this.labelPicturesCount.Name = "labelPicturesCount";
             this.labelPicturesCount.Size = new System.Drawing.Size(108, 49);
             this.labelPicturesCount.TabIndex = 34;
-            this.labelPicturesCount.Text = "10/10";
+            this.labelPicturesCount.Text = "----";
             this.labelPicturesCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -436,7 +436,6 @@
             // timerCountdown
             // 
             this.timerCountdown.Enabled = true;
-            this.timerCountdown.Tick += new System.EventHandler(this.timerCountdown_Tick);
             // 
             // statusStripFirstLevel
             // 

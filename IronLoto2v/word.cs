@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -112,18 +108,74 @@ namespace IronLoto2v
     public class GameUser
     {
         public string Name { get; set; }
+        /// <summary>
+        /// Баллы за раунд
+        /// </summary>
         public int localscore;
-        public int globalscore;
-        public void RoundLoad(Label labelname, Label labelscore)
+        /// <summary>
+        /// Баллы за игру
+        /// </summary>
+        public int globalscore=0;
+        Label labelNick;
+        public GameUser opponent;
+        public Label labelcount;
+        public bool WeFoundWinner = false;
+        public GameUser(Label labelname, Label labelscore,string name)
         {
+            Name = name;
+            localscore = 0;
             labelname.Text = Name;
             labelscore.Text = localscore.ToString();
+            labelNick = labelname;
+            labelcount= labelscore;
         }
-        public void GetWinner()
+        public void IncreaseGlobalScore()
         {
-            MessageBox.Show("В данном раунде победил {0}",Name);
             globalscore += localscore;
             localscore = 0;
+        }
+        /// <summary>
+        /// Выявляем победителя, если, конечно, он имеется
+        /// </summary>
+        public void ComparingGamers()
+        {
+            if (localscore < opponent.localscore)
+            {
+                GreetingWinner(opponent);
+                IncreaseGlobalScore();
+            }
+            if (localscore > opponent.localscore)
+            {
+                GreetingWinner(this);
+                opponent.IncreaseGlobalScore();
+            }
+            if(localscore == opponent.localscore)
+            {
+                NobodyWon();
+            }
+        }
+        /// <summary>
+        /// Объявляем локального победителя!
+        /// </summary>
+        /// <param name="user"></param>
+        void GreetingWinner(GameUser user)
+        {
+            user.IncreaseGlobalScore();
+            WeFoundWinner = true;
+            MessageBox.Show("В этом раунде победил(a) " + Name);
+        }
+        /// <summary>
+        /// Говорим, что ничья
+        /// </summary>
+        void NobodyWon()
+        {
+            if(!WeFoundWinner)
+            {
+                IncreaseGlobalScore();
+                opponent.IncreaseGlobalScore();
+                WeFoundWinner = true;
+                MessageBox.Show("В этом раунде победила дружба. Все молодцы");
+            }
         }
     }
     /// <summary>
@@ -134,11 +186,15 @@ namespace IronLoto2v
         int x;
         int y;
         public int[,] undertable;//таблица номеров соответствующих картинок
-        DataGridView data;
-        public GameTable(DataGridView datum, int a, int b,GameUser user) //конструктор строит таблицу
+        public DataGridView data;
+        public GameUser localuser;
+        public Label labelway;
+        public GameTable(DataGridView datum, int a, int b, GameUser user,Label label) //конструктор строит таблицу
         {
             x = a;
             y = b;
+            localuser = user;
+            labelway = label;
             DataGridViewImageColumn[] columns = new DataGridViewImageColumn[b];
             for (int i = 0; i < b; i++)
             {
@@ -150,7 +206,7 @@ namespace IronLoto2v
             datum.Rows.Add(a - 1);
             data = datum;
             data.CurrentCell = this.data[0, 0];
-        } 
+        }
         /// <summary>
         /// Метод заполнения одной таблицы. Используется в DrawFields
         /// </summary>
@@ -159,21 +215,10 @@ namespace IronLoto2v
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <param name="tr"></param>
-        public void Fill(WordExtract array, int a, int b,string regime)
+        public void Fill(WordExtract array, int a, int b, string regime)
         {
-            /*Random rnd = new Random();
-            for (int i = 0; i < a; i++)
-            {
-                for (int j = 0; j < b; j++)
-                {
-                    int c = rnd.Next(1, array.Length);
-                    Word temp = array[c];
-                    data.Rows[i].Cells[j].Value = temp.GetIrPicture();
-                    tr[i, j] = temp.NumberOf();
-                }
-            }*/
             int k = 0;
-            undertable=new int[x,y];
+            undertable = new int[x, y];
             try
             {
                 for (int i = 0; i < a; i++)
@@ -181,9 +226,9 @@ namespace IronLoto2v
                     for (int j = 0; j < b; j++)
                     {
                         Card card = new Card(array.mas[k]);
-                        switch(regime)
+                        switch (regime)
                         {
-                            case "1": data.Rows[i].Cells[j].Value = card.CatchIrPicture();break;
+                            case "1": data.Rows[i].Cells[j].Value = card.CatchIrPicture(); break;
                             case "2": data.Rows[i].Cells[j].Value = card.CatchPicture(); break;
                             case "3": data.Rows[i].Cells[j].Value = card.CatchIrWord(); break;
                         }
@@ -195,7 +240,13 @@ namespace IronLoto2v
             catch { }
             array.Shuffling();
         }
-        public int CheckingCards(Label labelway,Label labelPicturesCount,GameUser userone,GameUser usertwo,Switcher switcher, WordExtract extract)
+        /// <summary>
+        /// Функция, определяющая, можно ли повысить игроку балл. Вызывается в методе IsTheSameCard
+        /// </summary>
+        /// <param name="switcher"></param>
+        /// <param name="extract"></param>
+        /// <returns></returns>
+        public int IncreaseLocalScore(Switcher switcher, WordExtract extract)
         {
             int a = data.CurrentCell.RowIndex;
             int b = data.CurrentCell.ColumnIndex;
@@ -204,34 +255,33 @@ namespace IronLoto2v
                 data.CurrentCell.Value = Properties.Resources.p0;
                 undertable[a, b] = 0;
                 switcher.cnt++; //Здесь начинается та самая конкуренция!
-                if (switcher.cnt == extract.mas.Length) ReturnWinner(userone,usertwo);
                 switcher.countdown = 10;
                 switcher.picturebox.Image = extract.mas[switcher.cnt].GetRusPicture();
                 switcher.contentId = extract.mas[switcher.cnt].NumberOf();
                 switcher.countpic--;
-                labelPicturesCount.Text = switcher.countpic.ToString() + "/10";
+                switcher.labelPicturesCount.Text = switcher.countpic.ToString() + String.Format("/{0}",extract.MasLength.ToString());
                 return 1;
             }
             else if (undertable[a, b] != 0) labelway.Visible = true;
-            //MessageBox.Show("Ход невозможен");
             return 0;
         }
-        public void ReturnWinner(GameUser userone,GameUser usertwo)
+        /// <summary>
+        /// Происходит, когда игрок "ходит" по таблице и отмечает клетки. Здесь же определяется победитель
+        /// </summary>
+        /// <param name="switcher"></param>
+        /// <param name="extract"></param>
+        public void IsTheSameCard(Switcher switcher,WordExtract extract)
         {
-            if (userone.localscore > usertwo.localscore)
+            localuser.localscore += IncreaseLocalScore(switcher, extract);
+            data.Enabled = true;
+            localuser.labelcount.Text = localuser.localscore.ToString();
+            if (localuser.localscore == x * y)
             {
-                userone.GetWinner();
-                usertwo.globalscore += usertwo.localscore;
-                usertwo.localscore = 0;
-            } 
-            if (userone.localscore < usertwo.localscore)
-            {
-                usertwo.GetWinner();
-                userone.globalscore += usertwo.localscore;
-                userone.localscore = 0;
+                switcher.timer.Stop();
+                localuser.ComparingGamers();
             }
-            MessageBox.Show("В данном раунде победила дружба.");
         }
+        
     }
     public class Switcher
     {
@@ -240,49 +290,57 @@ namespace IronLoto2v
         public Timer timer;
         Card img;
         WordExtract extract;
-        public int cnt;
+        public int cnt = 0;
         public int countdown = 10;
-        public int countpic = 10;
+        public int countpic;
         Label labelCountdown;
-        Label labelPicturesCount;
-        public Switcher(Timer havetime, PictureBox havepicture, Card image, WordExtract newextract, Label locallabelCountdown,Label locallabelpicturescount,int t,string[]s)
+        public bool IsOver=false;
+        public Label labelPicturesCount;
+        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t)
         {
-            labelPicturesCount=locallabelpicturescount;
+            img = card;
+            labelPicturesCount = locallabelpicturescount;
             labelCountdown = locallabelCountdown;
-            img = image;
             extract = newextract;
             picturebox = havepicture;
             timer = havetime;
-            timer.Enabled = true;
             img.number = contentId;
             timer.Enabled = true;
             timer.Interval = t;
-            if (cnt > s.Length)
-                timer.Enabled = false;
-            this.timer.Tick += Timer_Tick;
+            countpic = extract.MasLength;
+        }
+        /// <summary>
+        /// Запуск таймера
+        /// </summary>
+        public void Start()
+        {
+            timer.Enabled = true;
+            timer.Tick += Timer_Tick;
         }
 
         public void Timer_Tick(object sender, EventArgs e)
         {
-            img = new Card(extract.mas[cnt]);
-            picturebox.Image = img.CatchRusPicture();
-            contentId = img.number;
-            countdown--;
-            labelCountdown.Text = countdown.ToString();
-            if (countdown < 5) labelCountdown.ForeColor = Color.Red;
-            else labelCountdown.ForeColor = Color.Black;
-            if (countdown == 0)
+            if (cnt < extract.MasLength)
             {
-                countdown = 10;
-                cnt++;
-                countpic--;
-                labelPicturesCount.Text = countpic.ToString() + "/10";
+                img = new Card(extract.mas[cnt]);
+                picturebox.Image = img.CatchRusPicture();
+                contentId = img.number;
+                countdown--;
+                labelCountdown.Text = countdown.ToString();
+                if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+                else labelCountdown.ForeColor = Color.Black;
+                if (countdown == 0)
+                {
+                    countdown = 10;
+                    cnt++;
+                    countpic--;
+                    labelPicturesCount.Text = countpic.ToString() + String.Format("/{0}", extract.MasLength.ToString());
+                }
             }
-            if (cnt == 10)
+            else if (cnt==extract.MasLength)
             {
-                timer.Stop();
-                ///winner
-            }
+                IsOver = true;
+            } 
         }
     }
     /// <summary>
@@ -290,13 +348,17 @@ namespace IronLoto2v
     /// </summary>
     public class WordExtract
     {
+        public int MasLength { get; set; }
+        int count;
         public Word[] mas;
-        public WordExtract(string[]s)
+        public WordExtract(string[] s,int num)
         {
+            count = num;
             mas = ToWord(s);
             antirepeat(mas, s);
-            Word[]a = GetExtract(mas);
+            Word[] a = GetExtract(mas);
             mas = a;
+            MasLength = mas.Length;
         }
         Word[] ToWord(string[] a)
         {
@@ -323,8 +385,8 @@ namespace IronLoto2v
         }
         Word[] GetExtract(Word[] perm) //выбираем первые 10 карточек из перетасованного массива
         {
-            Word[] result = new Word[10];
-            for (int i = 0; i < 10; i++)
+            Word[] result = new Word[count];
+            for (int i = 0; i < count; i++)
             {
                 result[i] = perm[i];
             }
@@ -348,7 +410,7 @@ namespace IronLoto2v
     public class Card
     {
         Word word;
-        public int number { get; set; } 
+        public int number { get; set; }
         public Card(Word temp)
         {
             word = temp;

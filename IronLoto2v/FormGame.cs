@@ -14,24 +14,16 @@ namespace IronLoto2v
 {
     public partial class FormGame : Form
     {
-        public string gamer1 = String.Empty;
-        public string gamer2 = String.Empty;
-        public GameUser firstgamer=new GameUser();
-        public GameUser secondgamer=new GameUser();
+        public string firstname;
+        public string secondname;
+        public GameUser firstgamer;
+        public GameUser secondgamer;
         static int x = 3;
         static int y = 2;
         static int t = 1000;
         bool IsPause = false;
-        int cnt = 0; //счётчик, не позволяющий выйти за пределы массива
-        int countpic;
         string[] s;
-        int[,] firstTable = new int[x, y];//
-        int[,] secondTable = new int[x, y];//
-        int pictureshow = 0;
-        int firstscore = 0;//
-        int secondscore = 0;//мусор
         WordExtract extract;
-        int countdown=10;
         Card img;  //демонстрируемые картинки
         GameTable firstfield;
         GameTable secondfield;
@@ -43,19 +35,29 @@ namespace IronLoto2v
         private void FormGame_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            firstgamer.RoundLoad(labelFirstGamer, labelFirstGamerCount);
-            secondgamer.RoundLoad(labelSecondGamer, labelSecondGamerCount);
+            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
+            secondgamer=new GameUser(labelSecondGamer, labelSecondGamerCount,secondname);
+            firstgamer.opponent = secondgamer;
+            secondgamer.opponent = firstgamer;
             s = Properties.Resources.dictionary__1_.Split('\n');
-            extract = new WordExtract(s); 
-            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer);
-            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer);
+            extract = new WordExtract(s,10); 
+            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer,labelNoWayGamer1);
+            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer,labelNoWayGamer2);
+            img = new Card(extract.mas[0]);
             firstfield.Fill(extract, x, y, "1"); //alert
             do
             {
                 secondfield.Fill(extract, x, y, "1");
             }
             while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
-            switcher = new Switcher(timerCountdown,pictureBoxShow,img,extract,labelCountdown,labelPicturesCount,t,s);
+            switcher = new Switcher(timerCountdown,img,pictureBoxShow,extract,labelCountdown,labelPicturesCount,t);
+            switcher.labelPicturesCount.Text = String.Format("{0}/{0}",extract.MasLength.ToString());
+            switcher.Start();
+            if(switcher.IsOver==true)
+            {
+                firstgamer.ComparingGamers();
+                switcher.timer.Stop();
+            }
         }
         /// <summary>
         /// Нельзя таблицам быть абсолютно одинаковыми
@@ -75,20 +77,6 @@ namespace IronLoto2v
                 }
             }
             return false;
-        }
-        void Winner(string first, string second, int one, int two) //add to GameUser later!
-        {
-            timerCountdown.Stop();
-            if (one > two) MessageBox.Show("В первом раунде победил(a) " + gamer1);
-            if (one < two) MessageBox.Show("В первом раунде победил(a) " + gamer2);
-            if (one == two) MessageBox.Show("В первом раунде победила дружба. Все молодцы");
-            StreamWriter file2 = new StreamWriter("first.txt");
-            file2.Write(one + " " + two);
-            file2.Close();
-            FormSecond form = new FormSecond();
-            form.gamer1 = gamer1;
-            form.gamer2 = gamer2;
-            form.Show();
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
@@ -161,29 +149,11 @@ namespace IronLoto2v
 
                 if (e.KeyCode == Keys.Space && IsPause == false)
                 {
-                    dataGridViewGamer1.Enabled = true;
-                    labelNoWayGamer1.Visible = false;
-                    firstgamer.localscore += firstfield.CheckingCards(labelNoWayGamer1,labelPicturesCount,firstgamer,secondgamer,switcher,extract);
-                    labelFirstGamerCount.Text = firstscore.ToString();
-                    if (firstscore == x * y)
-                    {
-                        timerCountdown.Stop();
-                        Winner(gamer1, gamer2, firstscore, secondscore);
-
-                    }
+                    firstfield.IsTheSameCard(switcher, extract);
                 }
                 if (e.KeyCode == Keys.NumPad5 && IsPause == false)
                 {
-                    dataGridViewGamer2.Enabled = true;
-                    labelNoWayGamer2.Visible = false;
-                    secondgamer.localscore += secondfield.CheckingCards(labelNoWayGamer2, labelPicturesCount, firstgamer, secondgamer, switcher, extract);
-                    labelSecondGamerCount.Text = secondscore.ToString();
-                    if (secondscore == x * y)
-                    {
-                        timerCountdown.Stop();
-                        Winner(gamer1, gamer2, firstscore, secondscore);
-                    }
-
+                    secondfield.IsTheSameCard(switcher, extract);
                 }
             }
             catch { }
@@ -191,49 +161,6 @@ namespace IronLoto2v
             dataGridViewGamer2.Enabled = false;
 
         }
-
-        private void timerCountdown_Tick(object sender, EventArgs e)
-        {
-            /*countdown--;
-            labelCountdown.Text=countdown.ToString();
-            if(countdown<5) labelCountdown.ForeColor = Color.Red;
-            else labelCountdown.ForeColor = Color.Black;
-            if(countdown==0)
-            {
-                countdown = 10;
-                try
-                {
-                    cnt++;
-                    pictureBoxShow.Image = extract[cnt].GetRusPicture();
-                    pictureshow = extract[cnt].NumberOf();
-                }
-                catch
-                {
-                    timerCountdown.Stop();
-                    Winner(gamer1, gamer2, firstscore, secondscore);
-                }
-            }
-            img = new Card(extract.mas[cnt]);
-            pictureBoxShow.Image = img.CatchRusPicture();
-            pictureshow = img.number;
-            countdown--;
-            labelCountdown.Text = countdown.ToString();
-            if (countdown < 5) labelCountdown.ForeColor = Color.Red;
-            else labelCountdown.ForeColor = Color.Black;
-            if (countdown == 0)
-            {
-                countdown = 10;
-                cnt++;
-                countpic--;
-                labelPicturesCount.Text= countpic.ToString()+"/10";
-            }
-            if(cnt==10)
-            {
-                timerCountdown.Stop();
-                Winner(gamer1, gamer2, firstscore, secondscore);
-            }*/
-        }
-
         private void ToolStripMenuItemExits_Click(object sender, EventArgs e)
         {
             Application.Exit();

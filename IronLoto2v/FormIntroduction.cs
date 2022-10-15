@@ -12,8 +12,8 @@ namespace IronLoto2v
 {
     public partial class FormIntroduction : Form
     {
-        GameUser firstgamer=new GameUser();
-        GameUser secondgamer=new GameUser();
+        public string firstname;
+        public string secondname;
         public FormIntroduction()
         {
             InitializeComponent();
@@ -21,12 +21,12 @@ namespace IronLoto2v
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            firstgamer.Name = textBoxGamer1.Text;
-            secondgamer.Name = textBoxGamer2.Text;
+            firstname = textBoxGamer1.Text;
+            secondname = textBoxGamer2.Text;
             MessageBox.Show("Желаем вам приятной игры и пусть победит сильнейший.");            
             FormGame form=new FormGame();
-            form.firstgamer=firstgamer;
-            form.secondgamer=secondgamer;
+            form.firstname=firstname;
+            form.secondname=secondname;
             form.Show();
         }
     }
