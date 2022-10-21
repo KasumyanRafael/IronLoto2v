@@ -119,7 +119,7 @@ namespace IronLoto2v
         Label labelNick;
         public GameUser opponent;
         public Label labelcount;
-        public bool WeFoundWinner = false;
+        bool WeFoundWinner = false;
         public GameUser(Label labelname, Label labelscore,string name)
         {
             Name = name;
@@ -171,9 +171,9 @@ namespace IronLoto2v
         {
             if(!WeFoundWinner)
             {
+                WeFoundWinner = true;
                 IncreaseGlobalScore();
                 opponent.IncreaseGlobalScore();
-                WeFoundWinner = true;
                 MessageBox.Show("В этом раунде победила дружба. Все молодцы");
             }
         }
@@ -246,20 +246,20 @@ namespace IronLoto2v
         /// <param name="switcher"></param>
         /// <param name="extract"></param>
         /// <returns></returns>
-        public int IncreaseLocalScore(Switcher switcher, WordExtract extract)
+        public int IncreaseLocalScore(WordExtract extract, Switcher localswitcher)
         {
             int a = data.CurrentCell.RowIndex;
             int b = data.CurrentCell.ColumnIndex;
-            if (undertable[a, b] == switcher.contentId)
+            if (undertable[a, b] == localswitcher.contentId)
             {
                 data.CurrentCell.Value = Properties.Resources.p0;
                 undertable[a, b] = 0;
-                switcher.cnt++; //Здесь начинается та самая конкуренция!
-                switcher.countdown = 10;
-                switcher.picturebox.Image = extract.mas[switcher.cnt].GetRusPicture();
-                switcher.contentId = extract.mas[switcher.cnt].NumberOf();
-                switcher.countpic--;
-                switcher.labelPicturesCount.Text = switcher.countpic.ToString() + String.Format("/{0}",extract.MasLength.ToString());
+                localswitcher.cnt++; //Здесь начинается та самая конкуренция!
+                localswitcher.countdown = 10;
+                localswitcher.picturebox.Image = extract.mas[localswitcher.cnt].GetRusPicture();
+                localswitcher.contentId = extract.mas[localswitcher.cnt].NumberOf();
+                localswitcher.countpic--;
+                localswitcher.labelPicturesCount.Text = localswitcher.countpic.ToString() + String.Format("/{0}",extract.MasLength.ToString());
                 return 1;
             }
             else if (undertable[a, b] != 0) labelway.Visible = true;
@@ -272,13 +272,13 @@ namespace IronLoto2v
         /// <param name="extract"></param>
         public void IsTheSameCard(Switcher switcher,WordExtract extract)
         {
-            localuser.localscore += IncreaseLocalScore(switcher, extract);
+            localuser.localscore += IncreaseLocalScore(extract,switcher);
             data.Enabled = true;
             localuser.labelcount.Text = localuser.localscore.ToString();
             if (localuser.localscore == x * y)
             {
-                switcher.timer.Stop();
                 localuser.ComparingGamers();
+                switcher.timer.Stop();
             }
         }
         
@@ -286,17 +286,18 @@ namespace IronLoto2v
     public class Switcher
     {
         public PictureBox picturebox;
+        public bool IsStopped = false;
         public int contentId;
         public Timer timer;
         Card img;
-        WordExtract extract;
+        public WordExtract extract;
         public int cnt = 0;
         public int countdown = 10;
         public int countpic;
         Label labelCountdown;
-        public bool IsOver=false;
         public Label labelPicturesCount;
-        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t)
+        GameUser gameuser;
+        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser)
         {
             img = card;
             labelPicturesCount = locallabelpicturescount;
@@ -308,6 +309,7 @@ namespace IronLoto2v
             timer.Enabled = true;
             timer.Interval = t;
             countpic = extract.MasLength;
+            this.gameuser = gameuser;
         }
         /// <summary>
         /// Запуск таймера
@@ -320,27 +322,38 @@ namespace IronLoto2v
 
         public void Timer_Tick(object sender, EventArgs e)
         {
-            if (cnt < extract.MasLength)
+            try
             {
-                img = new Card(extract.mas[cnt]);
-                picturebox.Image = img.CatchRusPicture();
-                contentId = img.number;
-                countdown--;
-                labelCountdown.Text = countdown.ToString();
-                if (countdown < 5) labelCountdown.ForeColor = Color.Red;
-                else labelCountdown.ForeColor = Color.Black;
-                if (countdown == 0)
+                if (countpic != 0)
                 {
-                    countdown = 10;
-                    cnt++;
-                    countpic--;
-                    labelPicturesCount.Text = countpic.ToString() + String.Format("/{0}", extract.MasLength.ToString());
+                    img = new Card(extract.mas[cnt]);
+                    picturebox.Image = img.CatchRusPicture();
+                    contentId = img.number;
+                    countdown--;
+                    labelCountdown.Text = countdown.ToString();
+                    if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+                    else labelCountdown.ForeColor = Color.Black;
+                    if (countdown == 0)
+                    {
+                        countdown = 10;
+                        cnt++;
+                        countpic--;
+                        labelPicturesCount.Text = countpic.ToString() + String.Format("/{0}", extract.MasLength.ToString());
+                    }
+                }
+                else
+                {
+                    timer.Stop();
+                    MessageBox.Show("Подводим итоги раунда...");
+                    gameuser.ComparingGamers();
                 }
             }
-            else if (cnt==extract.MasLength)
+            catch 
             {
-                IsOver = true;
-            } 
+                timer.Stop();
+                MessageBox.Show("Подводим итоги раунда...");
+                gameuser.ComparingGamers();
+            }
         }
     }
     /// <summary>
@@ -353,6 +366,7 @@ namespace IronLoto2v
         public Word[] mas;
         public WordExtract(string[] s,int num)
         {
+
             count = num;
             mas = ToWord(s);
             antirepeat(mas, s);

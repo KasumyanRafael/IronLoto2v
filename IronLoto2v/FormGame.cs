@@ -40,7 +40,7 @@ namespace IronLoto2v
             firstgamer.opponent = secondgamer;
             secondgamer.opponent = firstgamer;
             s = Properties.Resources.dictionary__1_.Split('\n');
-            extract = new WordExtract(s,10); 
+            extract = new WordExtract(s,10); //начиная отсюда,обновляем данные
             firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer,labelNoWayGamer1);
             secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer,labelNoWayGamer2);
             img = new Card(extract.mas[0]);
@@ -50,14 +50,10 @@ namespace IronLoto2v
                 secondfield.Fill(extract, x, y, "1");
             }
             while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
-            switcher = new Switcher(timerCountdown,img,pictureBoxShow,extract,labelCountdown,labelPicturesCount,t);
+            switcher = new Switcher(timerCountdown,img,pictureBoxShow,extract,labelCountdown,labelPicturesCount,t,firstgamer);
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}",extract.MasLength.ToString());
-            switcher.Start();
-            if(switcher.IsOver==true)
-            {
-                firstgamer.ComparingGamers();
-                switcher.timer.Stop();
-            }
+            switcher.Start(); //до сюда
+            
         }
         /// <summary>
         /// Нельзя таблицам быть абсолютно одинаковыми
