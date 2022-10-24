@@ -77,7 +77,8 @@
 Класс Switcher, переключающий картинки. Устранение ошибок.
 
 15.10.2022
-Настраивание Switcher, появление багов в таймере
+Настраивание Switcher.
+
 
 Ссылка на документ: https://docs.google.com/document/d/115HOOKC8THd5lYVwsKt7R-14hGU0Dvq_SUQSAQ9LyIg/edit#heading=h.gjdgxs
 
