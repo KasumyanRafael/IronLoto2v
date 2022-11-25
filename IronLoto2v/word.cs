@@ -119,7 +119,7 @@ namespace IronLoto2v
         Label labelNick;
         public GameUser opponent;
         public Label labelcount;
-        bool WeFoundWinner = false;
+        public bool WeFoundWinner = false;
         public GameUser(Label labelname, Label labelscore,string name)
         {
             Name = name;
@@ -183,8 +183,8 @@ namespace IronLoto2v
     /// </summary>
     public class GameTable
     {
-        int x;
-        int y;
+        public int x;
+        public int y;
         public int[,] undertable;//таблица номеров соответствующих картинок
         public DataGridView data;
         public GameUser localuser;

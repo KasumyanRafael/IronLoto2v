@@ -14,6 +14,7 @@ namespace IronLoto2v
 {
     public partial class FormGame : Form
     {
+        public static int regime = 0;
         public string firstname;
         public string secondname;
         public GameUser firstgamer;
@@ -32,28 +33,36 @@ namespace IronLoto2v
         {
             InitializeComponent();
         }
-        private void FormGame_Load(object sender, EventArgs e)
+        public void Start()
         {
+            regime++;
             this.WindowState = FormWindowState.Maximized;
             firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
-            secondgamer=new GameUser(labelSecondGamer, labelSecondGamerCount,secondname);
+            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
             firstgamer.opponent = secondgamer;
             secondgamer.opponent = firstgamer;
+            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);
+            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer, labelNoWayGamer2);
             s = Properties.Resources.dictionary__1_.Split('\n');
-            extract = new WordExtract(s,10); //начиная отсюда,обновляем данные
-            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer,labelNoWayGamer1);
-            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer,labelNoWayGamer2);
+            extract = new WordExtract(s, 10); //начиная отсюда,обновляем данные
             img = new Card(extract.mas[0]);
-            firstfield.Fill(extract, x, y, "1"); //alert
+            firstfield.Fill(extract, x, y, regime.ToString()); //alert
             do
             {
-                secondfield.Fill(extract, x, y, "1");
+                secondfield.Fill(extract, x, y, regime.ToString());
             }
             while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
-            switcher = new Switcher(timerCountdown,img,pictureBoxShow,extract,labelCountdown,labelPicturesCount,t,firstgamer);
-            switcher.labelPicturesCount.Text = String.Format("{0}/{0}",extract.MasLength.ToString());
+            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer);
+            switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
-            
+        }
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+            Start();
+            if(firstgamer.WeFoundWinner==true && regime<3)
+            {
+                Start();
+            }
         }
         /// <summary>
         /// Нельзя таблицам быть абсолютно одинаковыми
