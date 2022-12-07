@@ -121,7 +121,7 @@
 
 
 
-Ссылка на презентацию: https://docs.google.com/presentation/d/1H-9yBuKbMrasabpaP6SkaKygYZ0sQ1I-O2C6pe1379o/edit#slide=id.p
+Ссылка на презентацию: https://vk.com/away.php?to=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F1aYC7phj1dj_TnSb215BTvFkGx2FXxo6x%2Fedit%23slide%3Did.p3&cc_key=
 
 
       
