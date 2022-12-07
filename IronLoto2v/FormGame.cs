@@ -35,6 +35,7 @@ namespace IronLoto2v
         }
         public void Start()
         {
+
             regime++;
             this.WindowState = FormWindowState.Maximized;
             firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
