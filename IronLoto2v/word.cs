@@ -252,7 +252,7 @@ namespace IronLoto2v
             int b = data.CurrentCell.ColumnIndex;
             if (undertable[a, b] == localswitcher.contentId)
             {
-                data.CurrentCell.Value = Properties.Resources.p0;
+                data.CurrentCell.Value = Properties.Resources.pwhite;
                 undertable[a, b] = 0;
                 localswitcher.cnt++; //Здесь начинается та самая конкуренция!
                 localswitcher.countdown = 10;
