@@ -28,6 +28,7 @@ namespace IronLoto2v
             form.firstname=firstname;
             form.secondname=secondname;
             form.Show();
+            this.Hide();
         }
     }
 }

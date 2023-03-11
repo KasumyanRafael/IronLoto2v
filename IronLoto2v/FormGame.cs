@@ -35,7 +35,6 @@ namespace IronLoto2v
         }
         public void Start()
         {
-
             regime++;
             this.WindowState = FormWindowState.Maximized;
             firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
@@ -47,7 +46,7 @@ namespace IronLoto2v
             s = Properties.Resources.dictionary__1_.Split('\n');
             extract = new WordExtract(s, 10); //начиная отсюда,обновляем данные
             img = new Card(extract.mas[0]);
-            firstfield.Fill(extract, x, y, regime.ToString()); //alert
+            firstfield.Fill(extract, x, y, regime.ToString()); 
             do
             {
                 secondfield.Fill(extract, x, y, regime.ToString());
@@ -60,7 +59,7 @@ namespace IronLoto2v
         private void FormGame_Load(object sender, EventArgs e)
         {
             Start();
-            if(firstgamer.WeFoundWinner==true && regime<3)
+            if (firstgamer.WeFoundWinner == true && regime < 3)
             {
                 Start();
             }

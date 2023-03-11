@@ -115,19 +115,19 @@ namespace IronLoto2v
         /// <summary>
         /// Баллы за игру
         /// </summary>
-        public int globalscore=0;
+        public int globalscore = 0;
         Label labelNick;
         public GameUser opponent;
         public Label labelcount;
         public bool WeFoundWinner = false;
-        public GameUser(Label labelname, Label labelscore,string name)
+        public GameUser(Label labelname, Label labelscore, string name)
         {
             Name = name;
             localscore = 0;
             labelname.Text = Name;
             labelscore.Text = localscore.ToString();
             labelNick = labelname;
-            labelcount= labelscore;
+            labelcount = labelscore;
         }
         public void IncreaseGlobalScore()
         {
@@ -149,7 +149,7 @@ namespace IronLoto2v
                 GreetingWinner(this);
                 opponent.IncreaseGlobalScore();
             }
-            if(localscore == opponent.localscore)
+            if (localscore == opponent.localscore)
             {
                 NobodyWon();
             }
@@ -169,7 +169,7 @@ namespace IronLoto2v
         /// </summary>
         void NobodyWon()
         {
-            if(!WeFoundWinner)
+            if (!WeFoundWinner)
             {
                 WeFoundWinner = true;
                 IncreaseGlobalScore();
@@ -278,7 +278,7 @@ namespace IronLoto2v
             if (localuser.localscore == x * y)
             {
                 localuser.ComparingGamers();
-                switcher.timer.Stop();
+                switcher.Stop();
             }
         }
         
@@ -319,7 +319,10 @@ namespace IronLoto2v
             timer.Enabled = true;
             timer.Tick += Timer_Tick;
         }
-
+        public void Stop()
+        {
+            timer.Stop();
+        }
         public void Timer_Tick(object sender, EventArgs e)
         {
             try
