@@ -106,7 +106,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
-            this.Text = "Главное меню. НОВИЧКАМ СОВЕТУЕМ СНАЧАЛА ПРОЧИТАТЬ ИНСТРУКЦИЮ.";
+            this.Text = "Главное меню демо-версии. НОВИЧКАМ СОВЕТУЕМ СНАЧАЛА ПРОЧИТАТЬ ИНСТРУКЦИЮ.";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -20,7 +20,9 @@ namespace IronLoto2v
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormReg frm=new FormReg();
+            frm.Show();
+            this.Hide();
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
