@@ -37,7 +37,7 @@
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(26, 245);
+            this.buttonStart.Location = new System.Drawing.Point(26, 141);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(176, 53);
             this.buttonStart.TabIndex = 4;
@@ -47,7 +47,7 @@
             // 
             // textBoxGamer2
             // 
-            this.textBoxGamer2.Location = new System.Drawing.Point(37, 179);
+            this.textBoxGamer2.Location = new System.Drawing.Point(37, 102);
             this.textBoxGamer2.Name = "textBoxGamer2";
             this.textBoxGamer2.Size = new System.Drawing.Size(154, 20);
             this.textBoxGamer2.TabIndex = 5;
@@ -55,7 +55,7 @@
             // 
             // textBoxGamer1
             // 
-            this.textBoxGamer1.Location = new System.Drawing.Point(37, 115);
+            this.textBoxGamer1.Location = new System.Drawing.Point(37, 61);
             this.textBoxGamer1.Name = "textBoxGamer1";
             this.textBoxGamer1.Size = new System.Drawing.Size(154, 20);
             this.textBoxGamer1.TabIndex = 6;
@@ -63,25 +63,27 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(-3, 9);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(-7, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(251, 49);
             this.label1.TabIndex = 7;
             this.label1.Text = "Впишите имена:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormIntroduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(247, 310);
+            this.ClientSize = new System.Drawing.Size(237, 219);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxGamer1);
             this.Controls.Add(this.textBoxGamer2);
             this.Controls.Add(this.buttonStart);
             this.Name = "FormIntroduction";
-            this.Text = "Авторизация игроков (демо режим)";
+            this.Load += new System.EventHandler(this.FormIntroduction_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

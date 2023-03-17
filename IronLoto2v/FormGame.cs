@@ -35,8 +35,6 @@ namespace IronLoto2v
         }
         public void Start()
         {
-            regime++;
-            this.WindowState = FormWindowState.Maximized;
             firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
             secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
             firstgamer.opponent = secondgamer;
@@ -58,6 +56,10 @@ namespace IronLoto2v
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
+            regime++;
+            this.WindowState = FormWindowState.Maximized;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             Start();
             if (firstgamer.WeFoundWinner == true && regime < 3)
             {

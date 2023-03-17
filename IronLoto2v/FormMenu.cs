@@ -17,14 +17,6 @@ namespace IronLoto2v
         {
             InitializeComponent();
         }
-
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            FormReg frm=new FormReg();
-            frm.Show();
-            this.Hide();
-        }
-
         private void buttonStart_Click(object sender, EventArgs e)
         {
             FormIntroduction frm = new FormIntroduction();
@@ -35,6 +27,12 @@ namespace IronLoto2v
         {
             FormDirections frm = new FormDirections();
             frm.Show();
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
     }
 }

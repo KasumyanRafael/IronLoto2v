@@ -32,7 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.buttonDirections = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,35 +61,23 @@
             // 
             this.buttonStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(12, 171);
+            this.buttonStart.Location = new System.Drawing.Point(12, 205);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(245, 85);
+            this.buttonStart.Size = new System.Drawing.Size(298, 109);
             this.buttonStart.TabIndex = 3;
             this.buttonStart.Text = "Играть";
             this.buttonStart.UseVisualStyleBackColor = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit.Location = new System.Drawing.Point(12, 353);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(245, 85);
-            this.buttonExit.TabIndex = 4;
-            this.buttonExit.Text = "Выход";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
             // buttonDirections
             // 
             this.buttonDirections.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonDirections.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDirections.Location = new System.Drawing.Point(12, 262);
+            this.buttonDirections.Location = new System.Drawing.Point(12, 329);
             this.buttonDirections.Name = "buttonDirections";
-            this.buttonDirections.Size = new System.Drawing.Size(245, 85);
+            this.buttonDirections.Size = new System.Drawing.Size(298, 109);
             this.buttonDirections.TabIndex = 5;
-            this.buttonDirections.Text = "Инструкция";
+            this.buttonDirections.Text = "Правила";
             this.buttonDirections.UseVisualStyleBackColor = false;
             this.buttonDirections.Click += new System.EventHandler(this.buttonDirections_Click);
             // 
@@ -100,13 +87,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonDirections);
-            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
-            this.Text = "Главное меню демо-версии. НОВИЧКАМ СОВЕТУЕМ СНАЧАЛА ПРОЧИТАТЬ ИНСТРУКЦИЮ.";
+            this.Text = "Учим осетинские слова в формате игры \"Лото\".";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -117,7 +104,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonDirections;
     }
 }

@@ -16,7 +16,7 @@ namespace IronLoto2v
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormReg());
+            Application.Run(new FormMenu());
         }
     }
 }
