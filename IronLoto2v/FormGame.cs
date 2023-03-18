@@ -32,16 +32,12 @@ namespace IronLoto2v
         public FormGame()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
         public void Start()
         {
-            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
-            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
-            firstgamer.opponent = secondgamer;
-            secondgamer.opponent = firstgamer;
-            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);
-            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer, labelNoWayGamer2);
-            s = Properties.Resources.dictionary__1_.Split('\n');
             extract = new WordExtract(s, 10); //начиная отсюда,обновляем данные
             img = new Card(extract.mas[0]);
             firstfield.Fill(extract, x, y, regime.ToString()); 
@@ -57,14 +53,14 @@ namespace IronLoto2v
         private void FormGame_Load(object sender, EventArgs e)
         {
             regime++;
-            this.WindowState = FormWindowState.Maximized;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            Start();
-            if (firstgamer.WeFoundWinner == true && regime < 3)
-            {
-                Start();
-            }
+            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
+            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
+            firstgamer.opponent = secondgamer;
+            secondgamer.opponent = firstgamer;
+            firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);
+            secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer, labelNoWayGamer2);
+            s = Properties.Resources.dictionary__1_.Split('\n');
+            Start();           
         }
         /// <summary>
         /// Нельзя таблицам быть абсолютно одинаковыми

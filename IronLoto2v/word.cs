@@ -286,7 +286,7 @@ namespace IronLoto2v
     public class Switcher
     {
         public PictureBox picturebox;
-        public bool IsStopped = false;
+        public bool StopRound = false;
         public int contentId;
         public Timer timer;
         Card img;
@@ -321,6 +321,7 @@ namespace IronLoto2v
         }
         public void Stop()
         {
+            StopRound = true;
             timer.Stop();
         }
         public void Timer_Tick(object sender, EventArgs e)
