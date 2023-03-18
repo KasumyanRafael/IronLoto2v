@@ -52,7 +52,8 @@
             this.Controls.Add(this.richTextBoxDirections);
             this.MaximumSize = new System.Drawing.Size(871, 777);
             this.Name = "FormDirections";
-            this.Text = "Инструкции";
+            this.Text = "ЧаВо";
+            this.Load += new System.EventHandler(this.FormDirections_Load_1);
             this.ResumeLayout(false);
 
         }

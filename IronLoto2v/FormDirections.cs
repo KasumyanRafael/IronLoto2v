@@ -20,7 +20,9 @@ namespace IronLoto2v
             InitializeComponent();
         }
 
-        private void FormDirections_Load(object sender, EventArgs e)
+        
+
+        private void FormDirections_Load_1(object sender, EventArgs e)
         {
             this.MinimizeBox = false;
             this.MaximizeBox = false;

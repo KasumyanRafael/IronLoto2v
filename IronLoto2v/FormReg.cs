@@ -28,5 +28,12 @@ namespace IronLoto2v
             frm.Show();
             this.Hide();
         }
+
+        private void FormReg_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
     }
 }

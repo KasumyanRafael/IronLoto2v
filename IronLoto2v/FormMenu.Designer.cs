@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonDirections = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,25 @@
             this.buttonDirections.UseVisualStyleBackColor = false;
             this.buttonDirections.Click += new System.EventHandler(this.buttonDirections_Click);
             // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSubmit.ForeColor = System.Drawing.Color.Black;
+            this.buttonSubmit.Location = new System.Drawing.Point(663, 99);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(137, 34);
+            this.buttonSubmit.TabIndex = 6;
+            this.buttonSubmit.Text = "Особая версия";
+            this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonDirections);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
@@ -105,6 +120,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonDirections;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }
 
