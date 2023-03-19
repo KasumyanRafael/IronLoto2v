@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIntroduction));
             this.buttonStart = new System.Windows.Forms.Button();
             this.textBoxGamer2 = new System.Windows.Forms.TextBox();
             this.textBoxGamer1 = new System.Windows.Forms.TextBox();
@@ -82,6 +83,7 @@
             this.Controls.Add(this.textBoxGamer1);
             this.Controls.Add(this.textBoxGamer2);
             this.Controls.Add(this.buttonStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIntroduction";
             this.Load += new System.EventHandler(this.FormIntroduction_Load);
             this.ResumeLayout(false);

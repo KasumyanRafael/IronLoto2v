@@ -105,6 +105,7 @@
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
             this.Text = "Учим осетинские слова в формате игры \"Лото\".";

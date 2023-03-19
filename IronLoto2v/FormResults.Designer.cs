@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResults));
             this.dataGridViewResults = new System.Windows.Forms.DataGridView();
             this.ColumnGamer1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGamer2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,6 +150,7 @@
             this.ClientSize = new System.Drawing.Size(501, 454);
             this.Controls.Add(this.dataGridViewResults);
             this.Controls.Add(this.menuStripGame);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripGame;
             this.MaximumSize = new System.Drawing.Size(517, 493);
             this.Name = "FormResults";

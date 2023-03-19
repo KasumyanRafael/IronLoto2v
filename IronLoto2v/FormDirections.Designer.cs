@@ -50,6 +50,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(855, 738);
             this.Controls.Add(this.richTextBoxDirections);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(871, 777);
             this.Name = "FormDirections";
             this.Text = "ЧаВо";
