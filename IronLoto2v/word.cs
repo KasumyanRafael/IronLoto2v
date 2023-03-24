@@ -297,7 +297,8 @@ namespace IronLoto2v
         Label labelCountdown;
         public Label labelPicturesCount;
         GameUser gameuser;
-        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser)
+        Button button;
+        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn)
         {
             img = card;
             labelPicturesCount = locallabelpicturescount;
@@ -310,6 +311,7 @@ namespace IronLoto2v
             timer.Interval = t;
             countpic = extract.MasLength;
             this.gameuser = gameuser;
+            button = btn;
         }
         /// <summary>
         /// Запуск таймера
@@ -350,6 +352,7 @@ namespace IronLoto2v
                     timer.Stop();
                     MessageBox.Show("Подводим итоги раунда...");
                     gameuser.ComparingGamers();
+                    button.Visible = true;
                 }
             }
             catch 
@@ -357,6 +360,7 @@ namespace IronLoto2v
                 timer.Stop();
                 MessageBox.Show("Подводим итоги раунда...");
                 gameuser.ComparingGamers();
+                button.Visible = true;
             }
         }
     }
