@@ -3797,5 +3797,24 @@ namespace IronLoto2v.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;en&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///    &lt;link rel=&quot;stylesheet&quot;href=&quot;style.css&quot;&gt;
+        ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;
+        ///    &lt;title&gt;LotoDirections&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;bo [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string txthtml {
+            get {
+                return ResourceManager.GetString("txthtml", resourceCulture);
+            }
+        }
     }
 }

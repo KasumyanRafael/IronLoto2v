@@ -46,7 +46,7 @@ namespace IronLoto2v
                 secondfield.Fill(extract, x, y, regime.ToString());
             }
             while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
-            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer,buttonRoundsAccelerator);
+            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer,buttonRoundsAccelerator,regime);
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
         }
@@ -58,6 +58,8 @@ namespace IronLoto2v
             secondgamer.opponent = firstgamer;
             firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);
             secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer, labelNoWayGamer2);
+            firstfield.Clear(x, y);
+            secondfield.Clear(x, y);
             s = Properties.Resources.dictionary__1_.Split('\n');          
         }
         /// <summary>
@@ -211,12 +213,11 @@ namespace IronLoto2v
 
         private void buttonRoundsAccelerator_Click(object sender, EventArgs e)
         {
-            if (buttonRoundsAccelerator.Visible)
-            {
-                regime++;
-                buttonRoundsAccelerator.Visible = false;
-                Start();
-            }
+            regime++;
+            labelFirstGamerCount.Text = "0";
+            labelSecondGamerCount.Text = "0";
+            buttonRoundsAccelerator.Visible = false;
+            Start();
         }
     }
 }

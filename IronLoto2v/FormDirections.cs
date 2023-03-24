@@ -14,14 +14,10 @@ namespace IronLoto2v
 {
     public partial class FormDirections : Form
     {
-        
         public FormDirections()
         {
             InitializeComponent();
         }
-
-        
-
         private void FormDirections_Load_1(object sender, EventArgs e)
         {
             this.MinimizeBox = false;

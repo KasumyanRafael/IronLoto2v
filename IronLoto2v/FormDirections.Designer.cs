@@ -52,7 +52,7 @@
             this.webBrowserDirections.Name = "webBrowserDirections";
             this.webBrowserDirections.Size = new System.Drawing.Size(671, 628);
             this.webBrowserDirections.TabIndex = 1;
-            this.webBrowserDirections.Url = new System.Uri("", System.UriKind.Relative);
+            this.webBrowserDirections.Url = new System.Uri("http://mydirections.ru", System.UriKind.Absolute);
             // 
             // FormDirections
             // 
@@ -63,7 +63,6 @@
             this.Controls.Add(this.webBrowserDirections);
             this.Controls.Add(this.richTextBoxDirections);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(871, 777);
             this.Name = "FormDirections";
             this.Text = "ЧаВо";
             this.Load += new System.EventHandler(this.FormDirections_Load_1);

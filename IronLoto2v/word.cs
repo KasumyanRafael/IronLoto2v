@@ -240,6 +240,16 @@ namespace IronLoto2v
             catch { }
             array.Shuffling();
         }
+        public void Clear(int a,int b)
+        {
+            for (int i = 0; i < a; i++)
+            {
+                for (int j = 0; j < b; j++)
+                {
+                    data.Rows[i].Cells[j].Value = Properties.Resources.pwhite;
+                }
+            }
+        }
         /// <summary>
         /// Функция, определяющая, можно ли повысить игроку балл. Вызывается в методе IsTheSameCard
         /// </summary>
@@ -286,7 +296,6 @@ namespace IronLoto2v
     public class Switcher
     {
         public PictureBox picturebox;
-        public bool StopRound = false;
         public int contentId;
         public Timer timer;
         Card img;
@@ -296,9 +305,10 @@ namespace IronLoto2v
         public int countpic;
         Label labelCountdown;
         public Label labelPicturesCount;
+        string round;
         GameUser gameuser;
         Button button;
-        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn)
+        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn,int reg)
         {
             img = card;
             labelPicturesCount = locallabelpicturescount;
@@ -312,6 +322,7 @@ namespace IronLoto2v
             countpic = extract.MasLength;
             this.gameuser = gameuser;
             button = btn;
+            round=reg.ToString();
         }
         /// <summary>
         /// Запуск таймера
@@ -323,17 +334,23 @@ namespace IronLoto2v
         }
         public void Stop()
         {
-            StopRound = true;
             timer.Stop();
+            button.Visible = true;
         }
         public void Timer_Tick(object sender, EventArgs e)
         {
             try
             {
-                if (countpic != 0)
+                if (countpic != 0 && gameuser.localscore!=6 && gameuser.opponent.localscore!=6)
                 {
                     img = new Card(extract.mas[cnt]);
-                    picturebox.Image = img.CatchRusPicture();
+                    switch(round)
+                    {
+                        case "1": picturebox.Image = img.CatchRusPicture();break;
+                        case "2": picturebox.Image = img.CatchPicture(); break;
+                        case "3": picturebox.Image = img.CatchPicture(); break;
+                    }
+                    //picturebox.Image = img.CatchRusPicture();
                     contentId = img.number;
                     countdown--;
                     labelCountdown.Text = countdown.ToString();
@@ -349,18 +366,14 @@ namespace IronLoto2v
                 }
                 else
                 {
-                    timer.Stop();
-                    MessageBox.Show("Подводим итоги раунда...");
-                    gameuser.ComparingGamers();
-                    button.Visible = true;
+                    this.Stop();
+                    gameuser.ComparingGamers();                 
                 }
             }
             catch 
             {
-                timer.Stop();
-                MessageBox.Show("Подводим итоги раунда...");
+                this.Stop();
                 gameuser.ComparingGamers();
-                button.Visible = true;
             }
         }
     }
