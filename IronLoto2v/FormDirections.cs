@@ -17,7 +17,6 @@ namespace IronLoto2v
         public FormDirections()
         {
             InitializeComponent();
-            //webBrowserDirections.Navigate(@"C:\Users\Efrem\Desktop\Рафаэль\Курсовая работа\IronLoto2v\IronLoto2v\Resources\loto-directions\mydirs.html");
             string path = Properties.Resources.index;
             webBrowserDirections.DocumentText = path;
         }
@@ -25,7 +24,6 @@ namespace IronLoto2v
         {
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-
         }
     }
 }
