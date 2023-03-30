@@ -52,8 +52,8 @@ namespace IronLoto2v
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
-            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
-            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
+            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname,regime);
+            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname,regime);
             firstgamer.opponent = secondgamer;
             secondgamer.opponent = firstgamer;
             firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);

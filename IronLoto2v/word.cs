@@ -120,7 +120,9 @@ namespace IronLoto2v
         public GameUser opponent;
         public Label labelcount;
         public bool WeFoundWinner = false;
-        public GameUser(Label labelname, Label labelscore, string name)
+        int gameround;
+        public int[] roundresults = new int[3];
+        public GameUser(Label labelname, Label labelscore, string name,int round)
         {
             Name = name;
             localscore = 0;
@@ -128,10 +130,12 @@ namespace IronLoto2v
             labelscore.Text = localscore.ToString();
             labelNick = labelname;
             labelcount = labelscore;
+            gameround = round;
         }
         public void IncreaseGlobalScore()
         {
             globalscore += localscore;
+            roundresults[gameround] = localscore;
             localscore = 0;
         }
         /// <summary>
@@ -283,12 +287,13 @@ namespace IronLoto2v
         public void IsTheSameCard(Switcher switcher,WordExtract extract)
         {
             localuser.localscore += IncreaseLocalScore(extract,switcher);
-            data.Enabled = true;
             localuser.labelcount.Text = localuser.localscore.ToString();
+            data.Enabled = true;
             if (localuser.localscore == x * y)
             {
-                localuser.ComparingGamers();
+                localuser.labelcount.Text = localuser.localscore.ToString();
                 switcher.Stop();
+                localuser.ComparingGamers();
             }
         }
         
