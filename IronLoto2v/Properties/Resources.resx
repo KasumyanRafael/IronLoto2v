@@ -121,8 +121,14 @@
   <data name="dictionary__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dictionary (1).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="endOfRound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\endOfRound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\index.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="p0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1233,5 +1239,11 @@
   </data>
   <data name="pwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="raunds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\raunds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="roundview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roundview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

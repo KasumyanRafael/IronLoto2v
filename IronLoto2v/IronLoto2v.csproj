@@ -148,6 +148,10 @@
   <ItemGroup>
     <Content Include="ImagesWithIronMeaning\1.png" />
     <Content Include="ImagesWithIronMeaning\10.png" />
+    <None Include="Resources\roundview.png" />
+    <None Include="Resources\raunds.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\endOfRound.png" />
     <None Include="Resources\index.html" />
     <None Include="Resources\pwhite.png" />
     <None Include="Resources\p92ru.png" />
