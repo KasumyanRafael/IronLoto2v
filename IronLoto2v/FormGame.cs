@@ -38,48 +38,27 @@ namespace IronLoto2v
         }
         public void Start()
         {
-            extract = new WordExtract(s, 10); //начиная отсюда,обновляем данные
+            labelRounds.Text = String.Format("{0} раунд",regime);
+            extract = new WordExtract(s, 12); //начиная отсюда,обновляем данные
             img = new Card(extract.mas[0]);
-            firstfield.Fill(extract, x, y, regime.ToString()); 
-            do
-            {
-                secondfield.Fill(extract, x, y, regime.ToString());
-            }
-            while (!antitwin(firstfield.undertable, secondfield.undertable, x, y));
+            Card crd=new Card(extract.mas[extract.MasLength-1]);
+            firstfield.Fill(extract, x, y, regime.ToString());
+            secondfield.Fill(extract, x, y, regime.ToString());
             switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer,buttonRoundsAccelerator,regime);
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
         }
         private void FormGame_Load(object sender, EventArgs e)
         {
-            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname,regime);
-            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname,regime);
+            firstgamer = new GameUser(labelFirstGamer, labelFirstGamerCount, firstname);
+            secondgamer = new GameUser(labelSecondGamer, labelSecondGamerCount, secondname);
             firstgamer.opponent = secondgamer;
             secondgamer.opponent = firstgamer;
             firstfield = new GameTable(dataGridViewGamer1, x, y, firstgamer, labelNoWayGamer1);
             secondfield = new GameTable(dataGridViewGamer2, x, y, secondgamer, labelNoWayGamer2);
             firstfield.Clear(x, y);
             secondfield.Clear(x, y);
-            s = Properties.Resources.dictionary__1_.Split('\n');          
-        }
-        /// <summary>
-        /// Нельзя таблицам быть абсолютно одинаковыми
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
-        /// <param name="d"></param>
-        /// <returns></returns>
-        bool antitwin(int[,] a, int[,] b, int c, int d)
-        {
-            for (int i = 0; i < c; i++)
-            {
-                for (int j = 0; j < d; j++)
-                {
-                    if (a[i, j] == b[i, j]) return true;
-                }
-            }
-            return false;
+            s = Properties.Resources.dictionary__1_.Split('\n');
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
@@ -186,9 +165,9 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemDirections_Click(object sender, EventArgs e)
         {
+            ToolStripMenuItemPause.Text = "Вперёд!";
             timerCountdown.Stop();
             labelPause.Visible = true;
-            ToolStripMenuItemStopOrGo.Text = "Вперёд!";
             FormDirections frm = new FormDirections();
             frm.Show();
         }
@@ -213,6 +192,10 @@ namespace IronLoto2v
 
         private void buttonRoundsAccelerator_Click(object sender, EventArgs e)
         {
+            if(regime>0)
+            {
+                firstgamer.IncreaseGlobalScore();
+            }
             regime++;
             labelFirstGamerCount.Text = "0";
             labelSecondGamerCount.Text = "0";

@@ -54,10 +54,12 @@
             this.panelPictures = new System.Windows.Forms.Panel();
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.panelInformation = new System.Windows.Forms.Panel();
+            this.buttonRoundsAccelerator = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
             this.labelPicturesCount = new System.Windows.Forms.Label();
             this.labelCountdown = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelGamer2 = new System.Windows.Forms.Panel();
             this.panelGrid2 = new System.Windows.Forms.Panel();
             this.dataGridViewGamer2 = new System.Windows.Forms.DataGridView();
@@ -70,10 +72,9 @@
             this.dataGridViewGamer1 = new System.Windows.Forms.DataGridView();
             this.panelGamer1Info = new System.Windows.Forms.Panel();
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
-            this.labelFirstGamerCount = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
-            this.buttonRoundsAccelerator = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelFirstGamerCount = new System.Windows.Forms.Label();
+            this.labelRounds = new System.Windows.Forms.Label();
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSpace.SuspendLayout();
@@ -184,7 +185,7 @@
             this.ToolStripMenuItemMenues,
             this.ToolStripMenuItemUsersChange});
             this.выходToolStripMenuItemxits.Name = "выходToolStripMenuItemxits";
-            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(108, 22);
+            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItemxits.Text = "Выход";
             // 
             // ToolStripMenuItemExits
@@ -211,7 +212,7 @@
             // ToolStripMenuItemPause
             // 
             this.ToolStripMenuItemPause.Name = "ToolStripMenuItemPause";
-            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(108, 22);
+            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItemPause.Text = "Пауза";
             this.ToolStripMenuItemPause.Click += new System.EventHandler(this.ToolStripMenuItemPause_Click);
             // 
@@ -279,26 +280,41 @@
             // 
             // panelInformation
             // 
+            this.panelInformation.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panelInformation.BackColor = System.Drawing.Color.Gainsboro;
             this.panelInformation.Controls.Add(this.buttonRoundsAccelerator);
+            this.panelInformation.Controls.Add(this.labelRounds);
             this.panelInformation.Controls.Add(this.label2);
             this.panelInformation.Controls.Add(this.labelPause);
             this.panelInformation.Controls.Add(this.labelPicturesCount);
             this.panelInformation.Controls.Add(this.labelCountdown);
             this.panelInformation.Controls.Add(this.label1);
-            this.panelInformation.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInformation.Location = new System.Drawing.Point(0, 326);
+            this.panelInformation.Location = new System.Drawing.Point(0, 297);
             this.panelInformation.Name = "panelInformation";
-            this.panelInformation.Size = new System.Drawing.Size(479, 228);
+            this.panelInformation.Size = new System.Drawing.Size(479, 257);
             this.panelInformation.TabIndex = 0;
+            // 
+            // buttonRoundsAccelerator
+            // 
+            this.buttonRoundsAccelerator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonRoundsAccelerator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRoundsAccelerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRoundsAccelerator.ForeColor = System.Drawing.Color.Black;
+            this.buttonRoundsAccelerator.Location = new System.Drawing.Point(0, 0);
+            this.buttonRoundsAccelerator.Name = "buttonRoundsAccelerator";
+            this.buttonRoundsAccelerator.Size = new System.Drawing.Size(479, 257);
+            this.buttonRoundsAccelerator.TabIndex = 38;
+            this.buttonRoundsAccelerator.Text = "Запуск игры";
+            this.buttonRoundsAccelerator.UseVisualStyleBackColor = false;
+            this.buttonRoundsAccelerator.Click += new System.EventHandler(this.buttonRoundsAccelerator_Click);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(0, 112);
+            this.label2.Location = new System.Drawing.Point(-6, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(482, 49);
+            this.label2.Size = new System.Drawing.Size(482, 37);
             this.label2.TabIndex = 36;
             this.label2.Text = "Всего картинок осталось";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,7 +325,7 @@
             this.labelPause.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPause.ForeColor = System.Drawing.Color.Black;
-            this.labelPause.Location = new System.Drawing.Point(175, 63);
+            this.labelPause.Location = new System.Drawing.Point(173, 110);
             this.labelPause.Name = "labelPause";
             this.labelPause.Size = new System.Drawing.Size(98, 49);
             this.labelPause.TabIndex = 28;
@@ -323,7 +339,7 @@
             this.labelPicturesCount.BackColor = System.Drawing.Color.White;
             this.labelPicturesCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPicturesCount.ForeColor = System.Drawing.Color.Black;
-            this.labelPicturesCount.Location = new System.Drawing.Point(174, 161);
+            this.labelPicturesCount.Location = new System.Drawing.Point(173, 196);
             this.labelPicturesCount.Name = "labelPicturesCount";
             this.labelPicturesCount.Size = new System.Drawing.Size(108, 49);
             this.labelPicturesCount.TabIndex = 34;
@@ -336,12 +352,23 @@
             this.labelCountdown.BackColor = System.Drawing.Color.White;
             this.labelCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCountdown.ForeColor = System.Drawing.Color.Black;
-            this.labelCountdown.Location = new System.Drawing.Point(174, 63);
+            this.labelCountdown.Location = new System.Drawing.Point(173, 110);
             this.labelCountdown.Name = "labelCountdown";
             this.labelCountdown.Size = new System.Drawing.Size(98, 49);
             this.labelCountdown.TabIndex = 32;
             this.labelCountdown.Text = "10";
             this.labelCountdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(6, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(479, 49);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Следующее изображение будет через";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelGamer2
             // 
@@ -476,18 +503,6 @@
             this.labelNoWayGamer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelNoWayGamer1.Visible = false;
             // 
-            // labelFirstGamerCount
-            // 
-            this.labelFirstGamerCount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelFirstGamerCount.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelFirstGamerCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstGamerCount.Location = new System.Drawing.Point(332, 0);
-            this.labelFirstGamerCount.Name = "labelFirstGamerCount";
-            this.labelFirstGamerCount.Size = new System.Drawing.Size(145, 86);
-            this.labelFirstGamerCount.TabIndex = 4;
-            this.labelFirstGamerCount.Text = "0";
-            this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelFirstGamer
             // 
             this.labelFirstGamer.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -500,30 +515,30 @@
             this.labelFirstGamer.Text = "_ _";
             this.labelFirstGamer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonRoundsAccelerator
+            // labelFirstGamerCount
             // 
-            this.buttonRoundsAccelerator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonRoundsAccelerator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRoundsAccelerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRoundsAccelerator.ForeColor = System.Drawing.Color.Black;
-            this.buttonRoundsAccelerator.Location = new System.Drawing.Point(0, 0);
-            this.buttonRoundsAccelerator.Name = "buttonRoundsAccelerator";
-            this.buttonRoundsAccelerator.Size = new System.Drawing.Size(479, 228);
-            this.buttonRoundsAccelerator.TabIndex = 38;
-            this.buttonRoundsAccelerator.Text = "Начать раунд";
-            this.buttonRoundsAccelerator.UseVisualStyleBackColor = false;
-            this.buttonRoundsAccelerator.Click += new System.EventHandler(this.buttonRoundsAccelerator_Click);
+            this.labelFirstGamerCount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelFirstGamerCount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelFirstGamerCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFirstGamerCount.Location = new System.Drawing.Point(332, 0);
+            this.labelFirstGamerCount.Name = "labelFirstGamerCount";
+            this.labelFirstGamerCount.Size = new System.Drawing.Size(145, 86);
+            this.labelFirstGamerCount.TabIndex = 4;
+            this.labelFirstGamerCount.Text = "0";
+            this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // labelRounds
             // 
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(6, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(479, 49);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Следующее изображение будет через";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRounds.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelRounds.BackColor = System.Drawing.Color.White;
+            this.labelRounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRounds.ForeColor = System.Drawing.Color.Blue;
+            this.labelRounds.Location = new System.Drawing.Point(153, 26);
+            this.labelRounds.Name = "labelRounds";
+            this.labelRounds.Size = new System.Drawing.Size(149, 49);
+            this.labelRounds.TabIndex = 40;
+            this.labelRounds.Text = "n раунд";
+            this.labelRounds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGame
             // 
@@ -604,5 +619,6 @@
         private System.Windows.Forms.Label labelFirstGamerCount;
         private System.Windows.Forms.Button buttonRoundsAccelerator;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRounds;
     }
 }

@@ -120,9 +120,9 @@ namespace IronLoto2v
         public GameUser opponent;
         public Label labelcount;
         public bool WeFoundWinner = false;
-        int gameround;
+        static int gameround=0;
         public int[] roundresults = new int[3];
-        public GameUser(Label labelname, Label labelscore, string name,int round)
+        public GameUser(Label labelname, Label labelscore, string name)
         {
             Name = name;
             localscore = 0;
@@ -130,56 +130,18 @@ namespace IronLoto2v
             labelscore.Text = localscore.ToString();
             labelNick = labelname;
             labelcount = labelscore;
-            gameround = round;
         }
         public void IncreaseGlobalScore()
         {
             globalscore += localscore;
             roundresults[gameround] = localscore;
             localscore = 0;
-        }
-        /// <summary>
-        /// Выявляем победителя, если, конечно, он имеется
-        /// </summary>
-        public void ComparingGamers()
-        {
-            if (localscore < opponent.localscore)
-            {
-                GreetingWinner(opponent);
-                IncreaseGlobalScore();
-            }
-            if (localscore > opponent.localscore)
-            {
-                GreetingWinner(this);
-                opponent.IncreaseGlobalScore();
-            }
-            if (localscore == opponent.localscore)
-            {
-                NobodyWon();
-            }
-        }
-        /// <summary>
-        /// Объявляем локального победителя!
-        /// </summary>
-        /// <param name="user"></param>
-        void GreetingWinner(GameUser user)
-        {
-            user.IncreaseGlobalScore();
-            WeFoundWinner = true;
-            MessageBox.Show("В этом раунде победил(a) " + Name);
-        }
-        /// <summary>
-        /// Говорим, что ничья
-        /// </summary>
-        void NobodyWon()
-        {
-            if (!WeFoundWinner)
-            {
-                WeFoundWinner = true;
-                IncreaseGlobalScore();
-                opponent.IncreaseGlobalScore();
-                MessageBox.Show("В этом раунде победила дружба. Все молодцы");
-            }
+            opponent.globalscore += opponent.localscore;
+            opponent.roundresults[gameround] = opponent.localscore;
+            opponent.localscore = 0;
+            gameround++;
+            labelcount.Text = "0";
+            opponent.labelcount.Text = "0";
         }
     }
     /// <summary>
@@ -233,11 +195,11 @@ namespace IronLoto2v
                         switch (regime)
                         {
                             case "1": data.Rows[i].Cells[j].Value = card.CatchIrPicture(); break;
-                            case "2": data.Rows[i].Cells[j].Value = card.CatchPicture(); break;
+                            case "2": data.Rows[i].Cells[j].Value = card.CatchIrPicture(); break;
                             case "3": data.Rows[i].Cells[j].Value = card.CatchIrWord(); break;
                         }
                         undertable[i, j] = card.number;
-                        k++;
+                        if(k+1!=array.MasLength-1)k++;
                     }
                 }
             }
@@ -288,13 +250,6 @@ namespace IronLoto2v
         {
             localuser.localscore += IncreaseLocalScore(extract,switcher);
             localuser.labelcount.Text = localuser.localscore.ToString();
-            data.Enabled = true;
-            if (localuser.localscore == x * y)
-            {
-                localuser.labelcount.Text = localuser.localscore.ToString();
-                switcher.Stop();
-                localuser.ComparingGamers();
-            }
         }
         
     }
@@ -340,45 +295,40 @@ namespace IronLoto2v
         public void Stop()
         {
             timer.Stop();
+            MessageBox.Show(gameuser.localscore.ToString() + " " + gameuser.opponent.localscore.ToString());
             button.Visible = true;
         }
         public void Timer_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (countpic != 0 && gameuser.localscore!=6 && gameuser.opponent.localscore!=6)
-                {
-                    img = new Card(extract.mas[cnt]);
-                    switch(round)
-                    {
-                        case "1": picturebox.Image = img.CatchRusPicture();break;
-                        case "2": picturebox.Image = img.CatchPicture(); break;
-                        case "3": picturebox.Image = img.CatchPicture(); break;
-                    }
-                    //picturebox.Image = img.CatchRusPicture();
-                    contentId = img.number;
-                    countdown--;
-                    labelCountdown.Text = countdown.ToString();
-                    if (countdown < 5) labelCountdown.ForeColor = Color.Red;
-                    else labelCountdown.ForeColor = Color.Black;
-                    if (countdown == 0)
-                    {
-                        countdown = 10;
-                        cnt++;
-                        countpic--;
-                        labelPicturesCount.Text = countpic.ToString() + String.Format("/{0}", extract.MasLength.ToString());
-                    }
-                }
-                else
-                {
-                    this.Stop();
-                    gameuser.ComparingGamers();                 
-                }
-            }
-            catch 
+            if (gameuser.localscore == 6 || gameuser.opponent.localscore == 6)
             {
                 this.Stop();
-                gameuser.ComparingGamers();
+            }
+            if (countpic != 0)
+            {
+                img = new Card(extract.mas[cnt]);
+                switch (round)
+                {
+                    case "1": picturebox.Image = img.CatchRusPicture(); break;
+                    case "2": picturebox.Image = img.CatchPicture(); break;
+                    case "3": picturebox.Image = img.CatchPicture(); break;
+                }
+                contentId = img.number;
+                countdown--;
+                labelCountdown.Text = countdown.ToString();
+                if (countdown < 5) labelCountdown.ForeColor = Color.Red;
+                else labelCountdown.ForeColor = Color.Black;
+                if (countdown == 0)
+                {
+                    countdown = 10;
+                    cnt++;
+                    countpic--;
+                    labelPicturesCount.Text = countpic.ToString() + String.Format("/{0}", extract.MasLength.ToString());
+                }
+            }
+            else
+            {
+                this.Stop();
             }
         }
     }
@@ -435,7 +385,7 @@ namespace IronLoto2v
         public void Shuffling()
         {
             Random rnd = new Random();
-            for (int i = mas.Length - 1; i >= 1; i--)
+            for (int i = mas.Length - 2; i >= 1; i--)
             {
                 int j = rnd.Next(i + 1);
                 var temp = mas[j];
