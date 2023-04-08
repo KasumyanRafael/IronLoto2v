@@ -35,6 +35,10 @@ namespace IronLoto2v
             this.WindowState = FormWindowState.Maximized;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            dataGridViewGamer1.Width=dataGridViewGamer1.Width*ClientSize.Width/this.Width;
+            dataGridViewGamer1.Height=dataGridViewGamer1.Height*ClientSize.Height/this.Height;
+            dataGridViewGamer2.Width = dataGridViewGamer2.Width * ClientSize.Width / this.Width;
+            dataGridViewGamer2.Height = dataGridViewGamer2.Height * ClientSize.Height / this.Height; //адаптив таблиц
         }
         public void Start()
         {

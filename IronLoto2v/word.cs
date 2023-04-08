@@ -183,6 +183,7 @@ namespace IronLoto2v
         /// <param name="tr"></param>
         public void Fill(WordExtract array, int a, int b, string regime)
         {
+            Bitmap bmp;
             int k = 0;
             undertable = new int[x, y];
             try
@@ -194,9 +195,18 @@ namespace IronLoto2v
                         Card card = new Card(array.mas[k]);
                         switch (regime)
                         {
-                            case "1": data.Rows[i].Cells[j].Value = card.CatchIrPicture(); break;
-                            case "2": data.Rows[i].Cells[j].Value = card.CatchIrPicture(); break;
-                            case "3": data.Rows[i].Cells[j].Value = card.CatchIrWord(); break;
+                            case "1":
+                                bmp = new Bitmap(card.CatchIrPicture(), new Size(data.Width/b, data.Width / b)); //здесь изображение подстраивается под размеры ячейки
+                                data.Rows[i].Cells[j].Value = Image.FromHbitmap(bmp.GetHbitmap());
+                                break;
+                            case "2":
+                                bmp = new Bitmap(card.CatchIrPicture(), new Size(data.Width / b, data.Width / b)); //здесь изображение подстраивается под размеры ячейки
+                                data.Rows[i].Cells[j].Value = Image.FromHbitmap(bmp.GetHbitmap());
+                                break;
+                            case "3":
+                                bmp = new Bitmap(card.CatchIrWord(), new Size(data.Width / b, data.Width / b)); //здесь изображение подстраивается под размеры ячейки
+                                data.Rows[i].Cells[j].Value = Image.FromHbitmap(bmp.GetHbitmap());
+                                break;
                         }
                         undertable[i, j] = card.number;
                         if(k+1!=array.MasLength-1)k++;
