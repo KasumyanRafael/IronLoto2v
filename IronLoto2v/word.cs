@@ -196,7 +196,7 @@ namespace IronLoto2v
                         switch (regime)
                         {
                             case "1":
-                                bmp = new Bitmap(card.CatchIrPicture(), new Size(data.Width/b, data.Width / b)); //здесь изображение подстраивается под размеры ячейки
+                                bmp = new Bitmap(card.CatchIrPicture(), new Size(data.Width / b, data.Width / b)); //здесь изображение подстраивается под размеры ячейки
                                 data.Rows[i].Cells[j].Value = Image.FromHbitmap(bmp.GetHbitmap());
                                 break;
                             case "2":
@@ -209,7 +209,7 @@ namespace IronLoto2v
                                 break;
                         }
                         undertable[i, j] = card.number;
-                        if(k+1!=array.MasLength-1)k++;
+                        if (k!= 2*a*b+1) k++;
                     }
                 }
             }
@@ -353,7 +353,7 @@ namespace IronLoto2v
         public WordExtract(string[] s,int num)
         {
 
-            count = num;
+            count = num+1;
             mas = ToWord(s);
             antirepeat(mas, s);
             Word[] a = GetExtract(mas);
@@ -395,7 +395,7 @@ namespace IronLoto2v
         public void Shuffling()
         {
             Random rnd = new Random();
-            for (int i = mas.Length - 2; i >= 1; i--)
+            for (int i = count-2; i >= 1; i--)
             {
                 int j = rnd.Next(i + 1);
                 var temp = mas[j];

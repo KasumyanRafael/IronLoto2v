@@ -43,7 +43,7 @@ namespace IronLoto2v
         public void Start()
         {
             labelRounds.Text = String.Format("{0} раунд",regime);
-            extract = new WordExtract(s, 12); //начиная отсюда,обновляем данные
+            extract = new WordExtract(s, 2*x*y); //начиная отсюда,обновляем данные
             img = new Card(extract.mas[0]);
             Card crd=new Card(extract.mas[extract.MasLength-1]);
             firstfield.Fill(extract, x, y, regime.ToString());
