@@ -33,7 +33,7 @@ namespace IronLoto2v
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            //this.MaximizeBox = false;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
         public void Start()
@@ -189,14 +189,14 @@ namespace IronLoto2v
                 labelPause.Visible = false;
             }
         }
-
-        private void buttonRoundsAccelerator_Click(object sender, EventArgs e)
+        private void buttonRoundsAccelerator_Click_1(object sender, EventArgs e)
         {
-            if(regime>0)
+            if (regime > 0)
             {
                 firstgamer.IncreaseGlobalScore();
             }
             regime++;
+            buttonRoundsAccelerator.Text = "Следующий раунд";
             labelFirstGamerCount.Text = "0";
             labelSecondGamerCount.Text = "0";
             buttonRoundsAccelerator.Visible = false;

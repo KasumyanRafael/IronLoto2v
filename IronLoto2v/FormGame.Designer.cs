@@ -55,6 +55,7 @@
             this.pictureBoxShow = new System.Windows.Forms.PictureBox();
             this.panelInformation = new System.Windows.Forms.Panel();
             this.buttonRoundsAccelerator = new System.Windows.Forms.Button();
+            this.labelRounds = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelPause = new System.Windows.Forms.Label();
             this.labelPicturesCount = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
-            this.labelRounds = new System.Windows.Forms.Label();
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSpace.SuspendLayout();
@@ -185,7 +185,7 @@
             this.ToolStripMenuItemMenues,
             this.ToolStripMenuItemUsersChange});
             this.выходToolStripMenuItemxits.Name = "выходToolStripMenuItemxits";
-            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItemxits.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItemxits.Text = "Выход";
             // 
             // ToolStripMenuItemExits
@@ -212,7 +212,7 @@
             // ToolStripMenuItemPause
             // 
             this.ToolStripMenuItemPause.Name = "ToolStripMenuItemPause";
-            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItemPause.Size = new System.Drawing.Size(108, 22);
             this.ToolStripMenuItemPause.Text = "Пауза";
             this.ToolStripMenuItemPause.Click += new System.EventHandler(this.ToolStripMenuItemPause_Click);
             // 
@@ -240,10 +240,10 @@
             this.panel1.Controls.Add(this.panelSpace);
             this.panel1.Controls.Add(this.panelGamer2);
             this.panel1.Controls.Add(this.panelGamer1);
-            this.panel1.Location = new System.Drawing.Point(12, 37);
+            this.panel1.Location = new System.Drawing.Point(12, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1433, 554);
-            this.panel1.TabIndex = 39;
+            this.panel1.TabIndex = 40;
             // 
             // panelSpace
             // 
@@ -306,7 +306,20 @@
             this.buttonRoundsAccelerator.TabIndex = 38;
             this.buttonRoundsAccelerator.Text = "Запуск игры";
             this.buttonRoundsAccelerator.UseVisualStyleBackColor = false;
-            this.buttonRoundsAccelerator.Click += new System.EventHandler(this.buttonRoundsAccelerator_Click);
+            this.buttonRoundsAccelerator.Click += new System.EventHandler(this.buttonRoundsAccelerator_Click_1);
+            // 
+            // labelRounds
+            // 
+            this.labelRounds.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelRounds.BackColor = System.Drawing.Color.White;
+            this.labelRounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRounds.ForeColor = System.Drawing.Color.Blue;
+            this.labelRounds.Location = new System.Drawing.Point(153, 26);
+            this.labelRounds.Name = "labelRounds";
+            this.labelRounds.Size = new System.Drawing.Size(149, 49);
+            this.labelRounds.TabIndex = 40;
+            this.labelRounds.Text = "n раунд";
+            this.labelRounds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -527,19 +540,6 @@
             this.labelFirstGamerCount.Text = "0";
             this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelRounds
-            // 
-            this.labelRounds.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelRounds.BackColor = System.Drawing.Color.White;
-            this.labelRounds.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRounds.ForeColor = System.Drawing.Color.Blue;
-            this.labelRounds.Location = new System.Drawing.Point(153, 26);
-            this.labelRounds.Name = "labelRounds";
-            this.labelRounds.Size = new System.Drawing.Size(149, 49);
-            this.labelRounds.TabIndex = 40;
-            this.labelRounds.Text = "n раунд";
-            this.labelRounds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,10 +599,13 @@
         private System.Windows.Forms.Panel panelPictures;
         private System.Windows.Forms.PictureBox pictureBoxShow;
         private System.Windows.Forms.Panel panelInformation;
+        private System.Windows.Forms.Button buttonRoundsAccelerator;
+        private System.Windows.Forms.Label labelRounds;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelPause;
         private System.Windows.Forms.Label labelPicturesCount;
         private System.Windows.Forms.Label labelCountdown;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelGamer2;
         private System.Windows.Forms.Panel panelGrid2;
         private System.Windows.Forms.DataGridView dataGridViewGamer2;
@@ -617,8 +620,5 @@
         private System.Windows.Forms.Label labelNoWayGamer1;
         private System.Windows.Forms.Label labelFirstGamer;
         private System.Windows.Forms.Label labelFirstGamerCount;
-        private System.Windows.Forms.Button buttonRoundsAccelerator;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelRounds;
     }
 }

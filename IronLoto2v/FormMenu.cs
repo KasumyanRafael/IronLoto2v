@@ -16,6 +16,7 @@ namespace IronLoto2v
         public FormMenu()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
