@@ -33,7 +33,7 @@ namespace IronLoto2v
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            this.MaximizeBox = false;
+            //this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
         public void Start()

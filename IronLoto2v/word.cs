@@ -165,9 +165,9 @@ namespace IronLoto2v
             for (int i = 0; i < b; i++)
             {
                 columns[i] = new DataGridViewImageColumn();
-                columns[i].Width = 236;
+                columns[i].Width = datum.Width/y-4;
             }
-            datum.RowTemplate.Height = 236;
+            datum.RowTemplate.Height = datum.Height/3-4; ///адаптивная таблица
             datum.Columns.AddRange(columns);
             datum.Rows.Add(a - 1);
             data = datum;
