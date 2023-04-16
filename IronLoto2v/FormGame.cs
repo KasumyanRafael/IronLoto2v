@@ -14,7 +14,7 @@ namespace IronLoto2v
 {
     public partial class FormGame : Form
     {
-        public static int regime = 0;
+        public static int regime = 1;
         public string firstname;
         public string secondname;
         public GameUser firstgamer;
@@ -49,6 +49,7 @@ namespace IronLoto2v
             firstfield.Fill(extract, x, y, regime.ToString());
             secondfield.Fill(extract, x, y, regime.ToString());
             switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer,buttonRoundsAccelerator,regime);
+            regime++;
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
         }
@@ -195,11 +196,12 @@ namespace IronLoto2v
         }
         private void buttonRoundsAccelerator_Click_1(object sender, EventArgs e)
         {
-            if (regime > 0)
+            if(regime==4)
             {
-                firstgamer.IncreaseGlobalScore();
+                FormResults formResults = new FormResults();
+                formResults.Show();
+                this.Hide();
             }
-            regime++;
             buttonRoundsAccelerator.Text = "Следующий раунд";
             labelFirstGamerCount.Text = "0";
             labelSecondGamerCount.Text = "0";

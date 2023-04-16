@@ -275,7 +275,7 @@ namespace IronLoto2v
         public int countpic;
         Label labelCountdown;
         public Label labelPicturesCount;
-        string round;
+        int round;
         GameUser gameuser;
         Button button;
         public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn,int reg)
@@ -292,7 +292,7 @@ namespace IronLoto2v
             countpic = extract.MasLength;
             this.gameuser = gameuser;
             button = btn;
-            round=reg.ToString();
+            round=reg;
         }
         /// <summary>
         /// Запуск таймера
@@ -305,7 +305,7 @@ namespace IronLoto2v
         public void Stop()
         {
             timer.Stop();
-            MessageBox.Show(gameuser.localscore.ToString() + " " + gameuser.opponent.localscore.ToString());
+            gameuser.IncreaseGlobalScore();
             button.Visible = true;
         }
         public void Timer_Tick(object sender, EventArgs e)
@@ -319,9 +319,9 @@ namespace IronLoto2v
                 img = new Card(extract.mas[cnt]);
                 switch (round)
                 {
-                    case "1": picturebox.Image = img.CatchRusPicture(); break;
-                    case "2": picturebox.Image = img.CatchPicture(); break;
-                    case "3": picturebox.Image = img.CatchPicture(); break;
+                    case 1: picturebox.Image = img.CatchRusPicture(); break;
+                    case 2: picturebox.Image = img.CatchPicture(); break;
+                    case 3: picturebox.Image = img.CatchPicture(); break;
                 }
                 contentId = img.number;
                 countdown--;
