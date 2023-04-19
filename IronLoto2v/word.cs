@@ -302,7 +302,7 @@ namespace IronLoto2v
             timer.Enabled = true;
             timer.Tick += Timer_Tick;
         }
-        public void Stop()
+        public void StopRound()
         {
             timer.Stop();
             gameuser.IncreaseGlobalScore();
@@ -312,7 +312,7 @@ namespace IronLoto2v
         {
             if (gameuser.localscore == 6 || gameuser.opponent.localscore == 6)
             {
-                this.Stop();
+                this.StopRound();
             }
             if (countpic != 0)
             {
@@ -338,7 +338,7 @@ namespace IronLoto2v
             }
             else
             {
-                this.Stop();
+                this.StopRound();
             }
         }
     }

@@ -43,12 +43,9 @@ namespace IronLoto2v
         public void Start()
         {
             labelRounds.Text = String.Format("{0} раунд",regime);
-            extract = new WordExtract(s, 2*x*y); //начиная отсюда,обновляем данные
-            img = new Card(extract.mas[0]);
-            Card crd=new Card(extract.mas[extract.MasLength-1]);
             firstfield.Fill(extract, x, y, regime.ToString());
             secondfield.Fill(extract, x, y, regime.ToString());
-            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer,buttonRoundsAccelerator,regime);
+            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime);
             regime++;
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
@@ -64,6 +61,8 @@ namespace IronLoto2v
             firstfield.Clear(x, y);
             secondfield.Clear(x, y);
             s = Properties.Resources.dictionary__1_.Split('\n');
+            extract = new WordExtract(s, 2 * x * y); //начиная отсюда,обновляем данные
+            img = new Card(extract.mas[0]);
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
@@ -196,6 +195,7 @@ namespace IronLoto2v
         }
         private void buttonRoundsAccelerator_Click_1(object sender, EventArgs e)
         {
+            switcher = null;
             if(regime==4)
             {
                 FormResults formResults = new FormResults();
