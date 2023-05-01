@@ -278,12 +278,12 @@ namespace IronLoto2v
         int round;
         GameUser gameuser;
         Button button;
-        public Switcher(Timer havetime,Card card, PictureBox havepicture, WordExtract newextract, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn,int reg)
+        public Switcher(WordExtract newextract,Timer havetime,Card card, PictureBox havepicture, Label locallabelCountdown, Label locallabelpicturescount, int t,GameUser gameuser,Button btn,int reg)
         {
             img = card;
             labelPicturesCount = locallabelpicturescount;
-            labelCountdown = locallabelCountdown;
             extract = newextract;
+            labelCountdown = locallabelCountdown;
             picturebox = havepicture;
             timer = havetime;
             img.number = contentId;
@@ -305,6 +305,7 @@ namespace IronLoto2v
         public void StopRound()
         {
             timer.Stop();
+            timer = null;
             gameuser.IncreaseGlobalScore();
             button.Visible = true;
         }

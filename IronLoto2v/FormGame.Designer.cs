@@ -39,7 +39,7 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timerCountdown = new System.Windows.Forms.Timer(this.components);
+            this.timerFirstRound = new System.Windows.Forms.Timer(this.components);
             this.menuStripSettings = new System.Windows.Forms.MenuStrip();
             this.играToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItemxits = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +75,8 @@
             this.labelNoWayGamer1 = new System.Windows.Forms.Label();
             this.labelFirstGamer = new System.Windows.Forms.Label();
             this.labelFirstGamerCount = new System.Windows.Forms.Label();
+            this.timerSecondRound = new System.Windows.Forms.Timer(this.components);
+            this.timerFinalRound = new System.Windows.Forms.Timer(this.components);
             this.menuStripSettings.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSpace.SuspendLayout();
@@ -154,9 +156,9 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(262, 17);
             this.toolStripStatusLabel1.Text = "Первый раунд(слова с русскими переводами)";
             // 
-            // timerCountdown
+            // timerFirstRound
             // 
-            this.timerCountdown.Enabled = true;
+            this.timerFirstRound.Enabled = true;
             // 
             // menuStripSettings
             // 
@@ -540,6 +542,14 @@
             this.labelFirstGamerCount.Text = "0";
             this.labelFirstGamerCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // timerSecondRound
+            // 
+            this.timerSecondRound.Enabled = true;
+            // 
+            // timerFinalRound
+            // 
+            this.timerFinalRound.Enabled = true;
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,7 +594,7 @@
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemInformation;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Timer timerCountdown;
+        private System.Windows.Forms.Timer timerFirstRound;
         private System.Windows.Forms.MenuStrip menuStripSettings;
         private System.Windows.Forms.ToolStripMenuItem играToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItemxits;
@@ -620,5 +630,7 @@
         private System.Windows.Forms.Label labelNoWayGamer1;
         private System.Windows.Forms.Label labelFirstGamer;
         private System.Windows.Forms.Label labelFirstGamerCount;
+        private System.Windows.Forms.Timer timerSecondRound;
+        private System.Windows.Forms.Timer timerFinalRound;
     }
 }

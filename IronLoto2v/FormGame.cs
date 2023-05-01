@@ -45,7 +45,13 @@ namespace IronLoto2v
             labelRounds.Text = String.Format("{0} раунд",regime);
             firstfield.Fill(extract, x, y, regime.ToString());
             secondfield.Fill(extract, x, y, regime.ToString());
-            switcher = new Switcher(timerCountdown, img, pictureBoxShow, extract, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime);
+            switch(regime)
+            {
+                case 1: switcher = new Switcher(extract, timerFirstRound, img, pictureBoxShow, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime);break;
+                case 2: switcher = new Switcher(extract, timerSecondRound, img, pictureBoxShow, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime); break;
+                case 3: switcher = new Switcher(extract, timerFinalRound, img, pictureBoxShow, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime); break;
+            }
+            //switcher = new Switcher(extract,timerCountdown, img, pictureBoxShow, labelCountdown, labelPicturesCount, t, firstgamer, buttonRoundsAccelerator, regime);
             regime++;
             switcher.labelPicturesCount.Text = String.Format("{0}/{0}", extract.MasLength.ToString());
             switcher.Start(); //до сюда
@@ -154,14 +160,14 @@ namespace IronLoto2v
 
         private void ToolStripMenuItemMenues_Click(object sender, EventArgs e)
         {
-            timerCountdown.Stop();
+            timerFirstRound.Stop();
             FormMenu menu = new FormMenu();
             menu.Show();
         }
 
         private void ToolStripMenuItemUsersChange_Click(object sender, EventArgs e)
         {
-            timerCountdown.Stop();
+            timerFirstRound.Stop();
             FormIntroduction form = new FormIntroduction();
             form.Show();
         }
@@ -170,7 +176,7 @@ namespace IronLoto2v
         private void ToolStripMenuItemDirections_Click(object sender, EventArgs e)
         {
             ToolStripMenuItemPause.Text = "Вперёд!";
-            timerCountdown.Stop();
+            timerFirstRound.Stop();
             labelPause.Visible = true;
             FormDirections frm = new FormDirections();
             frm.Show();
@@ -180,14 +186,14 @@ namespace IronLoto2v
         {
             if (ToolStripMenuItemPause.Text == "Пауза")
             {
-                timerCountdown.Stop();
+                timerFirstRound.Stop();
                 ToolStripMenuItemPause.Text = "Вперёд!";
                 IsPause = true;
                 labelPause.Visible = true;
             }
             else
             {
-                timerCountdown.Start();
+                timerFirstRound.Start();
                 ToolStripMenuItemPause.Text = "Пауза";
                 IsPause = false;
                 labelPause.Visible = false;
