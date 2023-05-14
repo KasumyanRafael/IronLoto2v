@@ -221,7 +221,7 @@ namespace IronLoto2v
             for (int i = 0; i < a; i++)
             {
                 for (int j = 0; j < b; j++)
-                {
+                {                  
                     data.Rows[i].Cells[j].Value = Properties.Resources.pwhite;
                 }
             }
@@ -306,13 +306,13 @@ namespace IronLoto2v
         {
             timer.Stop();
             timer = null;
-            gameuser.IncreaseGlobalScore();
             button.Visible = true;
         }
         public void Timer_Tick(object sender, EventArgs e)
         {
             if (gameuser.localscore == 6 || gameuser.opponent.localscore == 6)
             {
+                gameuser.IncreaseGlobalScore();
                 this.StopRound();
             }
             if (countpic != 0)
@@ -339,6 +339,7 @@ namespace IronLoto2v
             }
             else
             {
+                gameuser.IncreaseGlobalScore();
                 this.StopRound();
             }
         }

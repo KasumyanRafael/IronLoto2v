@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace IronLoto2v
 {
@@ -18,7 +19,8 @@ namespace IronLoto2v
         {
             InitializeComponent();
             string path = Properties.Resources.index;
-            webBrowserDirections.DocumentText = path;
+            //webBrowserDirections.DocumentText = path;
+            Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HTMLPageDirections.html"));
         }
         private void FormDirections_Load_1(object sender, EventArgs e)
         {
