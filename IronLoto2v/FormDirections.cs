@@ -18,8 +18,11 @@ namespace IronLoto2v
         public FormDirections()
         {
             InitializeComponent();
-            string path = Properties.Resources.index;
-            //webBrowserDirections.DocumentText = path;
+            this.WindowState = FormWindowState.Maximized;
+            pictureBox1.Image = new Bitmap(Properties.Resources.roundview, new Size(pictureBox1.Width, pictureBox1.Height));
+            pictureBox2.Image = new Bitmap(Properties.Resources.endOfRound, new Size(pictureBox1.Width, pictureBox1.Height));
+            pictureBox3.Image = new Bitmap(Properties.Resources.raunds, new Size(pictureBox1.Width, pictureBox1.Height));
+            pictureBox4.Image = new Bitmap(Properties.Resources.keyboard, new Size(1271, 561));
             Process.Start(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HTMLPageDirections.html"));
         }
         private void FormDirections_Load_1(object sender, EventArgs e)
