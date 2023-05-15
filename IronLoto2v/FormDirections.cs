@@ -30,5 +30,12 @@ namespace IronLoto2v
             this.MinimizeBox = false;
             this.MaximizeBox = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormReg frm=new FormReg();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

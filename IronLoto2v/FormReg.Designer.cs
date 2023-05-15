@@ -108,6 +108,7 @@
             this.buttonReg.TabIndex = 6;
             this.buttonReg.Text = "Зарегистрироваться";
             this.buttonReg.UseVisualStyleBackColor = false;
+            this.buttonReg.Click += new System.EventHandler(this.buttonReg_Click);
             // 
             // label2
             // 
@@ -134,7 +135,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormReg";
-            this.Text = "Регистрация";
+            this.Text = "Вход в аккаунт";
             this.Load += new System.EventHandler(this.FormReg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

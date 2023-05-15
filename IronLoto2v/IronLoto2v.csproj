@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateAccount.Designer.cs">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="word.cs" />
+    <EmbeddedResource Include="FormCreateAccount.resx">
+      <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGame.resx">
       <DependentUpon>FormGame.cs</DependentUpon>
     </EmbeddedResource>

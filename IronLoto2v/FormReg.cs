@@ -35,5 +35,12 @@ namespace IronLoto2v
             this.MinimizeBox = false;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
+        private void buttonReg_Click(object sender, EventArgs e)
+        {
+            FormCreateAccount frm=new FormCreateAccount();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
