@@ -53,7 +53,8 @@ namespace IronLoto2v
                                 connection.Open();
                                 try
                                 {
-                                    mySqlCommand.ExecuteNonQuery();                                    
+                                    mySqlCommand.ExecuteNonQuery();
+                                    if (!flag) MessageBox.Show("Аккаунт создан");
                                 }
                                 catch
                                 {
@@ -63,8 +64,6 @@ namespace IronLoto2v
                                 finally
                                 {
                                     connection.Close();
-                                    if(!flag)MessageBox.Show("Аккаунт создан");
-                                    MessageBox.Show(name);
                                     this.Hide();
                                 }
                             }
