@@ -33,10 +33,10 @@ namespace IronLoto2v
                 name = textBoxName.Text;
                 if (textBoxSurname.Text != String.Empty && textBoxSurname.Text != "Введите фамилию")
                 {
-                    surname = textBoxName.Text;
+                    surname = textBoxSurname.Text;
                     if (textBoxEmail.Text != String.Empty && textBoxEmail.Text != "Введите адрес почты")
                     {
-                        email = textBoxName.Text;
+                        email = textBoxEmail.Text;
                         if (textBoxPassword.Text != String.Empty && textBoxPassword.Text != "Введите пароль")
                         {
                             if (textBoxCheck.Text != String.Empty && textBoxCheck.Text != "Повторите пароль" && textBoxPassword.Text==textBoxCheck.Text)
