@@ -18,7 +18,6 @@ namespace IronLoto2v
         string surname;
         string password;
         string email;
-        bool flag = false;
         public FormCreateAccount()
         {
             InitializeComponent();
@@ -54,11 +53,10 @@ namespace IronLoto2v
                                 try
                                 {
                                     mySqlCommand.ExecuteNonQuery();
-                                    if (!flag) MessageBox.Show("Аккаунт создан");
+                                    MessageBox.Show("Аккаунт создан");
                                 }
                                 catch
                                 {
-                                    flag = true;
                                     MessageBox.Show("Что-то пошло не так");
                                 }
                                 finally
