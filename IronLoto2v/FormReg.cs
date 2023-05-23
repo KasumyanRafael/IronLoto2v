@@ -41,6 +41,7 @@ namespace IronLoto2v
                 StreamReader file = new StreamReader("storage.txt");
                 textBoxEmail.Text = file.ReadLine();
                 textBoxPassword.Text = file.ReadLine();
+                file.Close();
                 File.Delete("storage.txt");
             }
         }
@@ -55,6 +56,7 @@ namespace IronLoto2v
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             File.Delete("storage.txt");
+            File.Delete("localname.txt");
             if (checkBoxStorage.Checked)
             {
                 StreamWriter file = new StreamWriter("storage.txt");
@@ -65,7 +67,6 @@ namespace IronLoto2v
             string connect = "Data Source=127.0.0.1;Port=3306;User ID=root;Password=Kolobok168259;database=iron_pictures";
             char r = '"';
             string command = String.Format("SELECT userFirstName FROM iron_pictures.extendedusers where email = {2}{0}{2} and passwordInfo ={2}{1}{2};", textBoxEmail.Text, textBoxPassword.Text,r.ToString());
-            MessageBox.Show(command);
             MySqlConnection connection = new MySqlConnection(connect);
             MySqlCommand mySqlCommand = new MySqlCommand(command, connection);
             try
@@ -75,6 +76,12 @@ namespace IronLoto2v
                 if (res2.HasRows)
                 {
                     while (res2.Read()) MessageBox.Show($"Привет, {res2.GetValue(0)}! Есть настрой учиться? Тогда вперёд!");
+                    StreamWriter file = new StreamWriter("localname.txt");
+                    file.WriteLine(res2.GetValue(0));
+                    file.Close();
+                    this.Hide();
+                    FormMenu form=new FormMenu();
+                    form.Show();
                 }
                 else
                 {

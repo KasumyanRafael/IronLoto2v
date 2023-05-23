@@ -34,12 +34,43 @@ namespace IronLoto2v
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            pictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            if(File.Exists("localname.txt"))
+            {
+                buttonSubmit.Visible = false;
+                panel1.Visible = true;
+                StreamReader file = new StreamReader("localname.txt");
+                labelNick.Text = file.ReadLine();
+                file.Close();
+            }
+            else
+            {
+                panel1.Visible=false;
+                buttonSubmit.Visible=true;
+            }
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             FormReg formReg = new FormReg();
             formReg.Show();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            File.Delete("localname.txt");
+            this.Close();
+        }
+
+        private void changeUseкToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReg frm=new FormReg();
+            frm.Show();
+        }
+
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
