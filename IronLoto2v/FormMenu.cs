@@ -48,6 +48,11 @@ namespace IronLoto2v
                 panel1.Visible=false;
                 buttonSubmit.Visible=true;
             }
+            if (File.Exists("localname.txt"))
+            {
+                buttonStart.Text = "Играть вдвоём";
+                buttonLearn.Visible=true;
+            }
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -59,7 +64,9 @@ namespace IronLoto2v
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             File.Delete("localname.txt");
-            this.Close();
+            FormMenu formMenu = new FormMenu();
+            formMenu.Show();
+            this.Hide();
         }
 
         private void changeUseкToolStripMenuItem_Click(object sender, EventArgs e)

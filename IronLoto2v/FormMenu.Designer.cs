@@ -35,19 +35,20 @@
             this.buttonDirections = new System.Windows.Forms.Button();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxAvatar = new System.Windows.Forms.PictureBox();
-            this.labelNick = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeUseкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeUseкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNick = new System.Windows.Forms.Label();
+            this.pictureBoxAvatar = new System.Windows.Forms.PictureBox();
+            this.buttonLearn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -117,27 +118,6 @@
             this.panel1.Size = new System.Drawing.Size(216, 62);
             this.panel1.TabIndex = 7;
             // 
-            // pictureBoxAvatar
-            // 
-            this.pictureBoxAvatar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAvatar.Image")));
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
-            this.pictureBoxAvatar.Size = new System.Drawing.Size(54, 62);
-            this.pictureBoxAvatar.TabIndex = 0;
-            this.pictureBoxAvatar.TabStop = false;
-            // 
-            // labelNick
-            // 
-            this.labelNick.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNick.Location = new System.Drawing.Point(0, 0);
-            this.labelNick.Name = "labelNick";
-            this.labelNick.Size = new System.Drawing.Size(165, 30);
-            this.labelNick.TabIndex = 1;
-            this.labelNick.Text = "Ник";
-            this.labelNick.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip1);
@@ -168,12 +148,12 @@
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.menuToolStripMenuItem.Text = "Меню";
             // 
-            // SettingsToolStripMenuItem
+            // ExitToolStripMenuItem
             // 
-            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
-            this.SettingsToolStripMenuItem.Text = "Настройки профиля";
-            this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.ExitToolStripMenuItem.Text = "Выход из расширенной версии";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // changeUseкToolStripMenuItem
             // 
@@ -182,18 +162,52 @@
             this.changeUseкToolStripMenuItem.Text = "Смена пользователя";
             this.changeUseкToolStripMenuItem.Click += new System.EventHandler(this.changeUseкToolStripMenuItem_Click);
             // 
-            // ExitToolStripMenuItem
+            // SettingsToolStripMenuItem
             // 
-            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
-            this.ExitToolStripMenuItem.Text = "Выход из расширенной версии";
-            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.SettingsToolStripMenuItem.Text = "Настройки профиля";
+            this.SettingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            // 
+            // labelNick
+            // 
+            this.labelNick.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNick.Location = new System.Drawing.Point(0, 0);
+            this.labelNick.Name = "labelNick";
+            this.labelNick.Size = new System.Drawing.Size(165, 30);
+            this.labelNick.TabIndex = 1;
+            this.labelNick.Text = "Ник";
+            this.labelNick.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxAvatar
+            // 
+            this.pictureBoxAvatar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAvatar.Image")));
+            this.pictureBoxAvatar.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
+            this.pictureBoxAvatar.Size = new System.Drawing.Size(54, 62);
+            this.pictureBoxAvatar.TabIndex = 0;
+            this.pictureBoxAvatar.TabStop = false;
+            // 
+            // buttonLearn
+            // 
+            this.buttonLearn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonLearn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLearn.Location = new System.Drawing.Point(490, 329);
+            this.buttonLearn.Name = "buttonLearn";
+            this.buttonLearn.Size = new System.Drawing.Size(298, 109);
+            this.buttonLearn.TabIndex = 8;
+            this.buttonLearn.Text = "Обучение";
+            this.buttonLearn.UseVisualStyleBackColor = false;
+            this.buttonLearn.Visible = false;
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonLearn);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonDirections);
@@ -207,11 +221,11 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,6 +246,7 @@
         private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeUseкToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
+        private System.Windows.Forms.Button buttonLearn;
     }
 }
 
