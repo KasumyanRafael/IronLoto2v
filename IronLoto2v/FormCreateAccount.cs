@@ -52,8 +52,21 @@ namespace IronLoto2v
                                 connection.Open();
                                 try
                                 {
-                                    mySqlCommand.ExecuteNonQuery();
-                                    MessageBox.Show("Аккаунт создан");
+                                    char r = '"';
+                                    string newcommand = String.Format("SELECT userFirstName FROM iron_pictures.extendedusers where email = {2}{0}{2} and passwordInfo ={2}{1}{2};", email, password, r.ToString());
+                                    MySqlConnection newconnection = new MySqlConnection(connect);
+                                    MySqlCommand newmySqlCommand = new MySqlCommand(newcommand, newconnection);
+                                    newconnection.Open();
+                                    MySqlDataReader res2 = newmySqlCommand.ExecuteReader();
+                                    if (!res2.HasRows)
+                                    {
+                                        mySqlCommand.ExecuteNonQuery();
+                                        MessageBox.Show("Аккаунт создан");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Аккаунт с такими почтой и паролем уже есть. Странно, что вы знаете данные другого пользователя.");
+                                    }
                                 }
                                 catch
                                 {
